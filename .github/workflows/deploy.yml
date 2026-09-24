@@ -35,5 +35,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: donnos-dashboard
-          directory: .next
+          directory: out
           productionBranch: main
