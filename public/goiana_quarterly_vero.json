@@ -1,0 +1,150 @@
+{
+  "source": "Vero Internet Quarterly Media Calibration Exercise",
+  "period": "Jul/2026",
+  "municipality_code": "5208707",
+  "city_name": "Goiânia",
+  "state": "GO",
+  "population": 1503256,
+  "strategic_quadrant": "Capturar oportunidade",
+  "market_metrics": {
+    "bdi": {
+      "value": 61,
+      "scale": 100,
+      "description": "Brand Demand Index from Vero quarterly (Google Ads + Search data)",
+      "vs_national_avg": 0.61,
+      "note": "Lower than typical growth market; brand building opportunity"
+    },
+    "cdi": {
+      "value": 141,
+      "scale": 100,
+      "description": "Category Demand Index — Market category 41% above national average",
+      "vs_national_avg": 1.41,
+      "market_strength": "Strong underlying demand"
+    },
+    "share_of_search": {
+      "value": 13,
+      "unit": "%",
+      "description": "Brand search volume within category"
+    },
+    "market_share": {
+      "value": 3.2,
+      "unit": "%",
+      "description": "Vero's current market share"
+    },
+    "esov": {
+      "value": 14.6,
+      "unit": "p.p.",
+      "description": "Share of voice — spending vs. market share gap"
+    }
+  },
+  "network_infrastructure": {
+    "mercado_bl": {
+      "value": 397371,
+      "unit": "homes",
+      "description": "Broadband market size"
+    },
+    "acessos_vero": {
+      "value": 12368,
+      "unit": "current customers",
+      "description": "Vero's current active accesses"
+    },
+    "penetration_rate": {
+      "value": 3.1,
+      "unit": "%",
+      "description": "Market penetration (Acessos/Mercado)"
+    },
+    "hp_livre": {
+      "value": 691104,
+      "unit": "homes",
+      "description": "Available homes (untapped market)",
+      "growth_potential": "Very high"
+    },
+    "take_rate": {
+      "value": 2,
+      "unit": "%",
+      "description": "Current take rate (Acessos/HP Passado)"
+    },
+    "competitive_leader": {
+      "name": "CLARO",
+      "accesses": 43720,
+      "players_total": 102
+    }
+  },
+  "media_performance_quarterly": {
+    "period": "Jul/2026",
+    "investment": {
+      "verba": {
+        "value": 68053,
+        "currency": "R$",
+        "description": "Monthly media investment (Verba — Google Ads)"
+      },
+      "verba_tv": {
+        "value": 68204,
+        "currency": "R$",
+        "description": "TV media investment (separate channel)"
+      },
+      "total_spend": {
+        "value": 136257,
+        "currency": "R$",
+        "description": "Total media spend (Digital + TV)"
+      }
+    },
+    "results": {
+      "venda": {
+        "value": 495,
+        "unit": "sales/customers",
+        "description": "Customers acquired this month"
+      },
+      "demanda_apta": {
+        "value": 821,
+        "unit": "qualified leads",
+        "description": "Total qualified demand generated"
+      },
+      "conversion_rate": {
+        "value": 60.3,
+        "unit": "%",
+        "calculation": "(495/821) * 100"
+      }
+    },
+    "efficiency": {
+      "cac": {
+        "value": 137,
+        "currency": "R$",
+        "description": "Customer acquisition cost (monthly average)"
+      },
+      "elasticity": {
+        "value": 0.23,
+        "unit": "sales per R$1,000 invested",
+        "description": "CRITICAL: Low elasticity indicates poor ROI on current spend",
+        "benchmark": "Belo Horizonte: 13.0 (57x more efficient!)"
+      },
+      "sales_per_1k_invested": {
+        "value": 7.3,
+        "unit": "sales",
+        "description": "Direct sales metric"
+      },
+      "indice_vi": {
+        "value": 1.11,
+        "description": "Sales/Investment ratio (above 1.0 is positive)"
+      }
+    }
+  },
+  "clustering": {
+    "vero_cluster": "E",
+    "cluster_name": "High-Growth Emerging",
+    "vero_assessment": "Capturar oportunidade",
+    "recommendations": [
+      "Low elasticity (0.23) suggests poor targeting or weak brand positioning",
+      "Market has high CDI (141) but low BDI (61) — brand building needed",
+      "Consider: audience refinement before spending scale",
+      "HP LIVRE = 691K homes = massive growth runway if targeting improves"
+    ]
+  },
+  "trend_indicators": {
+    "month_comparison": "Previous month elasticity +0.23 (stable but low)",
+    "cac_trend": "Stable at R$137",
+    "market_trajectory": "Stable growth — not yet explosive"
+  },
+  "updated_at": "2026-07-31T23:59:59Z",
+  "next_review": "2026-10-31"
+}

@@ -1,0 +1,42 @@
+{
+  "3550308": {
+    "name": "São Paulo",
+    "state": "SP",
+    "population": 11904961,
+    "generated_at": "2026-09-24T14:37:16.725953",
+    "cached": true
+  },
+  "3106200": {
+    "name": "Belo Horizonte",
+    "state": "MG",
+    "population": 2415872,
+    "generated_at": "2026-09-24T14:37:16.729649",
+    "cached": true
+  },
+  "5208707": {
+    "name": "Goiânia",
+    "state": "GO",
+    "population": 1503256,
+    "generated_at": "2026-09-24T14:37:16.732462",
+    "cached": true
+  },
+  "5201405": {
+    "name": "Aparecida de Goiânia",
+    "state": "GO",
+    "population": 556021,
+    "generated_at": "2026-09-24T14:37:16.734096",
+    "cached": true
+  },
+  "3518800": {
+    "name": "Guarulhos",
+    "state": "SP",
+    "population": 1349100,
+    "generated_at": "2026-09-24T14:37:16.737510",
+    "cached": true
+  },
+  "3127109": {
+    "name": "Goiânia",
+    "generated_at": "2026-09-24T14:37:18.725006",
+    "cached": true
+  }
+}

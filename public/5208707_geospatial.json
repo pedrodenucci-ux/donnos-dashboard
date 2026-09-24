@@ -1,0 +1,1055 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.59639323683969,
+          -19.616743286718407
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.61087650658549,
+          -19.51159525741423
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.40941271305313,
+          -19.730273246106517
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.12776157303897,
+          -19.497680576898478
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.55727484753779,
+          -19.589382669898445
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.572492850679474,
+          -19.375976597582266
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.204622836444,
+          -19.552624297491498
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.325107467742114,
+          -19.521073547753893
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.16844799522839,
+          -19.41539681702688
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.2835640826559,
+          -19.61893517352079
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.127823367741456,
+          -19.639606978010523
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.562075944849745,
+          -19.69879031464546
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.2891381113298,
+          -19.820992358550605
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.226796698410155,
+          -19.815047495958495
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.28883530061937,
+          -19.397840420183755
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.33600198336634,
+          -19.34869825768373
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.36904615080679,
+          -19.63911973072475
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.19277637059099,
+          -19.644072930883247
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.20565072958622,
+          -19.793683668214207
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.23750612815321,
+          -19.579208197094662
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.31399786388186,
+          -19.53903263331842
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.33662898376624,
+          -19.749644396205625
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.44850044791247,
+          -19.524820353893364
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.2558123936387,
+          -19.410955598650034
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.43900591968509,
+          -19.724972638659654
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.352480364433326,
+          -19.75656514003191
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.50553859598714,
+          -19.548893165045065
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.46890540231123,
+          -19.349837491848607
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.5682143670148,
+          -19.78876372018664
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.20646001133098,
+          -19.60019725413815
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.381380365739005,
+          -19.813353412978902
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.21144177135657,
+          -19.662717174050265
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.491561329685965,
+          -19.61723754021406
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.61295849591929,
+          -19.641530049989115
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.41914951215864,
+          -19.609863796904786
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.44961117722526,
+          -19.52865985398649
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.42461244521402,
+          -19.609017919105224
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.60649597668076,
+          -19.400232503504686
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.52936676919747,
+          -19.44289175842682
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.406312389448416,
+          -19.438993826309854
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.57558953457077,
+          -19.806578592004755
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.18232693784322,
+          -19.65771454984119
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.135777439899385,
+          -19.74916209463673
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.50838080729227,
+          -19.65320879516952
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.46196392167193,
+          -19.490212196436623
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.5870618163445,
+          -19.789639889773927
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.150972108289785,
+          -19.736462361469545
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.374204792944255,
+          -19.705166929205326
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.37294060396734,
+          -19.78141010537054
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.5111851540402,
+          -19.5436572154053
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.24929348662243,
+          -19.465385156385377
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.37281800518667,
+          -19.435661516170207
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.512808498761004,
+          -19.77659220530995
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.29826282574841,
+          -19.592430672012984
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.40806948122972,
+          -19.710575133929698
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.14375638857491,
+          -19.578790915211073
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.50536676874546,
+          -19.61815714328582
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.56511168490361,
+          -19.804648410057336
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.31369080055281,
+          -19.371042752796804
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.341378826897895,
+          -19.789723104482768
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.363640748567434,
+          -19.65363712420081
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34779839105024,
+          -19.57781545619845
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.38202453254546,
+          -19.57471141577596
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.556065446914836,
+          -19.744876592904642
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.231672813904275,
+          -19.60338480028414
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.4642287904262,
+          -19.77841611583449
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.57612433858565,
+          -19.329178221115168
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.48214831994468,
+          -19.616097653826188
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.51312797433617,
+          -19.543990267237355
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.32158112200872,
+          -19.563951124390915
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.55449849311395,
+          -19.69735521182646
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.50257567920653,
+          -19.428965754684672
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.229537146433366,
+          -19.450809243064914
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.547128056181634,
+          -19.610629114596797
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5208707"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.32563925352751,
+          -19.68399819479657
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5208707"
+      }
+    }
+  ]
+}

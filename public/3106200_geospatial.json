@@ -1,0 +1,1685 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.59187210745019,
+          -19.81429717768548
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.17552730978056,
+          -19.80121271471552
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.416604388131724,
+          -19.60596965950516
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.356011587503154,
+          -19.43861625708422
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.50077314281844,
+          -19.646000125077585
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.31495920048435,
+          -19.69572950413042
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.552405309516125,
+          -19.747619375010192
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.27796712609704,
+          -19.594211047183855
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.50532683656739,
+          -19.603996566561833
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.18493570822657,
+          -19.61583198075208
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.284254596644665,
+          -19.748951780419404
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.48181745548666,
+          -19.57442254754277
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.170082936677495,
+          -19.45809141580203
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.360085325374406,
+          -19.547847716610956
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.27566935492793,
+          -19.36111817204046
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.455522605897855,
+          -19.49205481827469
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34545388802984,
+          -19.69928642800668
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34987038821983,
+          -19.50153562963557
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.11647237236507,
+          -19.364558283597667
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.17337832074991,
+          -19.463012152783364
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.506482319804405,
+          -19.490729957755413
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.166608390488165,
+          -19.411486825639273
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.24960920222241,
+          -19.32914969404211
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.30856619563426,
+          -19.675205324526907
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.513621812078895,
+          -19.593428570894254
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.37594923537661,
+          -19.711907714792627
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.55349572596764,
+          -19.440966108884048
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.16961575014194,
+          -19.76713811936225
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.49099561129436,
+          -19.775078066208394
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.23344857951812,
+          -19.416208857731668
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.41749568324521,
+          -19.41703872965852
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.2558065105883,
+          -19.631631855752772
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.4885861985559,
+          -19.46897469879953
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.33529948143697,
+          -19.526456853611766
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.16344819866559,
+          -19.395978568975302
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.583649595857985,
+          -19.495913853864433
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.29433638807852,
+          -19.654770431925837
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.191230657817954,
+          -19.411498522726593
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.33348533428643,
+          -19.734403306510362
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.46375212279298,
+          -19.618508927664866
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.21550840044249,
+          -19.682665400667496
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.31651846922015,
+          -19.775629281345886
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.26888258183965,
+          -19.526664136657384
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.481933071458364,
+          -19.34800248452555
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.16718812685636,
+          -19.69886210248662
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34937785803574,
+          -19.777568041937073
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.3484558938072,
+          -19.786232445062925
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.5986465004585,
+          -19.529954286883214
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.508705233262745,
+          -19.378121383127
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.55725117511751,
+          -19.366683422443153
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.22333964924777,
+          -19.709329310587012
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.37034440865773,
+          -19.471130431066
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.59308789291073,
+          -19.501138705760614
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.530001725687626,
+          -19.814834399713924
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.474807486215454,
+          -19.735879405057123
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.1505241747437,
+          -19.383473999100524
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.343327231188574,
+          -19.753267009204908
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.2750116718545,
+          -19.74532903529139
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34453849731304,
+          -19.541515269082417
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.55235517115937,
+          -19.540561464825725
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.26238599226659,
+          -19.53081308771966
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.49675406094731,
+          -19.34161781968655
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.20514621347328,
+          -19.600150421926898
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.16008308609662,
+          -19.621079665960195
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.29383392454667,
+          -19.35786105767443
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.54139847497153,
+          -19.394810297991583
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.12927316281766,
+          -19.48980793273505
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.29653637034969,
+          -19.6799945652184
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.483418653429375,
+          -19.474299596142828
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.389314911991455,
+          -19.721924782790985
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.201846866679375,
+          -19.427650187762982
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.527126904973,
+          -19.4244280414794
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.3358809604709,
+          -19.738170446303506
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.207376238996,
+          -19.415991782071643
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.13423700253846,
+          -19.541967672258235
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.490442579239584,
+          -19.58798496662563
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.39955762128217,
+          -19.40347847750465
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.33671446783565,
+          -19.578938349229762
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.14237015263741,
+          -19.516320062513092
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.339067935681975,
+          -19.472359684901033
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.42355875930123,
+          -19.65683691561648
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.47989013002544,
+          -19.424064838018907
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.35301047610447,
+          -19.47418464586412
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.45597847571348,
+          -19.481071196572728
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.22581680764162,
+          -19.51459338203547
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.52942847727822,
+          -19.787717964297766
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.33782691295718,
+          -19.81127257938302
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.366479351229884,
+          -19.744543489619005
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.25752998221615,
+          -19.799636742096627
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.15757467538193,
+          -19.355189125159793
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.33637461259136,
+          -19.351240280622136
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.43813889823026,
+          -19.44993354299532
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.60722581595548,
+          -19.424531320081336
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.55067701904317,
+          -19.762517303380797
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.56293457544625,
+          -19.491661682356817
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34444878518395,
+          -19.633093563164053
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.599042273140334,
+          -19.49137431074056
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.48557374024776,
+          -19.472095237105396
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.412596702778124,
+          -19.470787096213336
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.23294819626393,
+          -19.76087894304439
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.35657690166772,
+          -19.376387113116515
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.5751442733477,
+          -19.440560584438813
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.571030720935,
+          -19.450681754544203
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.3983114180054,
+          -19.392777895069464
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.11554291430158,
+          -19.69010809585134
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.335204516052904,
+          -19.342406818222173
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.31441622709028,
+          -19.761340966134178
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.31892928061563,
+          -19.39917288631759
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.27982065115666,
+          -19.32935161671967
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.237873520348224,
+          -19.640065465061074
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.60302373476398,
+          -19.73721991930992
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.25659174401837,
+          -19.712392509694165
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.18591581844604,
+          -19.548413170142506
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.155032798806225,
+          -19.74673638930948
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.18389470367899,
+          -19.56866076281924
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.27672131512002,
+          -19.553935503678062
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.16495691471162,
+          -19.38460779428997
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.11985202273729,
+          -19.56309020378663
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.14144548229671,
+          -19.732235663341157
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.44576408718186,
+          -19.353320310434892
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "3106200"
+      }
+    }
+  ]
+}

@@ -1,0 +1,5577 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.37965,
+          -19.588348
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00001",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.588348,
+        "longitude": -45.37965,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.382733,
+          -19.592668
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00002",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.592668,
+        "longitude": -45.382733,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.384261,
+          -19.594539
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00003",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.594539,
+        "longitude": -45.384261,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.389113,
+          -19.583362
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00004",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.583362,
+        "longitude": -45.389113,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.382395,
+          -19.595592
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00005",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.595592,
+        "longitude": -45.382395,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.378681,
+          -19.59673
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00006",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.59673,
+        "longitude": -45.378681,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.383689,
+          -19.598024
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00007",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.598024,
+        "longitude": -45.383689,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.375387,
+          -19.591021
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00008",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.591021,
+        "longitude": -45.375387,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.37858,
+          -19.592083
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00009",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.592083,
+        "longitude": -45.37858,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.387788,
+          -19.589278
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00010",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.589278,
+        "longitude": -45.387788,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.386161,
+          -19.593842
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00011",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.593842,
+        "longitude": -45.386161,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.377069,
+          -19.592308
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00012",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.592308,
+        "longitude": -45.377069,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.379637,
+          -19.601206
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00013",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.601206,
+        "longitude": -45.379637,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.387141,
+          -19.596527
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00014",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.596527,
+        "longitude": -45.387141,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.381497,
+          -19.590239
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00015",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.590239,
+        "longitude": -45.381497,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.387146,
+          -19.589192
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00016",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.589192,
+        "longitude": -45.387146,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.377669,
+          -19.588101
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00017",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.588101,
+        "longitude": -45.377669,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.385552,
+          -19.593677
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00018",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.593677,
+        "longitude": -45.385552,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.392727,
+          -19.591371
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00019",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.591371,
+        "longitude": -45.392727,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Grande",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.389594,
+          -19.602109
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00020",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.602109,
+        "longitude": -45.389594,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.384484,
+          -19.598845
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00021",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.598845,
+        "longitude": -45.384484,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.390168,
+          -19.591336
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00022",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.591336,
+        "longitude": -45.390168,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.386911,
+          -19.596969
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00023",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.596969,
+        "longitude": -45.386911,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.377323,
+          -19.594224
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00024",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.594224,
+        "longitude": -45.377323,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.38203,
+          -19.598015
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00025",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.598015,
+        "longitude": -45.38203,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.378225,
+          -19.596405
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00026",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.596405,
+        "longitude": -45.378225,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.387521,
+          -19.590957
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00027",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.590957,
+        "longitude": -45.387521,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.375762,
+          -19.59362
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00028",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.59362,
+        "longitude": -45.375762,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.383558,
+          -19.592725
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00029",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.592725,
+        "longitude": -45.383558,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.380217,
+          -19.586808
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00030",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.586808,
+        "longitude": -45.380217,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.385951,
+          -19.588629
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00031",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.588629,
+        "longitude": -45.385951,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.384724,
+          -19.585793
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00032",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.585793,
+        "longitude": -45.384724,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.388425,
+          -19.58087
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00033",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.58087,
+        "longitude": -45.388425,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.385426,
+          -19.590663
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00034",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.590663,
+        "longitude": -45.385426,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.386813,
+          -19.591564
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00035",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.591564,
+        "longitude": -45.386813,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.38083,
+          -19.595596
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00036",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.595596,
+        "longitude": -45.38083,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.382835,
+          -19.589451
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00037",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.589451,
+        "longitude": -45.382835,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.384332,
+          -19.597425
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00038",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.597425,
+        "longitude": -45.384332,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.383492,
+          -19.596821
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00039",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.596821,
+        "longitude": -45.383492,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.37689,
+          -19.594106
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00040",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.594106,
+        "longitude": -45.37689,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.385484,
+          -19.587407
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00041",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.587407,
+        "longitude": -45.385484,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.385962,
+          -19.597615
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00042",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.597615,
+        "longitude": -45.385962,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.385498,
+          -19.601064
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00043",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.601064,
+        "longitude": -45.385498,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.383699,
+          -19.597051
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00044",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.597051,
+        "longitude": -45.383699,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.382674,
+          -19.600718
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00045",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.600718,
+        "longitude": -45.382674,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.390474,
+          -19.598029
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00046",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.598029,
+        "longitude": -45.390474,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.389012,
+          -19.59346
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00047",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.59346,
+        "longitude": -45.389012,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.371138,
+          -19.584431
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00048",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.584431,
+        "longitude": -45.371138,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.38658,
+          -19.586547
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00049",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.586547,
+        "longitude": -45.38658,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.378854,
+          -19.598258
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00050",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.598258,
+        "longitude": -45.378854,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.390107,
+          -19.59938
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00051",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.59938,
+        "longitude": -45.390107,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.386269,
+          -19.597122
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00052",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.597122,
+        "longitude": -45.386269,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.382553,
+          -19.588119
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00053",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.588119,
+        "longitude": -45.382553,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.382689,
+          -19.601634
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00054",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.601634,
+        "longitude": -45.382689,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.380823,
+          -19.586997
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00055",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.586997,
+        "longitude": -45.380823,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.384807,
+          -19.606028
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00056",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.606028,
+        "longitude": -45.384807,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.386093,
+          -19.59184
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00057",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.59184,
+        "longitude": -45.386093,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.380845,
+          -19.60157
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00058",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.60157,
+        "longitude": -45.380845,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.392454,
+          -19.586999
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00059",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.586999,
+        "longitude": -45.392454,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.392424,
+          -19.59521
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00060",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.59521,
+        "longitude": -45.392424,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.373816,
+          -19.592446
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00061",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.592446,
+        "longitude": -45.373816,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.374123,
+          -19.585009
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00062",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.585009,
+        "longitude": -45.374123,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.383001,
+          -19.599003
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00063",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.599003,
+        "longitude": -45.383001,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.38409,
+          -19.594199
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00064",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.594199,
+        "longitude": -45.38409,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.384866,
+          -19.59465
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00065",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.59465,
+        "longitude": -45.384866,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.382758,
+          -19.591672
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00066",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.591672,
+        "longitude": -45.382758,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.38322,
+          -19.599166
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00067",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.599166,
+        "longitude": -45.38322,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.385234,
+          -19.59509
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00068",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.59509,
+        "longitude": -45.385234,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.383432,
+          -19.595188
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00069",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.595188,
+        "longitude": -45.383432,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.389362,
+          -19.598592
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00070",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.598592,
+        "longitude": -45.389362,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.391432,
+          -19.598179
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00071",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.598179,
+        "longitude": -45.391432,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.383861,
+          -19.5999
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00072",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.5999,
+        "longitude": -45.383861,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.377495,
+          -19.594138
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00073",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.594138,
+        "longitude": -45.377495,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.379714,
+          -19.585582
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00074",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.585582,
+        "longitude": -45.379714,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.394613,
+          -19.590586
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00075",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.590586,
+        "longitude": -45.394613,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.386923,
+          -19.598993
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00076",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.598993,
+        "longitude": -45.386923,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.393809,
+          -19.587124
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00077",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.587124,
+        "longitude": -45.393809,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.376428,
+          -19.587148
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00078",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.587148,
+        "longitude": -45.376428,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.388161,
+          -19.598455
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00079",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.598455,
+        "longitude": -45.388161,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.382374,
+          -19.592838
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00080",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.592838,
+        "longitude": -45.382374,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.387768,
+          -19.601554
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00081",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.601554,
+        "longitude": -45.387768,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.389367,
+          -19.594873
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00082",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.594873,
+        "longitude": -45.389367,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.385134,
+          -19.588778
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00083",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.588778,
+        "longitude": -45.385134,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.389432,
+          -19.59204
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00084",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.59204,
+        "longitude": -45.389432,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.384527,
+          -19.598253
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00085",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.598253,
+        "longitude": -45.384527,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Centro Histórico",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.353502,
+          -19.552972
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00086",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.552972,
+        "longitude": -45.353502,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.355261,
+          -19.557562
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00087",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.557562,
+        "longitude": -45.355261,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.357983,
+          -19.546782
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00088",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.546782,
+        "longitude": -45.357983,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.346302,
+          -19.552004
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00089",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.552004,
+        "longitude": -45.346302,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.356013,
+          -19.55279
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00090",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.55279,
+        "longitude": -45.356013,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.346203,
+          -19.549067
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00091",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.549067,
+        "longitude": -45.346203,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.351969,
+          -19.545721
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00092",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.545721,
+        "longitude": -45.351969,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.356418,
+          -19.547202
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00093",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.547202,
+        "longitude": -45.356418,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.354701,
+          -19.544587
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00094",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.544587,
+        "longitude": -45.354701,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.353657,
+          -19.55765
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00095",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.55765,
+        "longitude": -45.353657,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.349772,
+          -19.552006
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00096",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.552006,
+        "longitude": -45.349772,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.345887,
+          -19.553038
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00097",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.553038,
+        "longitude": -45.345887,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.348991,
+          -19.557036
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00098",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.557036,
+        "longitude": -45.348991,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.344464,
+          -19.551571
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00099",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.551571,
+        "longitude": -45.344464,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.344241,
+          -19.553554
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00100",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.553554,
+        "longitude": -45.344241,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.347404,
+          -19.547939
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00101",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.547939,
+        "longitude": -45.347404,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.356396,
+          -19.55019
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00102",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.55019,
+        "longitude": -45.356396,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.353395,
+          -19.562113
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00103",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.562113,
+        "longitude": -45.353395,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.356568,
+          -19.553111
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00104",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.553111,
+        "longitude": -45.356568,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.353068,
+          -19.549963
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00105",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.549963,
+        "longitude": -45.353068,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.347967,
+          -19.545654
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00106",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.545654,
+        "longitude": -45.347967,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.35113,
+          -19.5595
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00107",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.5595,
+        "longitude": -45.35113,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.352985,
+          -19.558136
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00108",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.558136,
+        "longitude": -45.352985,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.357687,
+          -19.553949
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00109",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.553949,
+        "longitude": -45.357687,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.353052,
+          -19.548713
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00110",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.548713,
+        "longitude": -45.353052,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.356878,
+          -19.549704
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00111",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.549704,
+        "longitude": -45.356878,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.353228,
+          -19.550143
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00112",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.550143,
+        "longitude": -45.353228,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.363963,
+          -19.554475
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00113",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.554475,
+        "longitude": -45.363963,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.358102,
+          -19.551599
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00114",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.551599,
+        "longitude": -45.358102,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.363976,
+          -19.551638
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00115",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.551638,
+        "longitude": -45.363976,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.350344,
+          -19.561486
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00116",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.561486,
+        "longitude": -45.350344,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.350276,
+          -19.548978
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00117",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.548978,
+        "longitude": -45.350276,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.359225,
+          -19.55495
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00118",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.55495,
+        "longitude": -45.359225,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.357307,
+          -19.560289
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00119",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.560289,
+        "longitude": -45.357307,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.346305,
+          -19.551139
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00120",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.551139,
+        "longitude": -45.346305,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Grande",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.362957,
+          -19.551346
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00121",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.551346,
+        "longitude": -45.362957,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.355737,
+          -19.549309
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00122",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.549309,
+        "longitude": -45.355737,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.362176,
+          -19.553176
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00123",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.553176,
+        "longitude": -45.362176,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.354192,
+          -19.556725
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00124",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.556725,
+        "longitude": -45.354192,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.355841,
+          -19.546692
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00125",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.546692,
+        "longitude": -45.355841,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.363751,
+          -19.560457
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00126",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.560457,
+        "longitude": -45.363751,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.349563,
+          -19.54941
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00127",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.54941,
+        "longitude": -45.349563,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.357987,
+          -19.545925
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00128",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.545925,
+        "longitude": -45.357987,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.357347,
+          -19.547992
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00129",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.547992,
+        "longitude": -45.357347,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.356795,
+          -19.546601
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00130",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.546601,
+        "longitude": -45.356795,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.357311,
+          -19.556677
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00131",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.556677,
+        "longitude": -45.357311,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.355507,
+          -19.553968
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00132",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.553968,
+        "longitude": -45.355507,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.357051,
+          -19.550896
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00133",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.550896,
+        "longitude": -45.357051,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.350027,
+          -19.555969
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00134",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.555969,
+        "longitude": -45.350027,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.353667,
+          -19.55908
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00135",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.55908,
+        "longitude": -45.353667,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.352997,
+          -19.54868
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00136",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.54868,
+        "longitude": -45.352997,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.356004,
+          -19.551444
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00137",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.551444,
+        "longitude": -45.356004,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.358129,
+          -19.549113
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00138",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.549113,
+        "longitude": -45.358129,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.358782,
+          -19.551095
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00139",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.551095,
+        "longitude": -45.358782,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.353614,
+          -19.563362
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00140",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.563362,
+        "longitude": -45.353614,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.351413,
+          -19.548315
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00141",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.548315,
+        "longitude": -45.351413,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.357344,
+          -19.548749
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00142",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.548749,
+        "longitude": -45.357344,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.360916,
+          -19.554523
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00143",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.554523,
+        "longitude": -45.360916,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.358843,
+          -19.566081
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00144",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.566081,
+        "longitude": -45.358843,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.362552,
+          -19.551552
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00145",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.551552,
+        "longitude": -45.362552,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.355898,
+          -19.554939
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00146",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.554939,
+        "longitude": -45.355898,
+        "setor_economico": "Indústria",
+        "cluster_tipo": "Zona Industrial",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.369099,
+          -19.562016
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00147",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.562016,
+        "longitude": -45.369099,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.377705,
+          -19.566455
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00148",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.566455,
+        "longitude": -45.377705,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.373177,
+          -19.562646
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00149",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.562646,
+        "longitude": -45.373177,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.375451,
+          -19.578551
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00150",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.578551,
+        "longitude": -45.375451,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.377348,
+          -19.563991
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00151",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.563991,
+        "longitude": -45.377348,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.381994,
+          -19.565396
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00152",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.565396,
+        "longitude": -45.381994,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.372721,
+          -19.560581
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00153",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.560581,
+        "longitude": -45.372721,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.38078,
+          -19.571511
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00154",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.571511,
+        "longitude": -45.38078,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.369193,
+          -19.568456
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00155",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.568456,
+        "longitude": -45.369193,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.36933,
+          -19.557453
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00156",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.557453,
+        "longitude": -45.36933,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.375636,
+          -19.567085
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00157",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.567085,
+        "longitude": -45.375636,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.375828,
+          -19.564992
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00158",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.564992,
+        "longitude": -45.375828,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.373217,
+          -19.560109
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00159",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.560109,
+        "longitude": -45.373217,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.371214,
+          -19.557023
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00160",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.557023,
+        "longitude": -45.371214,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.367036,
+          -19.558631
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00161",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.558631,
+        "longitude": -45.367036,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.369934,
+          -19.557857
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00162",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.557857,
+        "longitude": -45.369934,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.373391,
+          -19.558285
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00163",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.558285,
+        "longitude": -45.373391,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.371424,
+          -19.557879
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00164",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.557879,
+        "longitude": -45.371424,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.372717,
+          -19.559362
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00165",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.559362,
+        "longitude": -45.372717,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.372743,
+          -19.564926
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00166",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.564926,
+        "longitude": -45.372743,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.369525,
+          -19.57077
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00167",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.57077,
+        "longitude": -45.369525,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.370747,
+          -19.563943
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00168",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.563943,
+        "longitude": -45.370747,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.373747,
+          -19.564006
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00169",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.564006,
+        "longitude": -45.373747,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.378505,
+          -19.566989
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00170",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.566989,
+        "longitude": -45.378505,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.376854,
+          -19.564199
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00171",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.564199,
+        "longitude": -45.376854,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.377324,
+          -19.572498
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00172",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.572498,
+        "longitude": -45.377324,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.374424,
+          -19.557851
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00173",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.557851,
+        "longitude": -45.374424,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.381651,
+          -19.5698
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00174",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.5698,
+        "longitude": -45.381651,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.374355,
+          -19.562336
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00175",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.562336,
+        "longitude": -45.374355,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.37524,
+          -19.569413
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00176",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.569413,
+        "longitude": -45.37524,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.381173,
+          -19.564204
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00177",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.564204,
+        "longitude": -45.381173,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.364863,
+          -19.565864
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00178",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.565864,
+        "longitude": -45.364863,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.375528,
+          -19.568813
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00179",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.568813,
+        "longitude": -45.375528,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.378722,
+          -19.559161
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00180",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.559161,
+        "longitude": -45.378722,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.370971,
+          -19.565494
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00181",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.565494,
+        "longitude": -45.370971,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.37799,
+          -19.564885
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00182",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.564885,
+        "longitude": -45.37799,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Grande",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.380692,
+          -19.564388
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00183",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.564388,
+        "longitude": -45.380692,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.373653,
+          -19.560755
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00184",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.560755,
+        "longitude": -45.373653,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.376837,
+          -19.557717
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00185",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.557717,
+        "longitude": -45.376837,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.378264,
+          -19.566173
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00186",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.566173,
+        "longitude": -45.378264,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.372795,
+          -19.56382
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00187",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.56382,
+        "longitude": -45.372795,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.364934,
+          -19.563756
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00188",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.563756,
+        "longitude": -45.364934,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.36952,
+          -19.570499
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00189",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.570499,
+        "longitude": -45.36952,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.379038,
+          -19.559322
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00190",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.559322,
+        "longitude": -45.379038,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.379031,
+          -19.562097
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00191",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.562097,
+        "longitude": -45.379031,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.378798,
+          -19.572103
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00192",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.572103,
+        "longitude": -45.378798,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.3736,
+          -19.565228
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00193",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.565228,
+        "longitude": -45.3736,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.370222,
+          -19.560169
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00194",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.560169,
+        "longitude": -45.370222,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.374263,
+          -19.557997
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00195",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.557997,
+        "longitude": -45.374263,
+        "setor_economico": "Comércio",
+        "cluster_tipo": "Comércio",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.348567,
+          -19.581215
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00196",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.581215,
+        "longitude": -45.348567,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34996,
+          -19.583218
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00197",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.583218,
+        "longitude": -45.34996,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34414,
+          -19.582281
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00198",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.582281,
+        "longitude": -45.34414,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.357856,
+          -19.57986
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00199",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.57986,
+        "longitude": -45.357856,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.347359,
+          -19.582239
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00200",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.582239,
+        "longitude": -45.347359,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.346738,
+          -19.582588
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00201",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.582588,
+        "longitude": -45.346738,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.339385,
+          -19.579491
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00202",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.579491,
+        "longitude": -45.339385,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.341787,
+          -19.584553
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00203",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.584553,
+        "longitude": -45.341787,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.351317,
+          -19.593811
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00204",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.593811,
+        "longitude": -45.351317,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.348984,
+          -19.590686
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00205",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.590686,
+        "longitude": -45.348984,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.344827,
+          -19.590321
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00206",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.590321,
+        "longitude": -45.344827,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.349609,
+          -19.585527
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00207",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.585527,
+        "longitude": -45.349609,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.337014,
+          -19.583653
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00208",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.583653,
+        "longitude": -45.337014,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.346191,
+          -19.591202
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00209",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.591202,
+        "longitude": -45.346191,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.340831,
+          -19.587742
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00210",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.587742,
+        "longitude": -45.340831,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.340932,
+          -19.579402
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00211",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.579402,
+        "longitude": -45.340932,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.340627,
+          -19.589567
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00212",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.589567,
+        "longitude": -45.340627,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34683,
+          -19.579862
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00213",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.579862,
+        "longitude": -45.34683,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.341193,
+          -19.57975
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00214",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.57975,
+        "longitude": -45.341193,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.3459,
+          -19.576812
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00215",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.576812,
+        "longitude": -45.3459,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.345851,
+          -19.583539
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00216",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.583539,
+        "longitude": -45.345851,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.337942,
+          -19.582158
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00217",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.582158,
+        "longitude": -45.337942,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.338328,
+          -19.58333
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00218",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.58333,
+        "longitude": -45.338328,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.345986,
+          -19.589257
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00219",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.589257,
+        "longitude": -45.345986,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.343418,
+          -19.588162
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00220",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.588162,
+        "longitude": -45.343418,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.345565,
+          -19.582451
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00221",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.582451,
+        "longitude": -45.345565,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.342651,
+          -19.587293
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00222",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.587293,
+        "longitude": -45.342651,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.341808,
+          -19.582452
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00223",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.582452,
+        "longitude": -45.341808,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34678,
+          -19.596912
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00224",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.596912,
+        "longitude": -45.34678,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.339535,
+          -19.590499
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00225",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.590499,
+        "longitude": -45.339535,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.354466,
+          -19.575012
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00226",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.575012,
+        "longitude": -45.354466,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.346196,
+          -19.579953
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00227",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.579953,
+        "longitude": -45.346196,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.329956,
+          -19.582078
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00228",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.582078,
+        "longitude": -45.329956,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34123,
+          -19.579696
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00229",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.579696,
+        "longitude": -45.34123,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.344253,
+          -19.584106
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00230",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.584106,
+        "longitude": -45.344253,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.346763,
+          -19.58758
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00231",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.58758,
+        "longitude": -45.346763,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.346704,
+          -19.584533
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00232",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.584533,
+        "longitude": -45.346704,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.354729,
+          -19.589384
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00233",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.589384,
+        "longitude": -45.354729,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.337729,
+          -19.585775
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00234",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.585775,
+        "longitude": -45.337729,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.343926,
+          -19.589143
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00235",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.589143,
+        "longitude": -45.343926,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.344676,
+          -19.582259
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00236",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.582259,
+        "longitude": -45.344676,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.335777,
+          -19.597938
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00237",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.597938,
+        "longitude": -45.335777,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.346286,
+          -19.588685
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00238",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.588685,
+        "longitude": -45.346286,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Pequena",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.348489,
+          -19.568505
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00239",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.568505,
+        "longitude": -45.348489,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.348935,
+          -19.585057
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00240",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.585057,
+        "longitude": -45.348935,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.342134,
+          -19.587699
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00241",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.587699,
+        "longitude": -45.342134,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.348042,
+          -19.582005
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00242",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.582005,
+        "longitude": -45.348042,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Média",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.3424,
+          -19.587278
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00243",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.587278,
+        "longitude": -45.3424,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.338574,
+          -19.578
+        ]
+      },
+      "properties": {
+        "id": "3127109_EMP_00244",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.578,
+        "longitude": -45.338574,
+        "setor_economico": "Serviços",
+        "cluster_tipo": "Serviços",
+        "porte": "Micro",
+        "tipo_dados": "empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.349541,
+          -19.546948
+        ]
+      },
+      "properties": {
+        "id": "3127109_ERB_0000",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.546948,
+        "longitude": -45.349541,
+        "operadora": "Oi",
+        "tecnologia": "4G",
+        "cobertura_raio_km": 5.5,
+        "potencia_watts": 46,
+        "tipo_dados": "torre_celular"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.342855,
+          -19.576566
+        ]
+      },
+      "properties": {
+        "id": "3127109_ERB_0001",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.576566,
+        "longitude": -45.342855,
+        "operadora": "Vivo",
+        "tecnologia": "4G",
+        "cobertura_raio_km": 5.0,
+        "potencia_watts": 27,
+        "tipo_dados": "torre_celular"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.385485,
+          -19.60722
+        ]
+      },
+      "properties": {
+        "id": "3127109_ERB_0002",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.60722,
+        "longitude": -45.385485,
+        "operadora": "Claro",
+        "tecnologia": "4G",
+        "cobertura_raio_km": 5.3,
+        "potencia_watts": 51,
+        "tipo_dados": "torre_celular"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.374711,
+          -19.573008
+        ]
+      },
+      "properties": {
+        "id": "3127109_ERB_0003",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.573008,
+        "longitude": -45.374711,
+        "operadora": "Oi",
+        "tecnologia": "4G",
+        "cobertura_raio_km": 3.9,
+        "potencia_watts": 43,
+        "tipo_dados": "torre_celular"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.352543,
+          -19.578522
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0000",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.578522,
+        "longitude": -45.352543,
+        "tipo": "UPA",
+        "leitos_sus": 2,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.345305,
+          -19.546092
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0001",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.546092,
+        "longitude": -45.345305,
+        "tipo": "Centro de Saúde",
+        "leitos_sus": 1,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.367774,
+          -19.57009
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0002",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.57009,
+        "longitude": -45.367774,
+        "tipo": "Hospital",
+        "leitos_sus": 2,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.391732,
+          -19.550858
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0003",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.550858,
+        "longitude": -45.391732,
+        "tipo": "Centro de Saúde",
+        "leitos_sus": 4,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.346169,
+          -19.558878
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0004",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.558878,
+        "longitude": -45.346169,
+        "tipo": "Centro de Saúde",
+        "leitos_sus": 2,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.342098,
+          -19.594745
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0005",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.594745,
+        "longitude": -45.342098,
+        "tipo": "UPA",
+        "leitos_sus": 4,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.383051,
+          -19.574874
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0006",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.574874,
+        "longitude": -45.383051,
+        "tipo": "UPA",
+        "leitos_sus": 1,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.369085,
+          -19.556471
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0007",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.556471,
+        "longitude": -45.369085,
+        "tipo": "Posto de Saúde",
+        "leitos_sus": 3,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.371109,
+          -19.583745
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0008",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.583745,
+        "longitude": -45.371109,
+        "tipo": "Hospital",
+        "leitos_sus": 2,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.386197,
+          -19.597156
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0009",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.597156,
+        "longitude": -45.386197,
+        "tipo": "UPA",
+        "leitos_sus": 2,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.34927,
+          -19.596544
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0010",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.596544,
+        "longitude": -45.34927,
+        "tipo": "Hospital",
+        "leitos_sus": 3,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.36014,
+          -19.561486
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0011",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.561486,
+        "longitude": -45.36014,
+        "tipo": "Posto de Saúde",
+        "leitos_sus": 3,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.339189,
+          -19.557566
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0012",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.557566,
+        "longitude": -45.339189,
+        "tipo": "Centro de Saúde",
+        "leitos_sus": 1,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.363104,
+          -19.566828
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0013",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.566828,
+        "longitude": -45.363104,
+        "tipo": "Posto de Saúde",
+        "leitos_sus": 1,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.352777,
+          -19.595037
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0014",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.595037,
+        "longitude": -45.352777,
+        "tipo": "Posto de Saúde",
+        "leitos_sus": 4,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.36099,
+          -19.557749
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0015",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.557749,
+        "longitude": -45.36099,
+        "tipo": "Hospital",
+        "leitos_sus": 3,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.380588,
+          -19.587183
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0016",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.587183,
+        "longitude": -45.380588,
+        "tipo": "Hospital",
+        "leitos_sus": 3,
+        "tipo_dados": "saude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.382567,
+          -19.559992
+        ]
+      },
+      "properties": {
+        "id": "3127109_SAUDE_0017",
+        "municipio_codigo": "3127109",
+        "municipio_nome": "Goiana",
+        "latitude": -19.559992,
+        "longitude": -45.382567,
+        "tipo": "UPA",
+        "leitos_sus": 2,
+        "tipo_dados": "saude"
+      }
+    }
+  ]
+}

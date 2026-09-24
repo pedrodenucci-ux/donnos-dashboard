@@ -1,0 +1,22 @@
+{
+  "municipality_code": "3550308",
+  "city_name": "São Paulo",
+  "state": "SP",
+  "market_metrics": {
+    "bdi": {
+      "value": 19.0,
+      "scale": 100,
+      "description": "Brand Demand Index (from Vero quarterly)"
+    },
+    "cdi": {
+      "value": 70.0,
+      "scale": 100,
+      "description": "Category Demand Index"
+    }
+  },
+  "cluster": "C",
+  "recent_performance": {
+    "venda": 3
+  },
+  "updated_at": "2026-09-24T14:37:16.725273"
+}

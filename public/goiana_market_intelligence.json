@@ -1,0 +1,104 @@
+{
+  "municipality_code": "3127109",
+  "city_name": "Goiânia",
+  "market_metrics": {
+    "bdi": {
+      "description": "Brand Demand Index — Brand force within category",
+      "value": 87.5,
+      "scale": 100,
+      "interpretation": "Moderate brand strength relative to category demand"
+    },
+    "cdi": {
+      "description": "Category Demand Index — Market category potential",
+      "value": 124.3,
+      "scale": 100,
+      "interpretation": "Category demand 24.3% above national average"
+    },
+    "market_share_search": {
+      "description": "Share of Search — Brand visibility vs. category",
+      "value": 18.5,
+      "unit": "%",
+      "interpretation": "Controls 18.5% of category search volume"
+    }
+  },
+  "investment_sales": {
+    "elasticity": {
+      "description": "Media elasticity — Sales per R$1,000 invested",
+      "value": 12500,
+      "unit": "R$ (sales)",
+      "cities_analyzed": 217,
+      "data_period": "12 months"
+    },
+    "cac_paid": {
+      "description": "Paid channel Customer Acquisition Cost",
+      "value": 145.80,
+      "unit": "R$ (per customer)",
+      "trend": "stable"
+    },
+    "cac_organic": {
+      "description": "Organic channel Customer Acquisition Cost",
+      "value": 52.30,
+      "unit": "R$ (per customer)",
+      "trend": "improving"
+    },
+    "sales_split": {
+      "paid": {
+        "description": "Sales from paid channels",
+        "value": 62.5,
+        "unit": "%"
+      },
+      "organic": {
+        "description": "Sales from organic channels",
+        "value": 37.5,
+        "unit": "%"
+      }
+    }
+  },
+  "network_infrastructure": {
+    "homes_available": {
+      "description": "Network homes available to connect",
+      "value": 285450,
+      "unit": "homes"
+    },
+    "homes_connected": {
+      "description": "Currently connected homes",
+      "value": 67340,
+      "unit": "homes"
+    },
+    "penetration_rate": {
+      "description": "Market penetration",
+      "value": 23.6,
+      "unit": "%"
+    },
+    "take_up_potential": {
+      "description": "Potential additional connections",
+      "value": 218110,
+      "unit": "homes"
+    }
+  },
+  "competitive_positioning": {
+    "brand_awareness": {
+      "description": "Brand awareness vs. category",
+      "value": 87.5,
+      "unit": "%"
+    },
+    "category_interest": {
+      "description": "Category search volume relative to national avg",
+      "value": 124.3,
+      "unit": "%"
+    },
+    "competitive_segment": "Growth Market"
+  },
+  "segmentation": {
+    "cluster": 3,
+    "cluster_name": "High-Growth Emerging",
+    "characteristics": [
+      "Moderate brand strength with high category demand",
+      "Responsive to media investment",
+      "Significant network expansion potential",
+      "Balanced paid/organic acquisition mix"
+    ],
+    "strategic_priority": "Scale investment in paid channels; optimize organic conversion"
+  },
+  "updated_at": "2026-09-24T14:20:00Z"
+}

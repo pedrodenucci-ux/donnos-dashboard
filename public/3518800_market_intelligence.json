@@ -1,0 +1,22 @@
+{
+  "municipality_code": "3518800",
+  "city_name": "Guarulhos",
+  "state": "SP",
+  "market_metrics": {
+    "bdi": {
+      "value": 7.0,
+      "scale": 100,
+      "description": "Brand Demand Index (from Vero quarterly)"
+    },
+    "cdi": {
+      "value": 98.0,
+      "scale": 100,
+      "description": "Category Demand Index"
+    }
+  },
+  "cluster": "sem modelo",
+  "recent_performance": {
+    "venda": 0
+  },
+  "updated_at": "2026-09-24T14:37:16.735914"
+}

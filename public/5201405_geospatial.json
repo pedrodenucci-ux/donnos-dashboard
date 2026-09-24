@@ -1,0 +1,705 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.307594861795266,
+          -19.61883500699593
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.447697661393114,
+          -19.45317379973862
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.59068911887344,
+          -19.767666482482802
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.48410059106647,
+          -19.36820522956016
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.203800905445135,
+          -19.386858351289025
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.2771040443717,
+          -19.686647893484476
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.15825890601698,
+          -19.790698815555473
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.198096843530344,
+          -19.570249446238787
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.49825159509701,
+          -19.439726148842798
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.47011615407541,
+          -19.809337191689412
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.57614784847384,
+          -19.446889549643036
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.306124647275766,
+          -19.71243025437658
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.45697249649224,
+          -19.575431743304247
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.548081129819295,
+          -19.64539006705746
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.36168475265898,
+          -19.750645027883746
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.429221658186904,
+          -19.451000957421854
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.39274458347152,
+          -19.417650258133698
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.54058621863561,
+          -19.6918072036577
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.46182099655252,
+          -19.6599226745652
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.16472829911979,
+          -19.357505392316284
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.54596777116939,
+          -19.458469239843765
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.125731450082625,
+          -19.770635519124724
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.2282991140207,
+          -19.56494900198413
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.17541497541794,
+          -19.477843580323547
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.12528280549747,
+          -19.690894513842547
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.355512979319876,
+          -19.49454651940902
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.60867203119639,
+          -19.69983837883553
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.260306062333775,
+          -19.477778860425833
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.47223161404069,
+          -19.72641794736717
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.273433419955396,
+          -19.476905798530915
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.53226886202205,
+          -19.766336405460592
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.240551013145975,
+          -19.480785409081967
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.21157675296108,
+          -19.475437809587806
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.39731582432135,
+          -19.76555116801743
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.29638199201638,
+          -19.75774110194515
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.18865906666242,
+          -19.62769846055044
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.1453114965845,
+          -19.788852353461262
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.160310487789594,
+          -19.58985418078606
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.127208329255,
+          -19.330190549848496
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.354820700452,
+          -19.79354720172102
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.50377405644931,
+          -19.70284001141829
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.13088921268061,
+          -19.397452810758416
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.39639698785634,
+          -19.359557809710253
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.33951815904552,
+          -19.748870678076592
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.194358266547,
+          -19.537169973762907
+        ]
+      },
+      "properties": {
+        "tipo_dados": "saude",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.239429251229936,
+          -19.7127121360517
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.42099311498811,
+          -19.46920550115605
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.184465253794265,
+          -19.527661321444533
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.268576721410945,
+          -19.778580564005207
+        ]
+      },
+      "properties": {
+        "tipo_dados": "torre_celular",
+        "municipio_codigo": "5201405"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.39091001151275,
+          -19.525652075314692
+        ]
+      },
+      "properties": {
+        "tipo_dados": "empresa",
+        "municipio_codigo": "5201405"
+      }
+    }
+  ]
+}

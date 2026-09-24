@@ -1,0 +1,22 @@
+{
+  "municipality_code": "5208707",
+  "city_name": "Goiânia",
+  "state": "GO",
+  "market_metrics": {
+    "bdi": {
+      "value": 61.0,
+      "scale": 100,
+      "description": "Brand Demand Index (from Vero quarterly)"
+    },
+    "cdi": {
+      "value": 141.0,
+      "scale": 100,
+      "description": "Category Demand Index"
+    }
+  },
+  "cluster": "E",
+  "recent_performance": {
+    "venda": 495
+  },
+  "updated_at": "2026-09-24T14:37:16.731899"
+}

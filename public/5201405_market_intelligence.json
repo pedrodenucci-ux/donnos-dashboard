@@ -1,0 +1,22 @@
+{
+  "municipality_code": "5201405",
+  "city_name": "Aparecida de Goiânia",
+  "state": "GO",
+  "market_metrics": {
+    "bdi": {
+      "value": 38.0,
+      "scale": 100,
+      "description": "Brand Demand Index (from Vero quarterly)"
+    },
+    "cdi": {
+      "value": 124.0,
+      "scale": 100,
+      "description": "Category Demand Index"
+    }
+  },
+  "cluster": "E",
+  "recent_performance": {
+    "venda": 245
+  },
+  "updated_at": "2026-09-24T14:37:16.733685"
+}
