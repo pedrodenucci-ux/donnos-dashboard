@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import MapRenderer from '@/components/MapRenderer';
+import ThematicMapRenderer from '@/components/ThematicMapRenderer';
 import CityDropdown from '@/components/CityDropdown';
+import KPIGrid from '@/components/KPIGrid';
 
 export default function Home() {
   const [selectedCity, setSelectedCity] = useState(null);
@@ -16,14 +17,14 @@ export default function Home() {
     : `/data/5208707_geospatial.json`;
 
   return (
-    <div className="flex flex-col h-screen bg-gray-900">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-gray-800 text-white shadow-lg border-b border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-4">
+      <header className="bg-white shadow-sm border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-2xl font-bold">Donnos Dashboard</h1>
-              <p className="text-gray-400 text-sm mt-1">
+              <h1 className="text-3xl font-bold text-gray-900">Donnos Dashboard</h1>
+              <p className="text-gray-600 text-sm mt-1">
                 IEZ Territorial Intelligence
               </p>
             </div>
@@ -31,8 +32,8 @@ export default function Home() {
 
           {/* City Selector */}
           <div className="flex flex-col sm:flex-row sm:items-end gap-4">
-            <div className="flex-1">
-              <label className="block text-sm font-medium mb-2 text-gray-300">
+            <div className="flex-1 max-w-sm">
+              <label className="block text-sm font-medium mb-2 text-gray-700">
                 Select City
               </label>
               <CityDropdown
@@ -41,12 +42,9 @@ export default function Home() {
               />
             </div>
             {selectedCity && (
-              <div className="text-sm text-gray-300">
-                <span className="font-medium">
+              <div className="text-sm">
+                <span className="font-semibold text-gray-900">
                   {selectedCity.name}, {selectedCity.state}
-                </span>
-                <span className="ml-2 text-gray-400">
-                  ({selectedCity.population.toLocaleString()} inhabitants)
                 </span>
               </div>
             )}
@@ -55,26 +53,69 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-hidden">
-        <MapRenderer
-          geojsonUrl={geojsonUrl}
-          cityName={selectedCity?.name || 'Brazil'}
-        />
+      <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        {/* KPI Grid */}
+        <section className="mb-8">
+          <KPIGrid city={selectedCity} />
+        </section>
+
+        {/* Thematic Maps Grid */}
+        <section>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
+            Socioeconomic Indicators & Infrastructure
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="h-96">
+              <ThematicMapRenderer
+                geojsonUrl={geojsonUrl}
+                theme="densidade"
+                cityName={selectedCity?.name || 'Brazil'}
+              />
+            </div>
+            <div className="h-96">
+              <ThematicMapRenderer
+                geojsonUrl={geojsonUrl}
+                theme="socioeconômico"
+                cityName={selectedCity?.name || 'Brazil'}
+              />
+            </div>
+            <div className="h-96">
+              <ThematicMapRenderer
+                geojsonUrl={geojsonUrl}
+                theme="empresas"
+                cityName={selectedCity?.name || 'Brazil'}
+              />
+            </div>
+            <div className="h-96">
+              <ThematicMapRenderer
+                geojsonUrl={geojsonUrl}
+                theme="telecom"
+                cityName={selectedCity?.name || 'Brazil'}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Data Tables */}
+        <section className="mt-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
+            Market Intelligence
+          </h2>
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <p className="text-gray-500 text-center py-8">
+              {selectedCity
+                ? `Market data for ${selectedCity.name} coming soon...`
+                : 'Select a city to view market intelligence data'}
+            </p>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-gray-400 text-sm py-3 px-4 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto">
-          <p>
-            {selectedCity ? (
-              <>
-                <strong>{selectedCity.name}, {selectedCity.state}</strong> •{' '}
-                {selectedCity.population.toLocaleString()} inhabitants • Last
-                updated: {new Date().toLocaleDateString('pt-BR')}
-              </>
-            ) : (
-              'Select a city to view territorial intelligence data'
-            )}
+      <footer className="bg-white border-t border-gray-200 mt-12">
+        <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+          <p className="text-gray-500 text-sm text-center">
+            Donnos Dashboard © 2026 — IEZ Territorial Intelligence
           </p>
         </div>
       </footer>
