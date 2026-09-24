@@ -1,0 +1,8 @@
+name = "donnos-dashboard"
+type = "javascript"
+account_id = "c4d391d65c90bbe6898129c0b6dd6e41"
+pages_build_output_dir = "out"
+
+[build]
+command = "npm run build"
+cwd = "./"
