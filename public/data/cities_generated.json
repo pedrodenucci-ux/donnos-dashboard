@@ -1,40 +1,46 @@
 {
   "cities": [
     {
+      "ibge_code": "3127388",
+      "name": "Goianá",
+      "state": "MG",
+      "population": 4053,
+      "has_real_data": true
+    },
+    {
       "ibge_code": "3550308",
       "name": "São Paulo",
       "state": "SP",
-      "population": 11904961
+      "population": 11904961,
+      "demo": true
     },
     {
       "ibge_code": "3106200",
       "name": "Belo Horizonte",
       "state": "MG",
-      "population": 2415872
+      "population": 2415872,
+      "demo": true
     },
     {
       "ibge_code": "5208707",
       "name": "Goiânia",
       "state": "GO",
-      "population": 1503256
+      "population": 1503256,
+      "demo": true
     },
     {
       "ibge_code": "5201405",
       "name": "Aparecida de Goiânia",
       "state": "GO",
-      "population": 556021
+      "population": 556021,
+      "demo": true
     },
     {
       "ibge_code": "3518800",
       "name": "Guarulhos",
       "state": "SP",
-      "population": 1349100
-    },
-    {
-      "ibge_code": "3127388",
-      "name": "Goianá",
-      "state": "MG",
-      "population": 4053
+      "population": 1349100,
+      "demo": true
     }
   ]
 }

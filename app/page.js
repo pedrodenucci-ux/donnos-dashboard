@@ -1,21 +1,32 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ThematicMapRenderer from '@/components/ThematicMapRenderer';
-import ChoroplethRenderer from '@/components/ChoroplethRenderer';
+import ChoroplethMap from '@/components/ChoroplethMap';
 import CityDropdown from '@/components/CityDropdown';
 import KPIGrid from '@/components/KPIGrid';
 
+const THEME_KEYS = ['densidade', 'socioeconômico', 'empresas', 'telecom'];
+
 export default function Home() {
   const [selectedCity, setSelectedCity] = useState(null);
+  const [layer, setLayer] = useState('bairros');
+  const [summary, setSummary] = useState(null);
 
-  const handleCitySelect = (city) => {
-    setSelectedCity(city);
-  };
+  const real = Boolean(selectedCity?.has_real_data);
+  const code = selectedCity?.ibge_code;
 
-  const geojsonUrl = selectedCity
-    ? `/data/${selectedCity.ibge_code}_geospatial.json`
-    : `/data/5208707_geospatial.json`;
+  useEffect(() => {
+    setSummary(null);
+    if (!real) return;
+    fetch(`/data/${code}_summary.json`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then(setSummary)
+      .catch(() => setSummary(null));
+  }, [code, real]);
+
+  const geojsonUrl = code ? `/data/${code}_geospatial.json` : `/data/5208707_geospatial.json`;
+  const layerInfo = summary?.camadas?.[layer];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -38,7 +49,7 @@ export default function Home() {
                 Select City
               </label>
               <CityDropdown
-                onCitySelect={handleCitySelect}
+                onCitySelect={setSelectedCity}
                 selectedCity={selectedCity}
               />
             </div>
@@ -55,54 +66,75 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        {selectedCity?.demo && (
+          <div className="mb-6 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+            <strong>Dados de demonstração.</strong> Os pontos e indicadores desta cidade são sintéticos
+            (não vêm de fonte oficial) e não devem ser apresentados a clientes.
+          </div>
+        )}
+
         {/* KPI Grid */}
         <section className="mb-8">
-          <KPIGrid city={selectedCity} />
+          <KPIGrid city={selectedCity} summary={summary} />
         </section>
 
         {/* Thematic Maps Grid */}
         <section>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">
-            Socioeconomic Indicators & Infrastructure
-          </h2>
-          {selectedCity?.ibge_code === '3127388' ? (
-            <div className="h-96 rounded-lg overflow-hidden border border-gray-200">
-              <ChoroplethRenderer
-                cityCode={selectedCity.ibge_code}
-                cityName={selectedCity.name}
-              />
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="h-96">
-                <ThematicMapRenderer
-                  geojsonUrl={geojsonUrl}
-                  theme="densidade"
-                  cityName={selectedCity?.name || 'Brazil'}
-                />
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+            <h2 className="text-xl font-bold text-gray-900">
+              Socioeconomic Indicators & Infrastructure
+            </h2>
+            {real && (
+              <div className="inline-flex rounded-lg border border-gray-300 bg-white p-0.5 text-sm">
+                {[['bairros', 'Bairros (aproximados)'], ['setores', 'Setores IBGE (oficial)']].map(([k, label]) => (
+                  <button
+                    key={k}
+                    onClick={() => setLayer(k)}
+                    className={`px-3 py-1.5 rounded-md ${layer === k ? 'bg-gray-900 text-white' : 'text-gray-700 hover:bg-gray-100'}`}
+                  >
+                    {label}
+                  </button>
+                ))}
               </div>
-              <div className="h-96">
-                <ThematicMapRenderer
-                  geojsonUrl={geojsonUrl}
-                  theme="socioeconômico"
-                  cityName={selectedCity?.name || 'Brazil'}
-                />
+            )}
+          </div>
+
+          {real && layerInfo && (
+            <p className="text-xs text-gray-500 mb-3">
+              {layerInfo.nota}
+              {layer === 'bairros' && layerInfo.concordancia_cnpj != null &&
+                ` Validação: ${Math.round(layerInfo.concordancia_cnpj * 100)}% das empresas caem no bairro que declaram à Receita.`}
+              {' '}Limites tracejados = estimados.
+            </p>
+          )}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {THEME_KEYS.map((theme) => (
+              <div key={theme} className="h-96">
+                {!selectedCity ? (
+                  <div className="w-full h-full rounded-lg border border-gray-200 bg-gray-100" />
+                ) : real ? (
+                  <ChoroplethMap
+                    polygonsUrl={`/data/${code}_${layer}.geojson`}
+                    pointsUrl={`/data/${code}_pontos.geojson`}
+                    theme={theme}
+                  />
+                ) : (
+                  <ThematicMapRenderer
+                    geojsonUrl={geojsonUrl}
+                    theme={theme}
+                    cityName={selectedCity?.name || 'Brazil'}
+                  />
+                )}
               </div>
-              <div className="h-96">
-                <ThematicMapRenderer
-                  geojsonUrl={geojsonUrl}
-                  theme="empresas"
-                  cityName={selectedCity?.name || 'Brazil'}
-                />
-              </div>
-              <div className="h-96">
-                <ThematicMapRenderer
-                  geojsonUrl={geojsonUrl}
-                  theme="telecom"
-                  cityName={selectedCity?.name || 'Brazil'}
-                />
-              </div>
-            </div>
+            ))}
+          </div>
+
+          {real && summary && (
+            <p className="text-xs text-gray-500 mt-3">
+              <strong>Índice socioeconômico:</strong> {summary.indice_socioeconomico}.
+              {' '}<strong>Fontes:</strong> {summary.fontes.join(' · ')}.
+            </p>
           )}
         </section>
 

@@ -14,12 +14,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
@@ -28,12 +28,12 @@ jobs:
       - name: Build Next.js
         run: npm run build
 
+      # cloudflare/pages-action@1 não existe (a tag é v1, e a action foi descontinuada);
+      # o job falhava em "Set up job" antes de qualquer passo.
       - name: Deploy to Cloudflare Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: cloudflare/pages-action@1
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: donnos-dashboard
-          directory: out
-          productionBranch: main
+          command: pages deploy out --project-name=donnos-dashboard --branch=main

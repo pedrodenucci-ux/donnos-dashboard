@@ -1,0 +1,31 @@
+{
+  "ibge_code": "3127388",
+  "name": "Goianá",
+  "state": "MG",
+  "kpis": {
+    "populacao": 4053,
+    "empresas_ativas": 625,
+    "empresas_no_mapa": 512,
+    "erbs": 5,
+    "saude": 10
+  },
+  "camadas": {
+    "bairros": {
+      "n": 12,
+      "nota": "Bairros aproximados: nomes do CNEFE/IBGE 2022, limites estimados; zona rural = setores oficiais.",
+      "concordancia_cnpj": 0.741
+    },
+    "setores": {
+      "n": 13,
+      "nota": "Setores censitários oficiais IBGE 2022."
+    }
+  },
+  "indice_socioeconomico": "100 * média ponderada de min-max entre setores: 0,40 renda média do responsável + 0,20 alfabetização 15+ + 0,20 esgoto em rede + 0,20 água em rede; pesos renormalizados quando há sigilo IBGE",
+  "fontes": [
+    "IBGE Censo 2022 (setores, agregados, renda do responsável)",
+    "IBGE CNEFE 2022",
+    "Receita Federal CNPJ (2026-09)",
+    "Anatel ERBs (SMP)",
+    "CNES/Ministério da Saúde"
+  ]
+}
