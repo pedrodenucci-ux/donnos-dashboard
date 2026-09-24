@@ -82,7 +82,7 @@ export default function ThematicMapRenderer({ geojsonUrl, theme, cityName }) {
 
         map.current = new maplibregl.Map({
           container: mapContainer.current,
-          style: 'https://demotiles.maplibre.org/style.json',
+          style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
           center,
           zoom,
           pitch: 0,
