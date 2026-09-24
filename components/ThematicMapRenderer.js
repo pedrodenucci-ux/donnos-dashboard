@@ -14,28 +14,28 @@ export default function ThematicMapRenderer({ geojsonUrl, theme, cityName }) {
     densidade: {
       title: 'População',
       icon: '👥',
-      filter: ['in', ['get', 'type'], ['literal', ['empresa', 'torre', 'saúde']]],
-      color: ['interpolate', ['linear'], ['feature-state', 'intensity'], 0, '#90EE90', 0.5, '#FFD700', 1, '#FF4500'],
-      radius: 8,
+      filter: ['in', ['get', 'tipo_dados'], ['literal', ['empresa', 'torre_celular', 'saude']]],
+      color: '#6b7280',
+      radius: 6,
     },
     socioeconômico: {
       title: 'Índice Socioeconômico',
       icon: '📊',
-      filter: ['==', ['get', 'type'], 'saúde'],
+      filter: ['==', ['get', 'tipo_dados'], 'saude'],
       color: '#10b981',
       radius: 7,
     },
     empresas: {
       title: 'Concentração Empresas',
       icon: '🏢',
-      filter: ['==', ['get', 'type'], 'empresa'],
+      filter: ['==', ['get', 'tipo_dados'], 'empresa'],
       color: '#3b82f6',
       radius: 6,
     },
     telecom: {
       title: 'Infraestrutura Telecom',
       icon: '📡',
-      filter: ['==', ['get', 'type'], 'torre'],
+      filter: ['==', ['get', 'tipo_dados'], 'torre_celular'],
       color: '#ef4444',
       radius: 7,
     },
@@ -57,10 +57,11 @@ export default function ThematicMapRenderer({ geojsonUrl, theme, cityName }) {
 
         // Filter features by theme
         const filteredFeatures = geojson.features.filter((feature) => {
+          const tipo = feature.properties.tipo_dados;
           if (theme === 'densidade') return true;
-          if (theme === 'socioeconômico') return feature.properties.type === 'saúde';
-          if (theme === 'empresas') return feature.properties.type === 'empresa';
-          if (theme === 'telecom') return feature.properties.type === 'torre';
+          if (theme === 'socioeconômico') return tipo === 'saude';
+          if (theme === 'empresas') return tipo === 'empresa';
+          if (theme === 'telecom') return tipo === 'torre_celular';
           return true;
         });
 
