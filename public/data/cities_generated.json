@@ -29,6 +29,12 @@
       "name": "Guarulhos",
       "state": "SP",
       "population": 1349100
+    },
+    {
+      "ibge_code": "3127388",
+      "name": "Goianá",
+      "state": "MG",
+      "population": 4053
     }
   ]
 }

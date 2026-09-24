@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ThematicMapRenderer from '@/components/ThematicMapRenderer';
+import ChoroplethRenderer from '@/components/ChoroplethRenderer';
 import CityDropdown from '@/components/CityDropdown';
 import KPIGrid from '@/components/KPIGrid';
 
@@ -64,36 +65,45 @@ export default function Home() {
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Socioeconomic Indicators & Infrastructure
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="h-96">
-              <ThematicMapRenderer
-                geojsonUrl={geojsonUrl}
-                theme="densidade"
-                cityName={selectedCity?.name || 'Brazil'}
+          {selectedCity?.ibge_code === '3127388' ? (
+            <div className="h-96 rounded-lg overflow-hidden border border-gray-200">
+              <ChoroplethRenderer
+                cityCode={selectedCity.ibge_code}
+                cityName={selectedCity.name}
               />
             </div>
-            <div className="h-96">
-              <ThematicMapRenderer
-                geojsonUrl={geojsonUrl}
-                theme="socioeconômico"
-                cityName={selectedCity?.name || 'Brazil'}
-              />
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="h-96">
+                <ThematicMapRenderer
+                  geojsonUrl={geojsonUrl}
+                  theme="densidade"
+                  cityName={selectedCity?.name || 'Brazil'}
+                />
+              </div>
+              <div className="h-96">
+                <ThematicMapRenderer
+                  geojsonUrl={geojsonUrl}
+                  theme="socioeconômico"
+                  cityName={selectedCity?.name || 'Brazil'}
+                />
+              </div>
+              <div className="h-96">
+                <ThematicMapRenderer
+                  geojsonUrl={geojsonUrl}
+                  theme="empresas"
+                  cityName={selectedCity?.name || 'Brazil'}
+                />
+              </div>
+              <div className="h-96">
+                <ThematicMapRenderer
+                  geojsonUrl={geojsonUrl}
+                  theme="telecom"
+                  cityName={selectedCity?.name || 'Brazil'}
+                />
+              </div>
             </div>
-            <div className="h-96">
-              <ThematicMapRenderer
-                geojsonUrl={geojsonUrl}
-                theme="empresas"
-                cityName={selectedCity?.name || 'Brazil'}
-              />
-            </div>
-            <div className="h-96">
-              <ThematicMapRenderer
-                geojsonUrl={geojsonUrl}
-                theme="telecom"
-                cityName={selectedCity?.name || 'Brazil'}
-              />
-            </div>
-          </div>
+          )}
         </section>
 
         {/* Data Tables */}
