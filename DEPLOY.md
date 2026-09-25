@@ -12,94 +12,40 @@ This dashboard is configured for automatic deployment to Cloudflare Pages.
 
 ### Setup Steps
 
-#### 1. Connect Repository to Cloudflare Pages
+O deploy é feito pelo GitHub Actions (`.github/workflows/deploy.yml`) com
+`wrangler pages deploy`. O projeto Pages `donnos-dashboard` é do tipo
+"Direct Upload" — não conecte o repositório pelo "Connect to Git" do Cloudflare,
+senão os dois mecanismos brigam.
 
-1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/)
-2. Navigate to "Pages"
-3. Click "Connect to Git"
-4. Authorize GitHub and select the `donnos-dashboard` repository
-5. Click "Begin setup"
+#### 1. Build
 
-#### 2. Configure Build Settings
-
-**Build configuration:**
 ```
 Build command: npm run build
-Build output directory: .next
-Node.js version: 18.x
+Build output directory: out   (next.config.js usa output: 'export')
+Node.js version: 20
 ```
 
-**Environment variables:**
-```
-NODE_ENV=production
-```
+#### 2. Criar o API token no Cloudflare
 
-#### 3. Set Custom Domain (Optional)
+1. https://dash.cloudflare.com/profile/api-tokens → **Create Token** → **Create Custom Token**
+2. Permissions: **Account → Cloudflare Pages → Edit**
+3. Account Resources: **Include → a conta onde está o projeto `donnos-dashboard`**
+4. Crie e copie o token (aparece só uma vez)
 
-1. In Cloudflare Pages dashboard, go to your project
-2. Click "Custom domains"
-3. Add `dashboard.donnos.com.br`
-4. Update DNS records in your domain provider
+#### 3. Secrets no GitHub
 
-#### 4. GitHub Actions (Optional)
+Repository → Settings → Secrets and variables → Actions → New repository secret:
 
-For additional control over deployments, create `.github/workflows/deploy.yml`:
+- `CLOUDFLARE_API_TOKEN`: o token do passo 2
+- `CLOUDFLARE_ACCOUNT_ID`: o ID da conta (aparece na URL do dashboard,
+  `dash.cloudflare.com/<ACCOUNT_ID>/...`)
 
-```yaml
-name: Deploy to Cloudflare Pages
+Depois, rode o workflow em Actions → "Deploy to Cloudflare Pages" → **Run workflow**.
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+#### 4. Custom Domain (opcional)
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: donnos-dashboard
-          directory: .next
-```
-
-### Environment Variables Setup
-
-#### Cloudflare Pages
-
-Set these in your project settings:
-
-- `NODE_ENV`: `production`
-- `NEXT_PUBLIC_API_URL`: Your API endpoint
-- `NEXT_PUBLIC_API_KEY`: Your API key (if needed)
-
-#### GitHub Secrets (for GitHub Actions)
-
-1. Go to repository Settings → Secrets → New repository secret
-2. Add:
-   - `CLOUDFLARE_API_TOKEN`: Get from Cloudflare Dashboard
-   - `CLOUDFLARE_ACCOUNT_ID`: Your Cloudflare account ID
+1. No projeto Pages, vá em "Custom domains"
+2. Adicione `dashboard.donnos.com.br`
 
 ### Deployment URLs
 
@@ -111,6 +57,10 @@ Set these in your project settings:
 **Build fails with "Module not found"**
 - Ensure all dependencies are in `package.json`
 - Run `npm install` locally to verify
+
+**`Authentication error [code: 10000]` no passo de deploy**
+- O token não tem a permissão "Cloudflare Pages: Edit", ou é de outra conta que não a de `CLOUDFLARE_ACCOUNT_ID`
+- Recrie o token (passo 2) e atualize o secret
 
 **Pages shows 404**
 - Check build output directory in settings
