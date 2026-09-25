@@ -1,0 +1,30 @@
+{
+  "ibge_code": "5208707",
+  "nome": "Goiânia",
+  "estado": "GO",
+  "populacao": null,
+  "densidade": null,
+  "indice_socioeconomico": null,
+  "empresas_ativas": 22,
+  "estabelecimentos_cnes": 33,
+  "erbs_anatel": 20,
+  "total_features": 75,
+  "fontes": [
+    "IBGE",
+    "Anatel",
+    "CNES",
+    "Cérebro Brasil (pending)"
+  ],
+  "camadas": {
+    "bairros": {
+      "label": "Bairros / Distritos",
+      "arquivo": "5208707_bairros.geojson",
+      "status": "pending"
+    },
+    "setores": {
+      "label": "Setores Censitários (IBGE)",
+      "arquivo": "5208707_setores.geojson",
+      "status": "pending"
+    }
+  }
+}

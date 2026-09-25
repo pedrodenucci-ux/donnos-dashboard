@@ -1,0 +1,30 @@
+{
+  "ibge_code": "3550308",
+  "nome": "São Paulo",
+  "estado": "SP",
+  "populacao": null,
+  "densidade": null,
+  "indice_socioeconomico": null,
+  "empresas_ativas": 214,
+  "estabelecimentos_cnes": 196,
+  "erbs_anatel": 185,
+  "total_features": 595,
+  "fontes": [
+    "IBGE",
+    "Anatel",
+    "CNES",
+    "Cérebro Brasil (pending)"
+  ],
+  "camadas": {
+    "bairros": {
+      "label": "Bairros / Distritos",
+      "arquivo": "3550308_bairros.geojson",
+      "status": "pending"
+    },
+    "setores": {
+      "label": "Setores Censitários (IBGE)",
+      "arquivo": "3550308_setores.geojson",
+      "status": "pending"
+    }
+  }
+}
