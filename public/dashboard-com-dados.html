@@ -270,7 +270,11 @@ function renderMaps(bairros, pontos) {
     // Draw bairros
     bairros.features.forEach(f => {
       const val = f.properties[theme.prop] || 0;
-      const ratio = (val - min) / (max - min || 1);
+      let ratio = (val - min) / (max - min || 1);
+      // Use logarithmic scale for population_density to better distribute colors
+      if (theme.id === 'map-density' && val > 0 && min > 0) {
+        ratio = (Math.log(val) - Math.log(min)) / (Math.log(max) - Math.log(min) || 1);
+      }
       const colorIdx = Math.round(ratio * (theme.colors.length - 1));
       const color = theme.colors[colorIdx];
 
@@ -320,7 +324,9 @@ function renderMaps(bairros, pontos) {
             const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             circle.setAttribute('cx', px);
             circle.setAttribute('cy', py);
-            circle.setAttribute('r', '0.004');
+            // Larger circles for companies (map 3), smaller for towers (map 4)
+            const radius = theme.id === 'map-companies' ? '0.008' : '0.004';
+            circle.setAttribute('r', radius);
             circle.setAttribute('fill', color);
             circle.setAttribute('stroke', 'none');
             circle.setAttribute('opacity', '0.8');
