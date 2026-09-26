@@ -307,18 +307,26 @@ function renderMaps(bairros, pontos) {
           cx /= coordCount;
           cy /= coordCount;
 
-          // For companies map, render only 1 circle per neighborhood; for telecom, render per tower
+          // For companies map, render circles for each enterprise distributed; for telecom, render per tower
           if (theme.id === 'map-companies') {
-            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-            circle.setAttribute('cx', cx);
-            circle.setAttribute('cy', cy);
-            circle.setAttribute('r', '0.002');
-            circle.setAttribute('fill', '#e74c3c');
-            circle.setAttribute('stroke', 'none');
-            circle.setAttribute('opacity', '0.8');
-            circle.style.pointerEvents = 'none';
-            circle.title = `Empresas em ${f.properties.neighborhood_name}: ${pointCount}`;
-            svg.appendChild(circle);
+            // Distribute enterprises around the centroid
+            for (let i = 0; i < pointCount; i++) {
+              const angle = (i / pointCount) * Math.PI * 2;
+              const radius = 0.015 + (Math.random() * 0.01); // Random radius from 0.015 to 0.025
+              const px = cx + radius * Math.cos(angle);
+              const py = cy + radius * Math.sin(angle);
+
+              const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+              circle.setAttribute('cx', px);
+              circle.setAttribute('cy', py);
+              circle.setAttribute('r', '0.0008');
+              circle.setAttribute('fill', '#e74c3c');
+              circle.setAttribute('stroke', 'none');
+              circle.setAttribute('opacity', '0.8');
+              circle.style.pointerEvents = 'none';
+              circle.title = `Empresa em ${f.properties.neighborhood_name}`;
+              svg.appendChild(circle);
+            }
           } else {
             // Telecom: create circles for each tower with operator colors
             for (let i = 0; i < pointCount; i++) {
