@@ -320,11 +320,10 @@ function renderMaps(bairros, pontos) {
             const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             circle.setAttribute('cx', px);
             circle.setAttribute('cy', py);
-            circle.setAttribute('r', '0.012');
+            circle.setAttribute('r', '0.004');
             circle.setAttribute('fill', color);
-            circle.setAttribute('stroke', '#fff');
-            circle.setAttribute('stroke-width', '0.003');
-            circle.setAttribute('opacity', '0.95');
+            circle.setAttribute('stroke', 'none');
+            circle.setAttribute('opacity', '0.8');
             circle.style.pointerEvents = 'none';
             const label = theme.id === 'map-companies' ? 'Empresa' : 'Torre';
             circle.title = `${label} em ${f.properties.neighborhood_name}`;
