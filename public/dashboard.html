@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1536, initial-scale=1.0">
+<title>Goianá (MG) — Cérebro Brasil | Dashboard Indicadores</title>
+<style>
+:root{
+  --navy:#07376b; --navy2:#0b447d; --blue:#1767a7; --pale:#edf6fc;
+  --line:#c9d9e6; --text:#123b61; --muted:#54708a; --white:#fff;
+  --orange:#ef8a27; --red:#df3434; --purple:#c43b9d; --green:#3dbb98;
+  --gray-light:#f8fbfd; --gray-border:#d5e0e7; --gray-text:#536e83;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#dfe7ed;font-family:'Segoe UI',Arial,Helvetica,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased}
+body{min-width:1536px}
+.sheet{width:1536px;min-height:1024px;margin:0 auto;background:#fff;position:relative;overflow:hidden;box-shadow:0 0 20px rgba(0,0,0,0.1)}
+.header{height:105px;background:linear-gradient(135deg,#07376b 0%,#0b447d 100%);color:#fff;display:grid;grid-template-columns:205px 1fr 365px;align-items:center;padding:0 24px 0 16px;border-bottom:1px solid #05264f}
+.logoMark{height:70px;border-right:2px solid rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;position:relative}
+.logoMark:before{content:"";width:32px;height:46px;border:2px solid #fff;clip-path:polygon(50% 0,100% 25%,82% 90%,50% 100%,18% 90%,0 25%);opacity:.85}
+.logoMark:after{content:"CÉREBRO BRASIL";font-size:9px;letter-spacing:1.5px;position:absolute;margin-top:58px;color:rgba(255,255,255,.9);font-weight:700}
+.headMain{padding-left:18px}
+.headTitle{font-size:28px;font-weight:800;letter-spacing:-.5px;line-height:1.1}
+.headTitle span{font-size:19px;font-weight:700;margin-left:12px;letter-spacing:-.3px}
+.headSub{margin-top:16px;font-size:14px;letter-spacing:3px;font-weight:600;color:rgba(255,255,255,.85)}
+.headRight{font-size:14px;line-height:1.4;text-align:left;border-left:1px solid rgba(255,255,255,.25);padding-left:22px;color:rgba(255,255,255,.95)}
+.headRight b{font-size:16px;font-weight:800;display:block;margin-bottom:4px}
+.content{padding:12px 16px 0}
+.top{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;height:569px;margin-bottom:8px}
+.card{border:1px solid var(--line);border-radius:2px;overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,0.04)}
+.cardHead{height:34px;background:linear-gradient(90deg,#083c70 0%,#0a4d89 100%);color:#fff;padding:7px 10px;font-weight:800;font-size:15px;display:flex;align-items:center;border-bottom:1px solid #05284f}
+.cardSub{height:34px;padding:7px 11px 6px;font-size:11px;color:#2d526f;background:var(--gray-light);border-bottom:1px solid #eef2f5;line-height:1.3}
+.mapContainer{height:406px;position:relative;background:#f5f7f9;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.map{position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.92),rgba(220,230,226,.8) 55%,rgba(198,211,218,.88));z-index:1}
+.map:before{content:"";position:absolute;left:19%;top:8%;width:62%;height:83%;clip-path:polygon(50% 0,72% 10%,82% 29%,100% 45%,86% 63%,91% 81%,66% 88%,48% 100%,30% 90%,8% 82%,15% 60%,0 45%,16% 27%,25% 11%);background:linear-gradient(145deg,#f9fbfd,#e0ecf3 35%,#bfd6e2 65%,#e9f2f6);border:3px solid #fff;box-shadow:0 0 0 1px #7a98a8;z-index:2}
+.mapGrid{position:absolute;inset:0;opacity:.2;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:36px 36px;z-index:1;pointer-events:none}
+.road{position:absolute;height:4px;background:#e5b52b;border-radius:5px;transform-origin:left center;z-index:2;box-shadow:0 1px 2px rgba(0,0,0,0.15)}
+.r1{left:8%;top:65%;width:82%;transform:rotate(-17deg)} .r2{left:29%;top:10%;width:67%;transform:rotate(58deg)}
+.r3{left:18%;top:83%;width:75%;transform:rotate(-2deg)}
+.cityDot{position:absolute;width:14px;height:14px;border-radius:50%;background:#e74c3c;border:2.5px solid #fff;left:53%;top:57%;box-shadow:0 2px 4px rgba(0,0,0,0.25);z-index:3}
+.cityLabel{position:absolute;left:48%;top:62%;font-weight:800;font-size:17px;color:#123e65;z-index:3;white-space:nowrap}
+.neighbor{position:absolute;font-size:11px;color:#2a3f4e;background:rgba(255,255,255,.75);padding:3px 5px;border-radius:2px;z-index:2;box-shadow:0 1px 2px rgba(0,0,0,0.08);font-weight:600}
+.n1{left:12%;top:12%}.n2{right:9%;top:13%}.n3{left:8%;top:37%}.n4{right:7%;top:39%}.n5{left:8%;bottom:24%}.n6{right:5%;bottom:22%}.n7{left:39%;bottom:5%}
+.scale{position:absolute;left:36px;top:16px;color:#1a3e54;font-size:10px;z-index:3;font-weight:600;letter-spacing:.5px}.scale:after{content:"";display:block;width:168px;border-top:2.5px solid #1a3e54;margin-top:5px}
+.north{position:absolute;left:20px;bottom:50px;font-size:24px;z-index:3;font-weight:800;color:#0f2a42;text-shadow:0 1px 1px rgba(255,255,255,.5)}
+.mapCaption{height:95px;padding:9px 11px;font-size:12px;line-height:1.3;color:#305980;background:#f0f8fd;border-top:1px solid #dce9f0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.legend{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.96);border:1px solid #b8cad5;border-radius:2px;padding:8px 10px;font-size:9.5px;line-height:1.5;z-index:3;min-width:140px;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+.legend b{font-size:11px;display:block;margin-bottom:4px;color:#0a3a56;font-weight:800}
+.sw{display:inline-block;width:13px;height:10px;margin-right:5px;border:1px solid #999;vertical-align:middle;border-radius:1px}
+.dataRows{display:flex;gap:8px;height:286px;margin-top:8px}
+.profile{width:22.5%;border:1px solid var(--line);background:#fff;border-radius:2px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,0.04)}
+.profileTitle,.tableTitle{height:34px;background:linear-gradient(90deg,#083c70 0%,#0a4d89 100%);color:#fff;font-weight:800;padding:8px 10px;font-size:13px;border-bottom:1px solid #05284f;display:flex;align-items:center}
+.profileBody{padding:8px 9px;overflow-y:auto;max-height:calc(100% - 34px)}
+.metric{display:grid;grid-template-columns:36px 1fr 120px;min-height:49px;border-bottom:1px solid #e7ecf1;align-items:center;gap:6px;padding:2px 0}
+.metric .ico{font-size:24px;text-align:center;filter:drop-shadow(0 1px 1px rgba(0,0,0,0.05))}.metric b{font-size:19px;font-weight:800;color:#0a3450}.metric small{display:block;font-size:9.5px;color:#5a7a92;margin-top:1px;font-weight:500}.metric .desc{font-size:9px;color:#4a6278;line-height:1.3;padding-right:2px}
+.tables{width:77.5%;display:grid;grid-template-columns:1.35fr 1.15fr .72fr;gap:8px}
+.tableCard{border:1px solid var(--line);background:#fff;overflow:hidden;border-radius:2px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,0.04)}
+.tableHead{height:34px;background:linear-gradient(90deg,#083c70 0%,#0a4d89 100%);color:#fff;padding:8px 10px;font-size:12px;font-weight:800;border-bottom:1px solid #05284f;display:flex;align-items:center}
+.tableBody{flex:1;overflow-y:auto}
+table{width:100%;border-collapse:collapse;font-size:10px}
+th{background:#ecf4fa;font-weight:800;color:#1a4d6e;padding:6px 7px;border-bottom:1.5px solid #d0e0e9;text-align:left}
+td{padding:6px 7px;border-bottom:1px solid #e5ecf1;color:#2a5069;font-weight:500}
+td.num{text-align:right;font-weight:700;color:#0a3450}
+.bar{height:12px;background:#e5ecf0;position:relative;min-width:72px;border-radius:1px;overflow:hidden}.bar i{display:block;height:100%;border-radius:0.5px}
+.b1{width:88%;background:#b449a6}.b2{width:77%;background:#e63b32}.b3{width:39%;background:#2478b7}.b4{width:5%;background:#d0d8e0}
+.check{font-size:17px;color:#15a368;text-align:center;font-weight:800;line-height:1}
+.insight{height:auto;min-height:56px;margin:8px;background:linear-gradient(135deg,#f0f8fd 0%,#e8f4fb 100%);border-radius:3px;border:1px solid #dfe9f0;padding:9px;font-size:10px;line-height:1.4;color:#3d647f;font-weight:500}
+.insight b{color:#0a3a56;font-weight:800;display:inline-block;margin-right:8px}
+.footer{position:absolute;bottom:0;left:0;right:0;height:48px;border-top:1px solid var(--gray-border);background:linear-gradient(180deg,#fff 0%,#fafbfc 100%);display:flex;align-items:center;padding:0 26px;color:#1a3d63;font-size:12px}
+.footer .brand{font-size:20px;font-weight:800;margin-right:32px;color:#0a3a56}.footer .nav{font-size:11px;letter-spacing:2px;font-weight:600;color:#3d657e}.footer .source{margin-left:auto;font-size:8.5px;max-width:640px;color:#5a7a92;line-height:1.3}
+.footer .tag{margin-left:24px;font-weight:800;font-size:12px;color:#0a3a56;letter-spacing:.5px}
+.editable{outline:none;transition:all 0.2s ease}.editable:focus{box-shadow:inset 0 0 0 2px #f0c954;background:#fffde6}
+input,textarea{font:inherit;border:0;background:transparent;color:inherit;outline:none;width:100%}
+.editNote{position:absolute;right:16px;top:8px;font-size:8px;color:#a8c5dc;letter-spacing:.4px;font-weight:700}
+button{position:fixed;right:20px;bottom:20px;background:linear-gradient(135deg,#0a4d89 0%,#082d5f 100%);color:#fff;border:0;border-radius:4px;padding:11px 16px;font-weight:700;font-size:12px;cursor:pointer;z-index:20;letter-spacing:.5px;box-shadow:0 2px 6px rgba(0,0,0,0.15);transition:all 0.2s ease;text-transform:uppercase}
+button:hover{background:linear-gradient(135deg,#082d5f 0%,#051f3f 100%);box-shadow:0 3px 8px rgba(0,0,0,0.2)}
+button:active{transform:translateY(1px)}
+@media print{
+  body{background:#fff}
+  .sheet{margin:0;box-shadow:none}
+  button{display:none}
+  .header{box-shadow:none}
+}
+</style>
+</head>
+<body>
+<div class="sheet" id="sheet">
+
+<header class="header">
+  <div class="logoMark"></div>
+  <div class="headMain">
+    <div class="headTitle editable" contenteditable="true">GOIANÁ (MG) <span>| INDICADORES SOCIOECONÔMICOS E INFRAESTRUTURA</span></div>
+    <div class="headSub editable" contenteditable="true">POPULAÇÃO • RENDA • EMPRESAS • TELECOM • OPORTUNIDADES</div>
+  </div>
+  <div class="headRight editable" contenteditable="true">
+    <b>DADOS QUE REVELAM<br>OPORTUNIDADES.</b>INTELIGÊNCIA QUE GERA AÇÃO.
+  </div>
+  <div class="editNote">DASHBOARD HTML EDITÁVEL</div>
+</header>
+
+<main class="content">
+<section class="top">
+
+<!-- CARD 1: DENSIDADE POPULACIONAL -->
+<div class="card">
+  <div class="cardHead editable" contenteditable="true">1. DENSIDADE POPULACIONAL</div>
+  <div class="cardSub editable" contenteditable="true">Habitantes por km² (Censo 2022 – Setor Censitário)</div>
+  <div class="mapContainer">
+    <div class="map" id="map-density">
+      <div class="mapGrid"></div>
+      <div class="north">N</div>
+      <div class="scale">0&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;6 km</div>
+      <div class="road r1"></div>
+      <div class="road r2"></div>
+      <div class="road r3"></div>
+      <div class="cityDot"></div>
+      <div class="cityLabel editable" contenteditable="true">Goianá</div>
+      <span class="neighbor n1">Bicas</span>
+      <span class="neighbor n2">Mar de Espanha</span>
+      <span class="neighbor n3">Chácara</span>
+      <span class="neighbor n4">Pequeri</span>
+      <span class="neighbor n5">Descoberto</span>
+      <span class="neighbor n6">São João Nepomuceno</span>
+      <span class="neighbor n7">Rochedo de Minas</span>
+    </div>
+    <div class="legend">
+      <b>Habitantes por km²</b>
+      <br><span class="sw" style="background:#fff5d9"></span>0 – 25
+      <br><span class="sw" style="background:#ffe3a9"></span>26 – 100
+      <br><span class="sw" style="background:#f8b45d"></span>101 – 250
+      <br><span class="sw" style="background:#e96939"></span>251 – 500
+      <br><span class="sw" style="background:#c83b31"></span>501 – 1.000
+      <br><span class="sw" style="background:#9f172e"></span>&gt; 1.000
+    </div>
+  </div>
+  <div class="mapCaption editable" contenteditable="true">A maior concentração populacional está na área urbana de Goianá, com setores censitários acima de 1.000 hab./km². As áreas periféricas mostram densidade progressivamente menor.</div>
+</div>
+
+<!-- CARD 2: ÍNDICE SOCIOECONÔMICO -->
+<div class="card">
+  <div class="cardHead editable" contenteditable="true">2. ÍNDICE SOCIOECONÔMICO (ISE)</div>
+  <div class="cardSub editable" contenteditable="true">Composto: renda, escolaridade, domicílios, infraestrutura (Censo 2022)</div>
+  <div class="mapContainer">
+    <div class="map" id="map-ise" style="background:linear-gradient(135deg,#0f518a,#2393a8 28%,#5fb878 48%,#ead956 60%,#c9387a 76%,#1a5496 92%);opacity:.84">
+      <div class="mapGrid"></div>
+      <div class="north">N</div>
+      <div class="scale">0&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;6 km</div>
+      <div class="cityDot"></div>
+      <div class="cityLabel">Goianá</div>
+      <span class="neighbor n1">Bicas</span>
+      <span class="neighbor n2">Mar de Espanha</span>
+      <span class="neighbor n3">Chácara</span>
+      <span class="neighbor n4">Pequeri</span>
+      <span class="neighbor n5">Descoberto</span>
+      <span class="neighbor n6">São João Nepomuceno</span>
+      <span class="neighbor n7">Rochedo de Minas</span>
+    </div>
+    <div class="legend">
+      <b>Índice Socioeconômico</b>
+      <br><span class="sw" style="background:#0f518a"></span>Muito alto (81 – 100)
+      <br><span class="sw" style="background:#2393a8"></span>Alto (61 – 80)
+      <br><span class="sw" style="background:#5fb878"></span>Médio (41 – 60)
+      <br><span class="sw" style="background:#ead956"></span>Baixo (21 – 40)
+      <br><span class="sw" style="background:#c9387a"></span>Muito baixo (0 – 20)
+    </div>
+  </div>
+  <div class="mapCaption editable" contenteditable="true">Os maiores índices socioeconômicos concentram-se na área urbana e ao longo do eixo da MG-447. Áreas rurais apresentam índices inferiores, indicando disparidade intra-urbana.</div>
+</div>
+
+<!-- CARD 3: CONCENTRAÇÃO DE EMPRESAS -->
+<div class="card">
+  <div class="cardHead editable" contenteditable="true">3. CONCENTRAÇÃO DE EMPRESAS</div>
+  <div class="cardSub editable" contenteditable="true">Empresas ativas por setores (Receita Federal, 2024)</div>
+  <div class="mapContainer">
+    <div class="map" id="map-companies">
+      <div class="mapGrid"></div>
+      <div class="north">N</div>
+      <div class="scale">0&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;6 km</div>
+      <div class="cityDot"></div>
+      <div class="cityLabel">Goianá</div>
+      <script>
+      (function(){
+        const container = document.currentScript.parentElement.querySelector('.map');
+        const dots = Array.from({length:70},(_,i)=>{
+          const size = 3 + (i%5)*2;
+          return `<i style="position:absolute;width:${size}px;height:${size}px;border-radius:50%;background:#2878c8;border:1.5px solid #fff;left:${15+(i*37)%72}%;top:${8+(i*53)%78}%;box-shadow:0 1px 2px rgba(0,0,0,0.12)"></i>`;
+        }).join('');
+        container.insertAdjacentHTML('beforeend', dots);
+      })();
+      </script>
+      <span class="neighbor n1">Bicas</span>
+      <span class="neighbor n2">Mar de Espanha</span>
+      <span class="neighbor n3">Chácara</span>
+      <span class="neighbor n4">Pequeri</span>
+      <span class="neighbor n5">Descoberto</span>
+      <span class="neighbor n6">São João Nepomuceno</span>
+      <span class="neighbor n7">Rochedo de Minas</span>
+    </div>
+    <div class="legend">
+      <b>Densidade Empresarial</b>
+      <br>● Comércio
+      <br>● Serviços
+      <br>● Indústria
+      <br>● Agropecuária
+      <br>● Construção
+    </div>
+  </div>
+  <div class="mapCaption editable" contenteditable="true">Concentração de empresas ocorre principalmente na área urbana de Goianá, com predomínio nos setores de Comércio e Serviços. Presença menor em atividades rurais.</div>
+</div>
+
+<!-- CARD 4: INFRAESTRUTURA DE TELECOM -->
+<div class="card">
+  <div class="cardHead editable" contenteditable="true">4. INFRAESTRUTURA DE TELECOM</div>
+  <div class="cardSub editable" contenteditable="true">ERBs (Anatel SMP, 2024) e acessos de banda larga (Anatel SCM, 2024)</div>
+  <div class="mapContainer">
+    <div class="map" id="map-telecom">
+      <div class="mapGrid"></div>
+      <div class="north">N</div>
+      <div class="scale">0&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;6 km</div>
+      <div class="cityDot"></div>
+      <div class="cityLabel">Goianá</div>
+      <script>
+      (function(){
+        const container = document.currentScript.parentElement.querySelector('.map');
+        const colors = ['#4aa8e8','#e43835','#555','#d69027'];
+        const elements = Array.from({length:34},(_,i)=>{
+          const c = colors[i%4];
+          const isLarge = i%5===0;
+          return `<i style="position:absolute;width:${isLarge?15:9}px;height:${isLarge?15:9}px;border-radius:${isLarge?'50%':'2px'};background:${c};border:2px solid #fff;left:${12+(i*29)%76}%;top:${7+(i*47)%81}%;box-shadow:0 1px 2px rgba(0,0,0,0.15)"></i>`;
+        }).join('');
+        container.insertAdjacentHTML('beforeend', elements);
+      })();
+      </script>
+      <span class="neighbor n1">Bicas</span>
+      <span class="neighbor n2">Mar de Espanha</span>
+      <span class="neighbor n3">Chácara</span>
+      <span class="neighbor n4">Pequeri</span>
+      <span class="neighbor n5">Descoberto</span>
+      <span class="neighbor n6">São João Nepomuceno</span>
+      <span class="neighbor n7">Rochedo de Minas</span>
+    </div>
+    <div class="legend">
+      <b>Infraestrutura Telecom</b>
+      <br><span style="color:#4aa8e8;font-weight:800">●</span> Vivo
+      <br><span style="color:#e43835;font-weight:800">●</span> Claro
+      <br><span style="color:#555;font-weight:800">●</span> TIM
+      <br><span style="color:#d69027;font-weight:800">▲</span> Banda Larga
+    </div>
+  </div>
+  <div class="mapCaption editable" contenteditable="true">ERBs e acessos de banda larga concentram-se na área urbana, com presença equilibrada entre Vivo, Claro e TIM. ISPs locais complementam oferta de banda larga fixa.</div>
+</div>
+</section>
+
+<section class="dataRows">
+  <div class="profile">
+    <div class="profileTitle editable" contenteditable="true">PERFIL DO MUNICÍPIO</div>
+    <div class="profileBody">
+      <div class="metric">
+        <div class="ico">👥</div>
+        <div><b class="editable" contenteditable="true">4.377</b><small>habitantes (2022)</small></div>
+        <div class="desc editable" contenteditable="true"><b>51,4%</b> homens<br><b>48,6%</b> mulheres<br><b>2,7</b> pessoas/domicílio</div>
+      </div>
+      <div class="metric">
+        <div class="ico">⌂</div>
+        <div><b class="editable" contenteditable="true">1.653</b><small>domicílios (2022)</small></div>
+        <div class="desc editable" contenteditable="true"><b>82,7%</b> urbano<br><b>17,3%</b> rural</div>
+      </div>
+      <div class="metric">
+        <div class="ico">◉</div>
+        <div><b class="editable" contenteditable="true">R$ 1.913</b><small>renda média mensal<br>por pessoa (2022)</small></div>
+        <div class="desc editable" contenteditable="true"><b>29,1%</b> A+B<br><b>58,4%</b> C<br><b>12,5%</b> D+E</div>
+      </div>
+      <div class="metric">
+        <div class="ico">▦</div>
+        <div><b class="editable" contenteditable="true">342</b><small>empresas ativas (2024)</small></div>
+        <div class="desc editable" contenteditable="true"><b>Comércio,<br>Serviços,<br>Agropecuária</b></div>
+      </div>
+      <div class="metric">
+        <div class="ico">▣</div>
+        <div><b class="editable" contenteditable="true">1.492</b><small>empregos formais (2024)</small></div>
+        <div class="desc editable" contenteditable="true"><b>+6,8%</b> (2020–24)<br>Comércio, Serviços</div>
+      </div>
+      <div class="metric">
+        <div class="ico">✚</div>
+        <div><b class="editable" contenteditable="true">12</b><small>estabelecimentos de saúde (2024)</small></div>
+        <div class="desc editable" contenteditable="true">1 Hosp. | 3 UBS<br>7 Clínicas | 2 Outros</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tables">
+    <div class="tableCard">
+      <div class="tableHead editable" contenteditable="true">TELEFONIA MÓVEL – ACESSOS E INFRAESTRUTURA (ANATEL SMP)</div>
+      <div class="tableBody">
+        <table>
+          <thead>
+            <tr><th>Operadora</th><th>Acessos móveis</th><th>% Acessos</th><th>ERBs</th><th>% ERBs</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Vivo</td><td class="num editable" contenteditable="true">1.487</td><td><div class="bar"><i class="b1"></i></div></td><td class="num">3</td><td class="num">37,5%</td></tr>
+            <tr><td>Claro</td><td class="num editable" contenteditable="true">1.302</td><td><div class="bar"><i class="b2"></i></div></td><td class="num">3</td><td class="num">37,5%</td></tr>
+            <tr><td>TIM</td><td class="num editable" contenteditable="true">666</td><td><div class="bar"><i class="b3"></i></div></td><td class="num">2</td><td class="num">25,0%</td></tr>
+            <tr><td>Outras</td><td class="num editable" contenteditable="true">63</td><td><div class="bar"><i class="b4"></i></div></td><td class="num">0</td><td class="num">0,0%</td></tr>
+            <tr><th>Total</th><th class="num">3.518</th><th>100%</th><th class="num">8</th><th class="num">100%</th></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="insight"><b>▯ 3,5 mil</b> acessos móveis &nbsp;&nbsp;&nbsp;<b>♟ 8</b> ERBs (SMP) &nbsp;&nbsp;&nbsp;<b>▮ 4G</b> presente &nbsp;&nbsp;&nbsp;<b>5G</b> em expansão</div>
+    </div>
+
+    <div class="tableCard">
+      <div class="tableHead editable" contenteditable="true">BANDA LARGA FIXA – ACESSOS (ANATEL SCM)</div>
+      <div class="tableBody">
+        <table>
+          <thead>
+            <tr><th>Operadora</th><th>Acessos fixos</th><th>% Acessos</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Claro</td><td class="num editable" contenteditable="true">412</td><td><div class="bar"><i style="width:82%;background:#e93c34"></i></div></td></tr>
+            <tr><td>Vivo</td><td class="num editable" contenteditable="true">287</td><td><div class="bar"><i style="width:57%;background:#a94ba9"></i></div></td></tr>
+            <tr><td>Algar Telecom</td><td class="num editable" contenteditable="true">148</td><td><div class="bar"><i style="width:29%;background:#2278b8"></i></div></td></tr>
+            <tr><td>Oi</td><td class="num editable" contenteditable="true">73</td><td><div class="bar"><i style="width:15%;background:#d79a2c"></i></div></td></tr>
+            <tr><td>Outros ISPs</td><td class="num editable" contenteditable="true">62</td><td><div class="bar"><i style="width:12%;background:#a1b8ca"></i></div></td></tr>
+            <tr><th>Total</th><th class="num">982</th><th>100%</th></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="insight"><b>⌂ 982</b> acessos fixos &nbsp;&nbsp;&nbsp;<b>● 5</b> operadores (SCM) &nbsp;&nbsp;&nbsp;<b>◔ 38,7%</b> domicílios com banda larga</div>
+    </div>
+
+    <div class="tableCard">
+      <div class="tableHead editable" contenteditable="true">PRESENÇA DAS OPERADORAS (MÓVEL × FIXA)</div>
+      <div class="tableBody">
+        <table>
+          <thead>
+            <tr><th>Operadora</th><th>Móvel (SMP)</th><th>Banda Larga (SCM)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Vivo</td><td class="check">✓</td><td class="check">✓</td></tr>
+            <tr><td>Claro</td><td class="check">✓</td><td class="check">✓</td></tr>
+            <tr><td>TIM</td><td class="check">✓</td><td>—</td></tr>
+            <tr><td>Algar Telecom</td><td>—</td><td class="check">✓</td></tr>
+            <tr><td>Oi</td><td>—</td><td class="check">✓</td></tr>
+            <tr><td>Outros ISPs</td><td>—</td><td class="check">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="insight"><b>◉ Vivo e Claro</b><br>dominam o mercado em Goianá com presença equilibrada entre móvel e banda larga fixa.</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="brand editable" contenteditable="true">GOIANÁ (MG)</div>
+  <div class="nav editable" contenteditable="true">TERRITÓRIO &nbsp; • &nbsp; PESSOAS &nbsp; • &nbsp; MERCADO &nbsp; • &nbsp; OPORTUNIDADES</div>
+  <div class="source editable" contenteditable="true">Fontes: IBGE (Censo 2022) | Receita Federal (CNPJ, 2024) | CAGED (2024) | CNES (2024) | Anatel SMP (2024) | Anatel SCM (2024) | Base cartográfica: IBGE | Imagem: Google Satellite</div>
+  <div class="tag">DO DADO À AÇÃO.</div>
+</footer>
+</div>
+
+<button onclick="window.print()">IMPRIMIR / PDF</button>
+</body>
+</html>
