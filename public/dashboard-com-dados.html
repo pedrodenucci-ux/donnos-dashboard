@@ -307,43 +307,44 @@ function renderMaps(bairros, pontos) {
           svg.appendChild(circle);
         }
       });
-    } else if (theme.id === 'map-telecom') {
-      const operatorColors = ['#b449a6', '#e63b34', '#2478b7']; // Vivo, Claro, TIM
-      const pointProp = 'tower_count';
+    } else if (theme.id === 'map-telecom' && pontos) {
+      // Map operator names to colors
+      const operatorColorMap = {
+        'VIVO': '#b449a6',
+        'CLARO': '#e63b34',
+        'TIM': '#2478b7',
+        'Iez! Telecom Ltda.': '#9d4edd'
+      };
 
-      bairros.features.forEach(f => {
-        const pointCount = f.properties[pointProp] || 0;
-        if (pointCount > 0) {
-          // Calculate centroid of the polygon
-          let cx = 0, cy = 0, coordCount = 0;
-          f.geometry.coordinates[0].forEach(coord => {
-            cx += coord[0];
-            cy += coord[1];
-            coordCount++;
-          });
-          cx /= coordCount;
-          cy /= coordCount;
+      // Plot all real telecom towers with their geolocations
+      pontos.features.forEach(f => {
+        if (f.properties.tipo_dados === 'torre_celular') {
+          // Extract operator name from "ERB OPERADORA" format
+          const operadoraMatch = f.properties.nome.match(/ERB\s+(.+)/i);
+          let operadora = operadoraMatch ? operadoraMatch[1].trim() : 'OUTRO';
 
-          // Telecom: create circles for each tower with operator colors
-          for (let i = 0; i < pointCount; i++) {
-            const angle = (i / pointCount) * Math.PI * 2;
-            const offset = 0.012;
-            const px = cx + offset * Math.cos(angle);
-            const py = cy + offset * Math.sin(angle);
-            const color = operatorColors[i % operatorColors.length];
+          // Normalize operator name for color mapping
+          let normalizedOperadora = operadora.toUpperCase();
+          if (normalizedOperadora.includes('VIVO')) normalizedOperadora = 'VIVO';
+          if (normalizedOperadora.includes('CLARO')) normalizedOperadora = 'CLARO';
+          if (normalizedOperadora.includes('TIM')) normalizedOperadora = 'TIM';
+          if (normalizedOperadora.includes('IEZ')) normalizedOperadora = 'Iez! Telecom Ltda.';
 
-            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-            circle.setAttribute('cx', px);
-            circle.setAttribute('cy', py);
-            circle.setAttribute('r', '0.004');
-            circle.setAttribute('fill', color);
-            circle.setAttribute('stroke', 'none');
-            circle.setAttribute('opacity', '0.8');
-            circle.style.pointerEvents = 'none';
-            circle.title = `Torre em ${f.properties.neighborhood_name}`;
-            svg.appendChild(circle);
-          }
+          const color = operatorColorMap[normalizedOperadora] || '#cccccc';
+          const [lon, lat] = f.geometry.coordinates;
+
+          const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          circle.setAttribute('cx', lon);
+          circle.setAttribute('cy', lat);
+          circle.setAttribute('r', '0.006');
+          circle.setAttribute('fill', color);
+          circle.setAttribute('stroke', 'none');
+          circle.setAttribute('opacity', '0.85');
+          circle.style.pointerEvents = 'none';
+          circle.title = `${f.properties.nome} - ${f.properties.detalhe}`;
+          svg.appendChild(circle);
         }
+      });
       });
     }
 
@@ -360,7 +361,8 @@ function renderMaps(bairros, pontos) {
       const operators = [
         {name: 'Vivo', color: '#b449a6'},
         {name: 'Claro', color: '#e63b34'},
-        {name: 'TIM', color: '#2478b7'}
+        {name: 'TIM', color: '#2478b7'},
+        {name: 'Iez! Telecom', color: '#9d4edd'}
       ];
       operators.forEach(op => {
         const item = document.createElement('div');
