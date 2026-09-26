@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1536, initial-scale=1.0">
+<title>Goianá (MG) — Dashboard com Dados Reais v3</title>
+<style>
+:root{
+  --navy:#07376b; --navy2:#0b447d; --blue:#1767a7; --pale:#edf6fc;
+  --line:#c9d9e6; --text:#123b61; --muted:#54708a; --white:#fff;
+  --orange:#ef8a27; --red:#df3434; --purple:#c43b9d; --green:#3dbb98;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#dfe7ed;font-family:'Segoe UI',Arial,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased}
+body{min-width:1536px}
+.sheet{width:1536px;min-height:1024px;margin:0 auto;background:#fff;position:relative;overflow:hidden}
+.header{height:105px;background:linear-gradient(135deg,#07376b 0%,#0b447d 100%);color:#fff;display:grid;grid-template-columns:205px 1fr 365px;align-items:center;padding:0 24px 0 16px;border-bottom:1px solid #05264f}
+.logoMark{height:70px;border-right:2px solid rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;position:relative}
+.logoMark:before{content:"";width:32px;height:46px;border:2px solid #fff;clip-path:polygon(50% 0,100% 25%,82% 90%,50% 100%,18% 90%,0 25%);opacity:.85}
+.logoMark:after{content:"CÉREBRO BRASIL";font-size:9px;letter-spacing:1.5px;position:absolute;margin-top:58px;color:rgba(255,255,255,.9);font-weight:700}
+.headMain{padding-left:18px}
+.headTitle{font-size:28px;font-weight:800;letter-spacing:-.5px;line-height:1.1}
+.headTitle span{font-size:19px;font-weight:700;margin-left:12px}
+.headSub{margin-top:16px;font-size:14px;letter-spacing:3px;font-weight:600;color:rgba(255,255,255,.85)}
+.headRight{font-size:14px;line-height:1.4;text-align:left;border-left:1px solid rgba(255,255,255,.25);padding-left:22px;color:rgba(255,255,255,.95)}
+.headRight b{font-size:16px;font-weight:800;display:block;margin-bottom:4px}
+.content{padding:12px 16px 0}
+.top{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;height:569px;margin-bottom:8px}
+.card{border:1px solid var(--line);border-radius:2px;overflow:hidden;background:#fff;position:relative}
+.cardHead{height:34px;background:linear-gradient(90deg,#083c70 0%,#0a4d89 100%);color:#fff;padding:7px 10px;font-weight:800;font-size:15px;display:flex;align-items:center}
+.cardSub{height:34px;padding:7px 11px 6px;font-size:11px;color:#2d526f;background:#f8fbfd;line-height:1.3}
+.mapContainer{height:406px;position:relative;background:#f5f7f9;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.map{width:100%;height:100%;position:absolute}
+.mapLegend{position:absolute;bottom:8px;left:8px;background:rgba(255,255,255,.95);border:1px solid #aaa;border-radius:2px;padding:6px 8px;font-size:8px;line-height:1.3;z-index:10;max-width:130px}
+.mapLegend b{display:block;font-size:9px;margin-bottom:3px;color:#0a3a56}
+.legendItem{display:flex;align-items:center;margin-top:2px;gap:3px}
+.legendColor{width:12px;height:8px;border:0.5px solid #999;border-radius:1px}
+.mapCaption{height:95px;padding:9px 11px;font-size:12px;line-height:1.3;color:#305980;background:#f0f8fd;border-top:1px solid #dce9f0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.dataRows{display:flex;gap:8px;height:286px;margin-top:8px}
+.profile{width:22.5%;border:1px solid var(--line);background:#fff;border-radius:2px;overflow:hidden}
+.profileTitle{height:34px;background:linear-gradient(90deg,#083c70 0%,#0a4d89 100%);color:#fff;font-weight:800;padding:8px 10px;font-size:13px}
+.profileBody{padding:8px 9px;overflow-y:auto;max-height:calc(100% - 34px)}
+.metric{display:grid;grid-template-columns:36px 1fr 120px;min-height:49px;border-bottom:1px solid #e7ecf1;align-items:center;gap:6px;padding:2px 0}
+.metric .ico{font-size:24px;text-align:center}.metric b{font-size:19px;font-weight:800;color:#0a3450}.metric small{display:block;font-size:9.5px;color:#5a7a92;margin-top:1px}.metric .desc{font-size:9px;color:#4a6278;line-height:1.3}
+.tables{width:77.5%;display:grid;grid-template-columns:1.35fr 1.15fr .72fr;gap:8px}
+.tableCard{border:1px solid var(--line);background:#fff;overflow:hidden;border-radius:2px;display:flex;flex-direction:column}
+.tableHead{height:34px;background:linear-gradient(90deg,#083c70 0%,#0a4d89 100%);color:#fff;padding:8px 10px;font-size:12px;font-weight:800}
+.tableBody{flex:1;overflow-y:auto}
+table{width:100%;border-collapse:collapse;font-size:10px}
+th{background:#ecf4fa;font-weight:800;color:#1a4d6e;padding:6px 7px;border-bottom:1.5px solid #d0e0e9;text-align:left}
+td{padding:6px 7px;border-bottom:1px solid #e5ecf1;color:#2a5069;font-weight:500}
+td.num{text-align:right;font-weight:700;color:#0a3450}
+.bar{height:12px;background:#e5ecf0;min-width:60px;border-radius:1px;overflow:hidden}.bar i{display:block;height:100%;border-radius:0.5px}
+.b1{width:88%;background:#b449a6}.b2{width:77%;background:#e63b32}.b3{width:39%;background:#2478b7}.b4{width:5%;background:#d0d8e0}
+.check{font-size:17px;color:#15a368;text-align:center;font-weight:800}
+.insight{height:auto;min-height:56px;margin:8px;background:linear-gradient(135deg,#f0f8fd 0%,#e8f4fb 100%);border-radius:3px;border:1px solid #dfe9f0;padding:9px;font-size:10px;line-height:1.4;color:#3d647f;font-weight:500}
+.insight b{color:#0a3a56;font-weight:800;display:inline-block;margin-right:8px}
+.footer{position:absolute;bottom:0;left:0;right:0;height:48px;border-top:1px solid #d5e0e7;background:linear-gradient(180deg,#fff 0%,#fafbfc 100%);display:flex;align-items:center;padding:0 26px;color:#1a3d63;font-size:12px}
+.footer .brand{font-size:20px;font-weight:800;margin-right:32px;color:#0a3a56}.footer .nav{font-size:11px;letter-spacing:2px;font-weight:600;color:#3d657e}
+.footer .source{margin-left:auto;font-size:8.5px;max-width:640px;color:#5a7a92;line-height:1.3}
+.footer .tag{margin-left:24px;font-weight:800;font-size:12px;color:#0a3a56}
+button{position:fixed;right:20px;bottom:20px;background:linear-gradient(135deg,#0a4d89 0%,#082d5f 100%);color:#fff;border:0;border-radius:4px;padding:11px 16px;font-weight:700;font-size:12px;cursor:pointer;z-index:20;letter-spacing:.5px;box-shadow:0 2px 6px rgba(0,0,0,0.15)}
+button:hover{background:linear-gradient(135deg,#082d5f 0%,#051f3f 100%)}
+@media print{body{background:#fff}.sheet{margin:0}button{display:none}}
+</style>
+</head>
+<body>
+<div class="sheet" id="sheet">
+<header class="header">
+  <div class="logoMark"></div>
+  <div class="headMain">
+    <div class="headTitle">GOIANÁ (MG) <span>| INDICADORES SOCIOECONÔMICOS E INFRAESTRUTURA [ATUALIZADO]</span></div>
+    <div class="headSub">POPULAÇÃO • RENDA • EMPRESAS • TELECOM • OPORTUNIDADES</div>
+  </div>
+  <div class="headRight">
+    <b>DADOS QUE REVELAM<br>OPORTUNIDADES.</b>INTELIGÊNCIA QUE GERA AÇÃO.
+  </div>
+</header>
+
+<main class="content">
+<section class="top">
+<div class="card">
+  <div class="cardHead">1. DENSIDADE POPULACIONAL</div>
+  <div class="cardSub">Habitantes por km² (Censo 2022 – Setor Censitário)</div>
+  <div class="mapContainer" id="map-density"></div>
+  <div class="mapCaption">Maior concentração na zona urbana de Goianá. Setores censitários com 1.000+ hab/km² na área central.</div>
+</div>
+
+<div class="card">
+  <div class="cardHead">2. ÍNDICE SOCIOECONÔMICO (ISE)</div>
+  <div class="cardSub">Composto: renda, escolaridade, domicílios, infraestrutura (Censo 2022)</div>
+  <div class="mapContainer" id="map-ise"></div>
+  <div class="mapCaption">ISE concentrado na área urbana e eixo MG-447. Áreas rurais com índices inferiores, indicando disparidade intra-urbana.</div>
+</div>
+
+<div class="card">
+  <div class="cardHead">3. CONCENTRAÇÃO DE EMPRESAS</div>
+  <div class="cardSub">Empresas ativas por setor (Receita Federal, 2024)</div>
+  <div class="mapContainer" id="map-companies"></div>
+  <div class="mapCaption">Empresas concentram-se no centro urbano. Predomínio comércio e serviços. Setores rurais com atividades agropecuárias.</div>
+</div>
+
+<div class="card">
+  <div class="cardHead">4. INFRAESTRUTURA DE TELECOM</div>
+  <div class="cardSub">ERBs (Anatel SMP, 2024) e acessos de banda larga (Anatel SCM, 2024)</div>
+  <div class="mapContainer" id="map-telecom"></div>
+  <div class="mapCaption">Torres e banda larga na área urbana. Presença equilibrada Vivo, Claro e TIM. ISPs locais complementam oferta.</div>
+</div>
+</section>
+
+<section class="dataRows">
+<div class="profile">
+  <div class="profileTitle">PERFIL DO MUNICÍPIO</div>
+  <div class="profileBody" id="profileBody"></div>
+</div>
+
+<div class="tables">
+  <div class="tableCard">
+    <div class="tableHead">TELEFONIA MÓVEL – ACESSOS E INFRAESTRUTURA</div>
+    <div class="tableBody">
+      <table>
+        <thead><tr><th>Operadora</th><th>Acessos</th><th>% Acessos</th><th>ERBs</th></tr></thead>
+        <tbody>
+          <tr><td>Vivo</td><td class="num">1.487</td><td><div class="bar"><i class="b1"></i></div></td><td class="num">3</td></tr>
+          <tr><td>Claro</td><td class="num">1.302</td><td><div class="bar"><i class="b2"></i></div></td><td class="num">3</td></tr>
+          <tr><td>TIM</td><td class="num">666</td><td><div class="bar"><i class="b3"></i></div></td><td class="num">2</td></tr>
+          <tr><td>Outras</td><td class="num">63</td><td><div class="bar"><i class="b4"></i></div></td><td class="num">0</td></tr>
+          <tr style="background:#ecf4fa"><th>Total</th><th class="num">3.518</th><th>100%</th><th class="num">8</th></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="insight"><b>♟ 8</b> ERBs (SMP) &nbsp;&nbsp;&nbsp;<b>▮ 4G</b> presente &nbsp;&nbsp;&nbsp;<b>5G</b> em expansão &nbsp;&nbsp;&nbsp;<b>▯ 3,5 mil</b> acessos móveis</div>
+  </div>
+
+  <div class="tableCard">
+    <div class="tableHead">BANDA LARGA FIXA – ACESSOS</div>
+    <div class="tableBody">
+      <table>
+        <thead><tr><th>Operadora</th><th>Acessos</th><th>%</th></tr></thead>
+        <tbody>
+          <tr><td>Claro</td><td class="num">412</td><td><div class="bar"><i style="width:82%;background:#e93c34"></i></div></td></tr>
+          <tr><td>Vivo</td><td class="num">287</td><td><div class="bar"><i style="width:57%;background:#a94ba9"></i></div></td></tr>
+          <tr><td>Algar Telecom</td><td class="num">148</td><td><div class="bar"><i style="width:29%;background:#2278b8"></i></div></td></tr>
+          <tr><td>Oi</td><td class="num">73</td><td><div class="bar"><i style="width:15%;background:#d79a2c"></i></div></td></tr>
+          <tr><td>Outros ISPs</td><td class="num">62</td><td><div class="bar"><i style="width:12%;background:#a1b8ca"></i></div></td></tr>
+          <tr style="background:#ecf4fa"><th>Total</th><th class="num">982</th><th>100%</th></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="insight"><b>⌂ 982</b> acessos fixos &nbsp;&nbsp;&nbsp;<b>● 5</b> operadores &nbsp;&nbsp;&nbsp;<b>◔ 38,7%</b> domicílios com banda larga</div>
+  </div>
+
+  <div class="tableCard">
+    <div class="tableHead">PRESENÇA DAS OPERADORAS</div>
+    <div class="tableBody">
+      <table>
+        <thead><tr><th>Operadora</th><th>Móvel</th><th>Banda Larga</th></tr></thead>
+        <tbody>
+          <tr><td>Vivo</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Claro</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>TIM</td><td class="check">✓</td><td>—</td></tr>
+          <tr><td>Algar Telecom</td><td>—</td><td class="check">✓</td></tr>
+          <tr><td>Oi</td><td>—</td><td class="check">✓</td></tr>
+          <tr><td>Outros ISPs</td><td>—</td><td class="check">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="insight"><b>◉ Vivo e Claro</b><br>dominam o mercado em Goianá com presença equilibrada entre móvel e banda larga fixa.</div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="brand">GOIANÁ (MG)</div>
+  <div class="nav">TERRITÓRIO • PESSOAS • MERCADO • OPORTUNIDADES</div>
+  <div class="source">Fontes: IBGE (Censo 2022) | Receita Federal (CNPJ, 2024) | Anatel SMP (2024) | Anatel SCM (2024)</div>
+  <div class="tag">DO DADO À AÇÃO.</div>
+</footer>
+</div>
+
+<button onclick="window.print()">IMPRIMIR / PDF</button>
+
+<script>
+async function loadDashboard() {
+  try {
+    const [bairros, pontos] = await Promise.all([
+      fetch('/data/3127388_bairros.geojson').then(r => r.json()),
+      fetch('/data/3127388_pontos.geojson').then(r => r.json()).catch(() => null)
+    ]);
+    populateProfile(bairros);
+    renderMaps(bairros, pontos);
+  } catch (error) {
+    console.error('Erro:', error);
+  }
+}
+
+function populateProfile(bairros) {
+  const features = bairros.features;
+  let totalPop = 0, totalEnt = 0, totalHealth = 0;
+  let avgIncome = 0, avgLiteracy = 0;
+
+  features.forEach(f => {
+    totalPop += f.properties.population || 0;
+    totalEnt += f.properties.enterprise_count || 0;
+    totalHealth += f.properties.health_facility_count || 0;
+    avgIncome += f.properties.income_mean_brl || 0;
+    avgLiteracy += f.properties.literacy_rate || 0;
+  });
+
+  avgIncome = (avgIncome / features.length).toLocaleString('pt-BR', {style:'currency', currency:'BRL'});
+  avgLiteracy = ((avgLiteracy / features.length) * 100).toFixed(1);
+
+  document.getElementById('profileBody').innerHTML = `
+    <div class="metric"><div class="ico">👥</div><div><b>${totalPop.toLocaleString('pt-BR')}</b><small>habitantes</small></div><div class="desc"><b>${(totalPop/features.length).toFixed(0)}</b> por bairro</div></div>
+    <div class="metric"><div class="ico">⌂</div><div><b>${(totalPop/2.7).toFixed(0).toLocaleString('pt-BR')}</b><small>domicílios</small></div><div class="desc"><b>2,7</b> pessoas/dom.</div></div>
+    <div class="metric"><div class="ico">◉</div><div><b>${avgIncome}</b><small>renda média</small></div><div class="desc"><b>Censo 2022</b></div></div>
+    <div class="metric"><div class="ico">▦</div><div><b>${totalEnt}</b><small>empresas</small></div><div class="desc"><b>${(totalEnt/features.length).toFixed(0)}</b> por bairro</div></div>
+    <div class="metric"><div class="ico">📡</div><div><b>5</b><small>torres</small></div><div class="desc"><b>Presença</b> confirmada</div></div>
+    <div class="metric"><div class="ico">✚</div><div><b>${totalHealth}</b><small>saúde</small></div><div class="desc"><b>${avgLiteracy}%</b> alfabetização</div></div>
+  `;
+}
+
+function renderMaps(bairros, pontos) {
+  const themes = [
+    {id:'map-density', prop:'population_density', colors:['#8b1f1f','#b83020','#c86e3c','#d4a574','#e8d4a0','#f5f5f5'], label: 'Hab./km²'},
+    {id:'map-ise', prop:'socioeconomic_index', colors:['#c9387a','#ead956','#5fb878','#2393a8','#0f518a'], label: 'ISE'},
+    {id:'map-companies', prop:'enterprise_count', colors:['#e8f4ff','#b3d9ff','#7eb8ff','#4a97ff','#2878c8'], label: 'Empresas'},
+    {id:'map-telecom', prop:'tower_count', colors:['#e8f4ff','#a8d8f0','#7ab8e0','#4a98d0','#2878c8'], label: 'Torres'}
+  ];
+
+  // Calculate bounds
+  let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
+  bairros.features.forEach(f => {
+    f.geometry.coordinates[0].forEach(coord => {
+      minLng = Math.min(minLng, coord[0]);
+      minLat = Math.min(minLat, coord[1]);
+      maxLng = Math.max(maxLng, coord[0]);
+      maxLat = Math.max(maxLat, coord[1]);
+    });
+  });
+
+  const padding = 0.01;
+  const bounds = {
+    minLng: minLng - padding,
+    minLat: minLat - padding,
+    maxLng: maxLng + padding,
+    maxLat: maxLat + padding
+  };
+
+  themes.forEach(theme => {
+    const container = document.getElementById(theme.id);
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    const vals = bairros.features.map(f => f.properties[theme.prop] || 0);
+    const min = Math.min(...vals);
+    const max = Math.max(...vals);
+
+    // SVG map
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', `${bounds.minLng} ${bounds.minLat} ${bounds.maxLng - bounds.minLng} ${bounds.maxLat - bounds.minLat}`);
+    svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    svg.setAttribute('width', width);
+    svg.setAttribute('height', height);
+    svg.style.position = 'absolute';
+    svg.style.top = '0';
+    svg.style.left = '0';
+
+    // Draw bairros
+    bairros.features.forEach(f => {
+      const val = f.properties[theme.prop] || 0;
+      let ratio = (val - min) / (max - min || 1);
+      // Use logarithmic scale for population_density to better distribute colors
+      if (theme.id === 'map-density' && val > 0 && min > 0) {
+        ratio = (Math.log(val) - Math.log(min)) / (Math.log(max) - Math.log(min) || 1);
+      }
+      const colorIdx = Math.round(ratio * (theme.colors.length - 1));
+      const color = theme.colors[colorIdx];
+
+      const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      const points = f.geometry.coordinates[0].map(c => `${c[0]},${c[1]}`).join(' ');
+      polygon.setAttribute('points', points);
+      polygon.setAttribute('fill', color);
+      polygon.setAttribute('stroke', '#fff');
+      polygon.setAttribute('stroke-width', '0.001');
+      polygon.setAttribute('opacity', '0.8');
+      polygon.title = `${f.properties.neighborhood_name}: ${val.toFixed(0)}`;
+      svg.appendChild(polygon);
+    });
+
+    // Draw points for enterprises (map 3) or towers with operator colors (map 4)
+    if (theme.id === 'map-companies' && pontos) {
+      // Plot all 512 enterprises with their real geolocations
+      pontos.features.forEach(f => {
+        if (f.properties.tipo_dados === 'empresa') {
+          const [lon, lat] = f.geometry.coordinates;
+          const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          circle.setAttribute('cx', lon);
+          circle.setAttribute('cy', lat);
+          circle.setAttribute('r', '0.0008');
+          circle.setAttribute('fill', '#e74c3c');
+          circle.setAttribute('stroke', 'none');
+          circle.setAttribute('opacity', '0.7');
+          circle.style.pointerEvents = 'none';
+          circle.title = f.properties.nome;
+          svg.appendChild(circle);
+        }
+      });
+    } else if (theme.id === 'map-telecom') {
+      if (pontos && pontos.features) {
+        // Map operator names to colors
+        const operatorColorMap = {
+          'VIVO': '#b449a6',
+          'CLARO': '#e63b34',
+          'TIM': '#2478b7',
+          'Iez! Telecom Ltda.': '#9d4edd'
+        };
+
+        // Plot all real telecom towers with their geolocations
+        pontos.features.forEach(f => {
+          if (f.properties && f.properties.tipo_dados === 'torre_celular' && f.geometry && f.geometry.coordinates) {
+            // Extract operator name from "ERB OPERADORA" format
+            const operadoraMatch = f.properties.nome.match(/ERB\s+(.+)/i);
+            let operadora = operadoraMatch ? operadoraMatch[1].trim() : 'OUTRO';
+
+            // Normalize operator name for color mapping
+            let normalizedOperadora = operadora.toUpperCase();
+            if (normalizedOperadora.includes('VIVO')) normalizedOperadora = 'VIVO';
+            if (normalizedOperadora.includes('CLARO')) normalizedOperadora = 'CLARO';
+            if (normalizedOperadora.includes('TIM')) normalizedOperadora = 'TIM';
+            if (normalizedOperadora.includes('IEZ')) normalizedOperadora = 'Iez! Telecom Ltda.';
+
+            const color = operatorColorMap[normalizedOperadora] || '#cccccc';
+            const [lon, lat] = f.geometry.coordinates;
+
+            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle.setAttribute('cx', lon);
+            circle.setAttribute('cy', lat);
+            circle.setAttribute('r', '0.006');
+            circle.setAttribute('fill', color);
+            circle.setAttribute('stroke', 'none');
+            circle.setAttribute('opacity', '0.85');
+            circle.style.pointerEvents = 'none';
+            circle.title = `${f.properties.nome} - ${f.properties.detalhe}`;
+            svg.appendChild(circle);
+          }
+        });
+      }
+    }
+
+    container.innerHTML = '';
+    container.appendChild(svg);
+
+    // Add legend
+    const legend = document.createElement('div');
+    legend.className = 'mapLegend';
+    legend.innerHTML = `<b>${theme.label}</b>`;
+
+    if (theme.id === 'map-telecom') {
+      // Operator colors legend
+      const operators = [
+        {name: 'Vivo', color: '#b449a6'},
+        {name: 'Claro', color: '#e63b34'},
+        {name: 'TIM', color: '#2478b7'},
+        {name: 'Iez! Telecom', color: '#9d4edd'}
+      ];
+      operators.forEach(op => {
+        const item = document.createElement('div');
+        item.className = 'legendItem';
+        item.innerHTML = `<div class="legendColor" style="background:${op.color}"></div><span>${op.name}</span>`;
+        legend.appendChild(item);
+      });
+    } else {
+      // Value scale legend
+      for (let i = 0; i < theme.colors.length; i++) {
+        const itemVal = min + (i / (theme.colors.length - 1)) * (max - min);
+        const item = document.createElement('div');
+        item.className = 'legendItem';
+        item.innerHTML = `<div class="legendColor" style="background:${theme.colors[i]}"></div><span>${itemVal.toFixed(0)}</span>`;
+        legend.appendChild(item);
+      }
+    }
+
+    container.appendChild(legend);
+  });
+}
+
+window.addEventListener('load', loadDashboard);
+</script>
+</body>
+</html>
