@@ -290,9 +290,26 @@ function renderMaps(bairros, pontos) {
     });
 
     // Draw points for enterprises (map 3) or towers with operator colors (map 4)
-    if (theme.id === 'map-companies' || theme.id === 'map-telecom') {
+    if (theme.id === 'map-companies' && pontos) {
+      // Plot all 512 enterprises with their real geolocations
+      pontos.features.forEach(f => {
+        if (f.properties.tipo_dados === 'empresa') {
+          const [lon, lat] = f.geometry.coordinates;
+          const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          circle.setAttribute('cx', lon);
+          circle.setAttribute('cy', lat);
+          circle.setAttribute('r', '0.0008');
+          circle.setAttribute('fill', '#e74c3c');
+          circle.setAttribute('stroke', 'none');
+          circle.setAttribute('opacity', '0.7');
+          circle.style.pointerEvents = 'none';
+          circle.title = f.properties.nome;
+          svg.appendChild(circle);
+        }
+      });
+    } else if (theme.id === 'map-telecom') {
       const operatorColors = ['#b449a6', '#e63b34', '#2478b7']; // Vivo, Claro, TIM
-      const pointProp = theme.id === 'map-companies' ? 'enterprise_count' : 'tower_count';
+      const pointProp = 'tower_count';
 
       bairros.features.forEach(f => {
         const pointCount = f.properties[pointProp] || 0;
@@ -307,46 +324,24 @@ function renderMaps(bairros, pontos) {
           cx /= coordCount;
           cy /= coordCount;
 
-          // For companies map, render circles for each enterprise distributed; for telecom, render per tower
-          if (theme.id === 'map-companies') {
-            // Distribute enterprises around the centroid
-            for (let i = 0; i < pointCount; i++) {
-              const angle = (i / pointCount) * Math.PI * 2;
-              const radius = 0.015 + (Math.random() * 0.01); // Random radius from 0.015 to 0.025
-              const px = cx + radius * Math.cos(angle);
-              const py = cy + radius * Math.sin(angle);
+          // Telecom: create circles for each tower with operator colors
+          for (let i = 0; i < pointCount; i++) {
+            const angle = (i / pointCount) * Math.PI * 2;
+            const offset = 0.012;
+            const px = cx + offset * Math.cos(angle);
+            const py = cy + offset * Math.sin(angle);
+            const color = operatorColors[i % operatorColors.length];
 
-              const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-              circle.setAttribute('cx', px);
-              circle.setAttribute('cy', py);
-              circle.setAttribute('r', '0.0008');
-              circle.setAttribute('fill', '#e74c3c');
-              circle.setAttribute('stroke', 'none');
-              circle.setAttribute('opacity', '0.8');
-              circle.style.pointerEvents = 'none';
-              circle.title = `Empresa em ${f.properties.neighborhood_name}`;
-              svg.appendChild(circle);
-            }
-          } else {
-            // Telecom: create circles for each tower with operator colors
-            for (let i = 0; i < pointCount; i++) {
-              const angle = (i / pointCount) * Math.PI * 2;
-              const offset = 0.012;
-              const px = cx + offset * Math.cos(angle);
-              const py = cy + offset * Math.sin(angle);
-              const color = operatorColors[i % operatorColors.length];
-
-              const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-              circle.setAttribute('cx', px);
-              circle.setAttribute('cy', py);
-              circle.setAttribute('r', '0.004');
-              circle.setAttribute('fill', color);
-              circle.setAttribute('stroke', 'none');
-              circle.setAttribute('opacity', '0.8');
-              circle.style.pointerEvents = 'none';
-              circle.title = `Torre em ${f.properties.neighborhood_name}`;
-              svg.appendChild(circle);
-            }
+            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle.setAttribute('cx', px);
+            circle.setAttribute('cy', py);
+            circle.setAttribute('r', '0.004');
+            circle.setAttribute('fill', color);
+            circle.setAttribute('stroke', 'none');
+            circle.setAttribute('opacity', '0.8');
+            circle.style.pointerEvents = 'none';
+            circle.title = `Torre em ${f.properties.neighborhood_name}`;
+            svg.appendChild(circle);
           }
         }
       });
