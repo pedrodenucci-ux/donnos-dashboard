@@ -283,7 +283,7 @@ function renderMaps(bairros, pontos) {
       polygon.setAttribute('points', points);
       polygon.setAttribute('fill', color);
       polygon.setAttribute('stroke', '#fff');
-      polygon.setAttribute('stroke-width', '0.005');
+      polygon.setAttribute('stroke-width', '0.001');
       polygon.setAttribute('opacity', '0.8');
       polygon.title = `${f.properties.neighborhood_name}: ${val.toFixed(0)}`;
       svg.appendChild(polygon);
@@ -307,33 +307,38 @@ function renderMaps(bairros, pontos) {
           cx /= coordCount;
           cy /= coordCount;
 
-          // Create circles for each point
-          for (let i = 0; i < pointCount; i++) {
-            // Distribute points around centroid in small circle
-            const angle = (i / pointCount) * Math.PI * 2;
-            const offset = 0.012;
-            const px = cx + offset * Math.cos(angle);
-            const py = cy + offset * Math.sin(angle);
-
-            // For telecom map, use operator colors
-            let color = '#e74c3c';
-            if (theme.id === 'map-telecom') {
-              color = operatorColors[i % operatorColors.length];
-            }
-
+          // For companies map, render only 1 circle per neighborhood; for telecom, render per tower
+          if (theme.id === 'map-companies') {
             const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-            circle.setAttribute('cx', px);
-            circle.setAttribute('cy', py);
-            // Larger circles for companies (map 3), smaller for towers (map 4)
-            const radius = theme.id === 'map-companies' ? '0.008' : '0.004';
-            circle.setAttribute('r', radius);
-            circle.setAttribute('fill', color);
+            circle.setAttribute('cx', cx);
+            circle.setAttribute('cy', cy);
+            circle.setAttribute('r', '0.008');
+            circle.setAttribute('fill', '#e74c3c');
             circle.setAttribute('stroke', 'none');
             circle.setAttribute('opacity', '0.8');
             circle.style.pointerEvents = 'none';
-            const label = theme.id === 'map-companies' ? 'Empresa' : 'Torre';
-            circle.title = `${label} em ${f.properties.neighborhood_name}`;
+            circle.title = `Empresas em ${f.properties.neighborhood_name}: ${pointCount}`;
             svg.appendChild(circle);
+          } else {
+            // Telecom: create circles for each tower with operator colors
+            for (let i = 0; i < pointCount; i++) {
+              const angle = (i / pointCount) * Math.PI * 2;
+              const offset = 0.012;
+              const px = cx + offset * Math.cos(angle);
+              const py = cy + offset * Math.sin(angle);
+              const color = operatorColors[i % operatorColors.length];
+
+              const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+              circle.setAttribute('cx', px);
+              circle.setAttribute('cy', py);
+              circle.setAttribute('r', '0.004');
+              circle.setAttribute('fill', color);
+              circle.setAttribute('stroke', 'none');
+              circle.setAttribute('opacity', '0.8');
+              circle.style.pointerEvents = 'none';
+              circle.title = `Torre em ${f.properties.neighborhood_name}`;
+              svg.appendChild(circle);
+            }
           }
         }
       });
