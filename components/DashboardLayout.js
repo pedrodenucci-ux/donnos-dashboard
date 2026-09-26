@@ -242,36 +242,29 @@ export default function DashboardLayout({ city, summary, geospatial }) {
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* QUICK METRICS */}
-      <div className="bg-white px-6 py-8 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
-            <div className="flex flex-col items-center">
-              <p className="text-2xl font-bold text-slate-900">{telecomTotal.toLocaleString('pt-BR')}</p>
-              <p className="text-xs text-slate-600 mt-1">acessos móveis</p>
+          {/* Presença das Operadoras */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 mt-6">
+            <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-4 text-white">
+              <h3 className="font-bold text-sm">PRESENÇA DAS OPERADORAS (MÓVEL X FIXA)</h3>
             </div>
-            <div className="flex flex-col items-center">
-              <p className="text-2xl font-bold text-slate-900">{summary.erbs_anatel || '—'}</p>
-              <p className="text-xs text-slate-600 mt-1">ERBs (SMP)</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-2xl font-bold text-slate-900">4G</p>
-              <p className="text-xs text-slate-600 mt-1">presente</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-2xl font-bold text-slate-900">5G</p>
-              <p className="text-xs text-slate-600 mt-1">não identificado</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-2xl font-bold text-slate-900">{bandaLargaTotal.toLocaleString('pt-BR')}</p>
-              <p className="text-xs text-slate-600 mt-1">acessos fixos</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-2xl font-bold text-slate-900">{summary.telecom?.banda_larga?.length || '—'}</p>
-              <p className="text-xs text-slate-600 mt-1">operadoras (SCM)</p>
+            <div className="p-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {['Vivo', 'Claro', 'TIM', 'Algar Telecom', 'Oi', 'Outros ISPs'].map((op, idx) => {
+                  const isMobileOperator = ['Vivo', 'Claro', 'TIM'].includes(op);
+                  const isFixedOperator = ['Vivo', 'Claro', 'Algar Telecom', 'Oi', 'Outros ISPs'].includes(op);
+                  return (
+                    <div key={idx} className="flex items-center gap-3">
+                      <p className="font-semibold text-slate-900 text-sm">{op}</p>
+                      <div className="flex gap-2">
+                        <span className={`text-lg ${isMobileOperator ? 'text-green-600' : 'text-gray-300'}`}>✓</span>
+                        <span className={`text-lg ${isFixedOperator ? 'text-green-600' : 'text-gray-300'}`}>✓</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="text-xs text-slate-500 mt-4">Primeira coluna: Móvel (SMP) | Segunda coluna: Fibra Fixa (SCM)</p>
             </div>
           </div>
         </div>
