@@ -285,39 +285,49 @@ function renderMaps(bairros, pontos) {
       svg.appendChild(polygon);
     });
 
-    // Draw towers (only on telecom map)
-    if (theme.id === 'map-telecom') {
+    // Draw points for enterprises (map 3) or towers with operator colors (map 4)
+    if (theme.id === 'map-companies' || theme.id === 'map-telecom') {
+      const operatorColors = ['#b449a6', '#e63b34', '#2478b7']; // Vivo, Claro, TIM
+      const pointProp = theme.id === 'map-companies' ? 'enterprise_count' : 'tower_count';
+
       bairros.features.forEach(f => {
-        const towerCount = f.properties.tower_count || 0;
-        if (towerCount > 0) {
+        const pointCount = f.properties[pointProp] || 0;
+        if (pointCount > 0) {
           // Calculate centroid of the polygon
-          let cx = 0, cy = 0, pointCount = 0;
+          let cx = 0, cy = 0, coordCount = 0;
           f.geometry.coordinates[0].forEach(coord => {
             cx += coord[0];
             cy += coord[1];
-            pointCount++;
+            coordCount++;
           });
-          cx /= pointCount;
-          cy /= pointCount;
+          cx /= coordCount;
+          cy /= coordCount;
 
-          // Create circles for each tower
-          for (let i = 0; i < towerCount; i++) {
-            // Distribute towers around centroid in small circle
-            const angle = (i / towerCount) * Math.PI * 2;
+          // Create circles for each point
+          for (let i = 0; i < pointCount; i++) {
+            // Distribute points around centroid in small circle
+            const angle = (i / pointCount) * Math.PI * 2;
             const offset = 0.003;
-            const tx = cx + offset * Math.cos(angle);
-            const ty = cy + offset * Math.sin(angle);
+            const px = cx + offset * Math.cos(angle);
+            const py = cy + offset * Math.sin(angle);
+
+            // For telecom map, use operator colors
+            let color = '#e74c3c';
+            if (theme.id === 'map-telecom') {
+              color = operatorColors[i % operatorColors.length];
+            }
 
             const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-            circle.setAttribute('cx', tx);
-            circle.setAttribute('cy', ty);
+            circle.setAttribute('cx', px);
+            circle.setAttribute('cy', py);
             circle.setAttribute('r', '0.004');
-            circle.setAttribute('fill', '#e74c3c');
+            circle.setAttribute('fill', color);
             circle.setAttribute('stroke', '#fff');
             circle.setAttribute('stroke-width', '0.002');
             circle.setAttribute('opacity', '0.9');
             circle.style.pointerEvents = 'none';
-            circle.title = `Torre em ${f.properties.neighborhood_name}`;
+            const label = theme.id === 'map-companies' ? 'Empresa' : 'Torre';
+            circle.title = `${label} em ${f.properties.neighborhood_name}`;
             svg.appendChild(circle);
           }
         }
@@ -332,12 +342,28 @@ function renderMaps(bairros, pontos) {
     legend.className = 'mapLegend';
     legend.innerHTML = `<b>${theme.label}</b>`;
 
-    for (let i = 0; i < theme.colors.length; i++) {
-      const itemVal = min + (i / (theme.colors.length - 1)) * (max - min);
-      const item = document.createElement('div');
-      item.className = 'legendItem';
-      item.innerHTML = `<div class="legendColor" style="background:${theme.colors[i]}"></div><span>${itemVal.toFixed(0)}</span>`;
-      legend.appendChild(item);
+    if (theme.id === 'map-telecom') {
+      // Operator colors legend
+      const operators = [
+        {name: 'Vivo', color: '#b449a6'},
+        {name: 'Claro', color: '#e63b34'},
+        {name: 'TIM', color: '#2478b7'}
+      ];
+      operators.forEach(op => {
+        const item = document.createElement('div');
+        item.className = 'legendItem';
+        item.innerHTML = `<div class="legendColor" style="background:${op.color}"></div><span>${op.name}</span>`;
+        legend.appendChild(item);
+      });
+    } else {
+      // Value scale legend
+      for (let i = 0; i < theme.colors.length; i++) {
+        const itemVal = min + (i / (theme.colors.length - 1)) * (max - min);
+        const item = document.createElement('div');
+        item.className = 'legendItem';
+        item.innerHTML = `<div class="legendColor" style="background:${theme.colors[i]}"></div><span>${itemVal.toFixed(0)}</span>`;
+        legend.appendChild(item);
+      }
     }
 
     container.appendChild(legend);
