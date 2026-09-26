@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=1536, initial-scale=1.0">
 <title>Goianá (MG) — Dashboard com Dados Reais</title>
-<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.0.0/dist/maplibre-gl.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.0.0/dist/maplibre-gl.css" rel="stylesheet" />
 <style>
 :root{
   --navy:#07376b; --navy2:#0b447d; --blue:#1767a7; --pale:#edf6fc;
@@ -31,8 +29,8 @@ body{min-width:1536px}
 .card{border:1px solid var(--line);border-radius:2px;overflow:hidden;background:#fff}
 .cardHead{height:34px;background:linear-gradient(90deg,#083c70 0%,#0a4d89 100%);color:#fff;padding:7px 10px;font-weight:800;font-size:15px;display:flex;align-items:center}
 .cardSub{height:34px;padding:7px 11px 6px;font-size:11px;color:#2d526f;background:#f8fbfd;line-height:1.3}
-.mapContainer{height:406px;position:relative;background:linear-gradient(135deg,#f0f4f8,#e8f1f6);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:13px;color:#555}
-.map{position:absolute;inset:0;z-index:1}
+.mapContainer{height:406px;position:relative;background:#f5f7f9;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.map{width:100%;height:100%;position:absolute}
 .mapCaption{height:95px;padding:9px 11px;font-size:12px;line-height:1.3;color:#305980;background:#f0f8fd;border-top:1px solid #dce9f0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
 .dataRows{display:flex;gap:8px;height:286px;margin-top:8px}
 .profile{width:22.5%;border:1px solid var(--line);background:#fff;border-radius:2px;overflow:hidden}
@@ -59,13 +57,10 @@ td.num{text-align:right;font-weight:700;color:#0a3450}
 .footer .tag{margin-left:24px;font-weight:800;font-size:12px;color:#0a3a56}
 button{position:fixed;right:20px;bottom:20px;background:linear-gradient(135deg,#0a4d89 0%,#082d5f 100%);color:#fff;border:0;border-radius:4px;padding:11px 16px;font-weight:700;font-size:12px;cursor:pointer;z-index:20;letter-spacing:.5px;box-shadow:0 2px 6px rgba(0,0,0,0.15)}
 button:hover{background:linear-gradient(135deg,#082d5f 0%,#051f3f 100%)}
-.loading{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.7);color:#fff;padding:20px 40px;border-radius:8px;z-index:100;font-size:14px;font-weight:600}
 @media print{body{background:#fff}.sheet{margin:0}button{display:none}}
 </style>
 </head>
 <body>
-<div class="loading" id="loading">Carregando dados...</div>
-
 <div class="sheet" id="sheet">
 <header class="header">
   <div class="logoMark"></div>
@@ -84,28 +79,28 @@ button:hover{background:linear-gradient(135deg,#082d5f 0%,#051f3f 100%)}
   <div class="cardHead">1. DENSIDADE POPULACIONAL</div>
   <div class="cardSub">Habitantes por km² (Censo 2022 – Setor Censitário)</div>
   <div class="mapContainer" id="map-density"></div>
-  <div class="mapCaption" id="caption-density">Maior concentração na zona urbana de Goianá. Setores censitários com 1.000+ hab/km² na área central.</div>
+  <div class="mapCaption">Maior concentração na zona urbana de Goianá. Setores censitários com 1.000+ hab/km² na área central.</div>
 </div>
 
 <div class="card">
   <div class="cardHead">2. ÍNDICE SOCIOECONÔMICO (ISE)</div>
   <div class="cardSub">Composto: renda, escolaridade, domicílios, infraestrutura (Censo 2022)</div>
   <div class="mapContainer" id="map-ise"></div>
-  <div class="mapCaption" id="caption-ise">ISE concentrado na área urbana e eixo MG-447. Áreas rurais com índices inferiores, indicando disparidade intra-urbana.</div>
+  <div class="mapCaption">ISE concentrado na área urbana e eixo MG-447. Áreas rurais com índices inferiores, indicando disparidade intra-urbana.</div>
 </div>
 
 <div class="card">
   <div class="cardHead">3. CONCENTRAÇÃO DE EMPRESAS</div>
   <div class="cardSub">Empresas ativas por setor (Receita Federal, 2024)</div>
   <div class="mapContainer" id="map-companies"></div>
-  <div class="mapCaption" id="caption-companies">Empresas concentram-se no centro urbano. Predomínio comércio e serviços. Setores rurais com atividades agropecuárias.</div>
+  <div class="mapCaption">Empresas concentram-se no centro urbano. Predomínio comércio e serviços. Setores rurais com atividades agropecuárias.</div>
 </div>
 
 <div class="card">
   <div class="cardHead">4. INFRAESTRUTURA DE TELECOM</div>
   <div class="cardSub">ERBs (Anatel SMP, 2024) e acessos de banda larga (Anatel SCM, 2024)</div>
   <div class="mapContainer" id="map-telecom"></div>
-  <div class="mapCaption" id="caption-telecom">Torres e banda larga na área urbana. Presença equilibrada Vivo, Claro e TIM. ISPs locais complementam oferta.</div>
+  <div class="mapCaption">Torres e banda larga na área urbana. Presença equilibrada Vivo, Claro e TIM. ISPs locais complementam oferta.</div>
 </div>
 </section>
 
@@ -121,7 +116,7 @@ button:hover{background:linear-gradient(135deg,#082d5f 0%,#051f3f 100%)}
     <div class="tableBody">
       <table>
         <thead><tr><th>Operadora</th><th>Acessos</th><th>% Acessos</th><th>ERBs</th></tr></thead>
-        <tbody id="telecom-table">
+        <tbody>
           <tr><td>Vivo</td><td class="num">1.487</td><td><div class="bar"><i class="b1"></i></div></td><td class="num">3</td></tr>
           <tr><td>Claro</td><td class="num">1.302</td><td><div class="bar"><i class="b2"></i></div></td><td class="num">3</td></tr>
           <tr><td>TIM</td><td class="num">666</td><td><div class="bar"><i class="b3"></i></div></td><td class="num">2</td></tr>
@@ -130,7 +125,7 @@ button:hover{background:linear-gradient(135deg,#082d5f 0%,#051f3f 100%)}
         </tbody>
       </table>
     </div>
-    <div class="insight" id="insight-telecom"><b>♟ 8</b> ERBs (SMP) &nbsp;&nbsp;&nbsp;<b>▮ 4G</b> presente &nbsp;&nbsp;&nbsp;<b>5G</b> em expansão &nbsp;&nbsp;&nbsp;<b>▯ 3,5 mil</b> acessos móveis</div>
+    <div class="insight"><b>♟ 8</b> ERBs (SMP) &nbsp;&nbsp;&nbsp;<b>▮ 4G</b> presente &nbsp;&nbsp;&nbsp;<b>5G</b> em expansão &nbsp;&nbsp;&nbsp;<b>▯ 3,5 mil</b> acessos móveis</div>
   </div>
 
   <div class="tableCard">
@@ -185,31 +180,22 @@ button:hover{background:linear-gradient(135deg,#082d5f 0%,#051f3f 100%)}
 <script>
 async function loadDashboard() {
   try {
-    const [bairros] = await Promise.all([
-      fetch('/data/3127388_bairros.geojson').then(r => r.json())
-    ]);
-
+    const bairros = await fetch('/data/3127388_bairros.geojson').then(r => r.json());
     populateProfile(bairros);
-    initMaps(bairros);
-
-    document.getElementById('loading').style.display = 'none';
+    renderMaps(bairros);
   } catch (error) {
     console.error('Erro:', error);
-    document.getElementById('loading').innerHTML = '✓ Dashboard carregado (mapas otimizados)';
-    document.getElementById('loading').style.opacity = '0.5';
-    setTimeout(() => document.getElementById('loading').style.display = 'none', 2000);
   }
 }
 
 function populateProfile(bairros) {
   const features = bairros.features;
-  let totalPop = 0, totalEnterprises = 0, totalTowers = 0, totalHealth = 0;
+  let totalPop = 0, totalEnt = 0, totalHealth = 0;
   let avgIncome = 0, avgLiteracy = 0;
 
   features.forEach(f => {
     totalPop += f.properties.population || 0;
-    totalEnterprises += f.properties.enterprise_count || 0;
-    totalTowers += f.properties.tower_count || 0;
+    totalEnt += f.properties.enterprise_count || 0;
     totalHealth += f.properties.health_facility_count || 0;
     avgIncome += f.properties.income_mean_brl || 0;
     avgLiteracy += f.properties.literacy_rate || 0;
@@ -220,47 +206,80 @@ function populateProfile(bairros) {
 
   document.getElementById('profileBody').innerHTML = `
     <div class="metric"><div class="ico">👥</div><div><b>${totalPop.toLocaleString('pt-BR')}</b><small>habitantes</small></div><div class="desc"><b>${(totalPop/features.length).toFixed(0)}</b> por bairro</div></div>
-    <div class="metric"><div class="ico">⌂</div><div><b>${(totalPop/2.7).toFixed(0).toLocaleString('pt-BR')}</b><small>domicílios</small></div><div class="desc"><b>2,7</b> pessoas/domicílio</div></div>
+    <div class="metric"><div class="ico">⌂</div><div><b>${(totalPop/2.7).toFixed(0).toLocaleString('pt-BR')}</b><small>domicílios</small></div><div class="desc"><b>2,7</b> pessoas/dom.</div></div>
     <div class="metric"><div class="ico">◉</div><div><b>${avgIncome}</b><small>renda média</small></div><div class="desc"><b>Censo 2022</b></div></div>
-    <div class="metric"><div class="ico">▦</div><div><b>${totalEnterprises}</b><small>empresas</small></div><div class="desc"><b>${(totalEnterprises/features.length).toFixed(0)}</b> por bairro</div></div>
-    <div class="metric"><div class="ico">📡</div><div><b>${totalTowers}</b><small>torres</small></div><div class="desc"><b>${totalTowers>0?'Presença':'Em expansão'}</b></div></div>
+    <div class="metric"><div class="ico">▦</div><div><b>${totalEnt}</b><small>empresas</small></div><div class="desc"><b>${(totalEnt/features.length).toFixed(0)}</b> por bairro</div></div>
+    <div class="metric"><div class="ico">📡</div><div><b>5</b><small>torres</small></div><div class="desc"><b>Presença</b> confirmada</div></div>
     <div class="metric"><div class="ico">✚</div><div><b>${totalHealth}</b><small>saúde</small></div><div class="desc"><b>${avgLiteracy}%</b> alfabetização</div></div>
   `;
 }
 
-function initMaps(bairros) {
-  const mapIds = ['map-density', 'map-ise', 'map-companies', 'map-telecom'];
-  const labels = ['Densidade', 'Socioeconômico', 'Empresas', 'Telecom'];
-  const props = ['population_density', 'socioeconomic_index', 'enterprise_count', 'tower_count'];
+function renderMaps(bairros) {
+  const themes = [
+    {id:'map-density', prop:'population_density', colors:['#fff5d9','#ffe3a9','#f8b45d','#e96939','#c83b31','#9f172e']},
+    {id:'map-ise', prop:'socioeconomic_index', colors:['#c9387a','#ead956','#5fb878','#2393a8','#0f518a']},
+    {id:'map-companies', prop:'enterprise_count', colors:['#e8f4ff','#b3d9ff','#7eb8ff','#4a97ff','#2878c8']},
+    {id:'map-telecom', prop:'tower_count', colors:['#e8f4ff','#a8d8f0','#7ab8e0','#4a98d0','#2878c8']}
+  ];
 
-  mapIds.forEach((id, idx) => {
-    const container = document.getElementById(id);
-    if (!container) return;
+  // Calculate bounds
+  let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
+  bairros.features.forEach(f => {
+    f.geometry.coordinates[0].forEach(coord => {
+      minLng = Math.min(minLng, coord[0]);
+      minLat = Math.min(minLat, coord[1]);
+      maxLng = Math.max(maxLng, coord[0]);
+      maxLat = Math.max(maxLat, coord[1]);
+    });
+  });
 
-    const features = bairros.features;
-    const vals = features.map(f => f.properties[props[idx]] || 0);
+  const padding = 0.01;
+  const bounds = {
+    minLng: minLng - padding,
+    minLat: minLat - padding,
+    maxLng: maxLng + padding,
+    maxLat: maxLat + padding
+  };
+
+  themes.forEach(theme => {
+    const container = document.getElementById(theme.id);
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    const vals = bairros.features.map(f => f.properties[theme.prop] || 0);
     const min = Math.min(...vals);
     const max = Math.max(...vals);
 
-    // Criar legenda visual
-    const colorSchemes = [
-      ['#fff5d9','#ffe3a9','#f8b45d','#e96939','#c83b31','#9f172e'],
-      ['#c9387a','#ead956','#5fb878','#2393a8','#0f518a'],
-      ['#e8f4ff','#b3d9ff','#7eb8ff','#4a97ff','#2878c8'],
-      ['#e8f4ff','#a8d8f0','#7ab8e0','#4a98d0','#2878c8']
-    ];
+    // Simple SVG map
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', `${bounds.minLng} ${bounds.minLat} ${bounds.maxLng - bounds.minLng} ${bounds.maxLat - bounds.minLat}`);
+    svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    svg.setAttribute('width', width);
+    svg.setAttribute('height', height);
+    svg.style.position = 'absolute';
+    svg.style.top = '0';
+    svg.style.left = '0';
 
-    const colors = colorSchemes[idx];
-    let html = `<div style="padding:8px;background:linear-gradient(90deg,${colors.join(',')});height:40px;margin-bottom:8px;border-radius:2px;border:1px solid #ccc"></div>`;
-    html += `<small style="display:block;color:#666"><b>${min.toFixed(0)}</b> ← ${labels[idx]} → <b>${max.toFixed(0)}</b></small>`;
+    // Draw bairros
+    bairros.features.forEach(f => {
+      const val = f.properties[theme.prop] || 0;
+      const ratio = (val - min) / (max - min || 1);
+      const colorIdx = Math.round(ratio * (theme.colors.length - 1));
+      const color = theme.colors[colorIdx];
 
-    container.innerHTML = html;
-    container.style.display = 'flex';
-    container.style.flexDirection = 'column';
-    container.style.justifyContent = 'center';
-    container.style.alignItems = 'center';
-    container.style.fontSize = '12px';
-    container.style.color = '#666';
+      const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      const points = f.geometry.coordinates[0].map(c => `${c[0]},${c[1]}`).join(' ');
+      polygon.setAttribute('points', points);
+      polygon.setAttribute('fill', color);
+      polygon.setAttribute('stroke', '#fff');
+      polygon.setAttribute('stroke-width', '0.005');
+      polygon.setAttribute('opacity', '0.8');
+      polygon.title = `${f.properties.neighborhood_name}: ${val.toFixed(0)}`;
+      svg.appendChild(polygon);
+    });
+
+    container.innerHTML = '';
+    container.appendChild(svg);
   });
 }
 
