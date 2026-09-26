@@ -4,81 +4,74 @@ import { useEffect, useRef, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
-export default function ThematicMapRenderer({ geojsonUrl, theme, cityName }) {
+export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, cityCode }) {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const themeConfig = {
-    densidade: {
-      title: 'População',
-      icon: '👥',
-      filter: ['in', ['get', 'tipo_dados'], ['literal', ['empresa', 'torre_celular', 'saude']]],
-      color: '#6b7280',
-      radius: 6,
-    },
-    socioeconômico: {
-      title: 'Índice Socioeconômico',
-      icon: '📊',
-      filter: ['==', ['get', 'tipo_dados'], 'saude'],
-      color: '#10b981',
-      radius: 7,
-    },
-    empresas: {
-      title: 'Concentração Empresas',
-      icon: '🏢',
-      filter: ['==', ['get', 'tipo_dados'], 'empresa'],
+    density: {
+      label: 'Densidade Populacional',
+      description: 'Habitantes por km² (Censo 2022)',
       color: '#3b82f6',
-      radius: 6,
+      type: 'choropleth',
+    },
+    socioeconomic: {
+      label: 'Índice Socioeconômico',
+      description: 'Composição: renda, escolaridade, infraestrutura',
+      color: '#10b981',
+      type: 'choropleth',
+    },
+    companies: {
+      label: 'Concentração de Empresas',
+      description: 'Empresas ativas (Receita Federal, 2024)',
+      color: '#f59e0b',
+      type: 'choropleth',
     },
     telecom: {
-      title: 'Infraestrutura Telecom',
-      icon: '📡',
-      filter: ['==', ['get', 'tipo_dados'], 'torre_celular'],
+      label: 'Infraestrutura de Telecom',
+      description: 'ERBs (Anatel SMP 2024) e acessos de banda larga',
       color: '#ef4444',
-      radius: 7,
+      type: 'choropleth',
     },
   };
 
-  const config = themeConfig[theme] || themeConfig.densidade;
+  const config = themeConfig[theme] || themeConfig.density;
 
   useEffect(() => {
-    if (!mapContainer.current) return;
+    if (!mapContainer.current || !geospatial) return;
 
     const initMap = async () => {
       try {
         setIsLoading(true);
         setError(null);
 
-        const response = await fetch(geojsonUrl);
-        if (!response.ok) throw new Error(`Failed to load ${geojsonUrl}`);
-        const geojson = await response.json();
+        const layerData = geospatial[selectedLayer];
+        if (!layerData || !layerData.features) {
+          throw new Error(`Dados não disponíveis para ${selectedLayer}`);
+        }
 
-        // Filter features by theme
-        const filteredFeatures = geojson.features.filter((feature) => {
-          const tipo = feature.properties.tipo_dados;
-          if (theme === 'densidade') return true;
-          if (theme === 'socioeconômico') return tipo === 'saude';
-          if (theme === 'empresas') return tipo === 'empresa';
-          if (theme === 'telecom') return tipo === 'torre_celular';
-          return true;
-        });
-
-        // Calculate bounds
+        // Get bounds from features
         let bounds = [180, 90, -180, -90];
-        filteredFeatures.forEach((feature) => {
+        layerData.features.forEach((feature) => {
           if (feature.geometry.coordinates) {
-            const [lng, lat] = feature.geometry.coordinates;
-            bounds[0] = Math.min(bounds[0], lng);
-            bounds[1] = Math.min(bounds[1], lat);
-            bounds[2] = Math.max(bounds[2], lng);
-            bounds[3] = Math.max(bounds[3], lat);
+            if (feature.geometry.type === 'Point') {
+              const [lng, lat] = feature.geometry.coordinates;
+              bounds[0] = Math.min(bounds[0], lng);
+              bounds[1] = Math.min(bounds[1], lat);
+              bounds[2] = Math.max(bounds[2], lng);
+              bounds[3] = Math.max(bounds[3], lat);
+            }
           }
         });
 
         const center = [(bounds[0] + bounds[2]) / 2, (bounds[1] + bounds[3]) / 2];
         const zoom = 11;
+
+        if (map.current) {
+          map.current.remove();
+        }
 
         map.current = new maplibregl.Map({
           container: mapContainer.current,
@@ -92,22 +85,17 @@ export default function ThematicMapRenderer({ geojsonUrl, theme, cityName }) {
         map.current.on('load', () => {
           if (!map.current) return;
 
-          // Add filtered geojson
           map.current.addSource('thematic-data', {
             type: 'geojson',
-            data: {
-              type: 'FeatureCollection',
-              features: filteredFeatures,
-            },
+            data: layerData,
           });
 
-          // Add circle layer
           map.current.addLayer({
             id: 'thematic-features',
             type: 'circle',
             source: 'thematic-data',
             paint: {
-              'circle-radius': config.radius,
+              'circle-radius': 6,
               'circle-color': config.color,
               'circle-opacity': 0.7,
               'circle-stroke-width': 1,
@@ -115,7 +103,6 @@ export default function ThematicMapRenderer({ geojsonUrl, theme, cityName }) {
             },
           });
 
-          // Hover
           map.current.on('mouseenter', 'thematic-features', () => {
             if (map.current) map.current.getCanvas().style.cursor = 'pointer';
           });
@@ -126,13 +113,20 @@ export default function ThematicMapRenderer({ geojsonUrl, theme, cityName }) {
           setIsLoading(false);
         });
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to load map');
+        setError(err instanceof Error ? err.message : 'Erro ao carregar mapa');
         setIsLoading(false);
       }
     };
 
     initMap();
-  }, [geojsonUrl, theme]);
+
+    return () => {
+      if (map.current) {
+        map.current.remove();
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [geospatial, theme, selectedLayer]);
 
   return (
     <div className="w-full h-full relative bg-gray-100 rounded-lg overflow-hidden border border-gray-200">

@@ -25,7 +25,14 @@ export default function Home() {
     ])
       .then(([summary, geo]) => {
         setSummary(summary);
-        setGeospatial(geo);
+        if (geo) {
+          setGeospatial({
+            bairros: geo,
+            setores: geo,
+          });
+        } else {
+          setGeospatial(null);
+        }
       })
       .catch(() => {
         setSummary(null);
