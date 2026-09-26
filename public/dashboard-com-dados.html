@@ -334,16 +334,16 @@ function renderMaps(bairros, pontos) {
             const color = operatorColorMap[normalizedOperadora] || '#cccccc';
             const [lon, lat] = f.geometry.coordinates;
 
-            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-            circle.setAttribute('cx', lon);
-            circle.setAttribute('cy', lat);
-            circle.setAttribute('r', '0.015');
-            circle.setAttribute('fill', color);
-            circle.setAttribute('stroke', 'none');
-            circle.setAttribute('opacity', '0.85');
-            circle.style.pointerEvents = 'none';
-            circle.title = `${f.properties.nome} - ${f.properties.detalhe}`;
-            svg.appendChild(circle);
+            const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            dot.setAttribute('cx', lon);
+            dot.setAttribute('cy', lat);
+            dot.setAttribute('r', '0.0015');
+            dot.setAttribute('fill', color);
+            dot.setAttribute('stroke', 'none');
+            dot.setAttribute('opacity', '0.9');
+            dot.style.pointerEvents = 'none';
+            dot.title = `${f.properties.nome} - ${f.properties.detalhe}`;
+            svg.appendChild(dot);
           }
         });
       }
