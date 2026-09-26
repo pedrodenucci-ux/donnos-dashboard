@@ -223,7 +223,7 @@ function populateProfile(bairros) {
 
 function renderMaps(bairros, pontos) {
   const themes = [
-    {id:'map-density', prop:'population_density', colors:['#fff5d9','#ffe3a9','#f8b45d','#e96939','#c83b31','#9f172e'], label: 'Hab./km²'},
+    {id:'map-density', prop:'population_density', colors:['#f5f5f5','#e8d4a0','#d4a574','#c86e3c','#b83020','#8b1f1f'], label: 'Hab./km²'},
     {id:'map-ise', prop:'socioeconomic_index', colors:['#c9387a','#ead956','#5fb878','#2393a8','#0f518a'], label: 'ISE'},
     {id:'map-companies', prop:'enterprise_count', colors:['#e8f4ff','#b3d9ff','#7eb8ff','#4a97ff','#2878c8'], label: 'Empresas'},
     {id:'map-telecom', prop:'tower_count', colors:['#e8f4ff','#a8d8f0','#7ab8e0','#4a98d0','#2878c8'], label: 'Torres'}
@@ -320,11 +320,11 @@ function renderMaps(bairros, pontos) {
             const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             circle.setAttribute('cx', px);
             circle.setAttribute('cy', py);
-            circle.setAttribute('r', '0.004');
+            circle.setAttribute('r', '0.006');
             circle.setAttribute('fill', color);
             circle.setAttribute('stroke', '#fff');
-            circle.setAttribute('stroke-width', '0.002');
-            circle.setAttribute('opacity', '0.9');
+            circle.setAttribute('stroke-width', '0.0025');
+            circle.setAttribute('opacity', '0.95');
             circle.style.pointerEvents = 'none';
             const label = theme.id === 'map-companies' ? 'Empresa' : 'Torre';
             circle.title = `${label} em ${f.properties.neighborhood_name}`;
