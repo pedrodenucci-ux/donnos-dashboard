@@ -314,7 +314,7 @@ function renderMaps(bairros, pontos) {
           'VIVO': '#b449a6',
           'CLARO': '#e63b34',
           'TIM': '#2478b7',
-          'Iez! Telecom Ltda.': '#9d4edd'
+          'Iez! Telecom Ltda.': '#f4a60c'
         };
 
         // Plot all real telecom towers with their geolocations
@@ -337,7 +337,7 @@ function renderMaps(bairros, pontos) {
             const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             circle.setAttribute('cx', lon);
             circle.setAttribute('cy', lat);
-            circle.setAttribute('r', '0.006');
+            circle.setAttribute('r', '0.015');
             circle.setAttribute('fill', color);
             circle.setAttribute('stroke', 'none');
             circle.setAttribute('opacity', '0.85');
@@ -363,7 +363,7 @@ function renderMaps(bairros, pontos) {
         {name: 'Vivo', color: '#b449a6'},
         {name: 'Claro', color: '#e63b34'},
         {name: 'TIM', color: '#2478b7'},
-        {name: 'Iez! Telecom', color: '#9d4edd'}
+        {name: 'Iez! Telecom', color: '#f4a60c'}
       ];
       operators.forEach(op => {
         const item = document.createElement('div');
