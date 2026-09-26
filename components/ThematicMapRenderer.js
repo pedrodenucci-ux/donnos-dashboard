@@ -7,6 +7,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, cityCode }) {
   const mapContainer = useRef(null);
   const map = useRef(null);
+  const sourceAdded = useRef(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -40,39 +41,46 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
   const config = themeConfig[theme] || themeConfig.density;
 
   useEffect(() => {
-    if (!mapContainer.current || !geospatial) return;
+    if (!mapContainer.current || !geospatial) {
+      console.log('Missing container or geospatial data');
+      return;
+    }
 
-    const initMap = async () => {
+    const layerData = geospatial[selectedLayer];
+    if (!layerData || !layerData.features) {
+      setError(`Dados não disponíveis para ${selectedLayer}`);
+      setIsLoading(false);
+      return;
+    }
+
+    const initializeMap = () => {
       try {
         setIsLoading(true);
         setError(null);
 
-        const layerData = geospatial[selectedLayer];
-        if (!layerData || !layerData.features) {
-          throw new Error(`Dados não disponíveis para ${selectedLayer}`);
-        }
-
-        // Get bounds from features
+        // Calculate bounds
         let bounds = [180, 90, -180, -90];
         layerData.features.forEach((feature) => {
-          if (feature.geometry.coordinates) {
-            if (feature.geometry.type === 'Point') {
-              const [lng, lat] = feature.geometry.coordinates;
-              bounds[0] = Math.min(bounds[0], lng);
-              bounds[1] = Math.min(bounds[1], lat);
-              bounds[2] = Math.max(bounds[2], lng);
-              bounds[3] = Math.max(bounds[3], lat);
-            }
+          if (feature.geometry?.coordinates && feature.geometry.type === 'Point') {
+            const [lng, lat] = feature.geometry.coordinates;
+            bounds[0] = Math.min(bounds[0], lng);
+            bounds[1] = Math.min(bounds[1], lat);
+            bounds[2] = Math.max(bounds[2], lng);
+            bounds[3] = Math.max(bounds[3], lat);
           }
         });
 
         const center = [(bounds[0] + bounds[2]) / 2, (bounds[1] + bounds[3]) / 2];
         const zoom = 11;
 
+        // Remove existing map if present
         if (map.current) {
           map.current.remove();
+          map.current = null;
+          sourceAdded.current = false;
         }
 
+        // Create new map
         map.current = new maplibregl.Map({
           container: mapContainer.current,
           style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
@@ -83,46 +91,62 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
         });
 
         map.current.on('load', () => {
-          if (!map.current) return;
+          if (!map.current || sourceAdded.current) return;
 
-          map.current.addSource('thematic-data', {
-            type: 'geojson',
-            data: layerData,
-          });
+          try {
+            map.current.addSource('thematic-data', {
+              type: 'geojson',
+              data: layerData,
+            });
 
-          map.current.addLayer({
-            id: 'thematic-features',
-            type: 'circle',
-            source: 'thematic-data',
-            paint: {
-              'circle-radius': 6,
-              'circle-color': config.color,
-              'circle-opacity': 0.7,
-              'circle-stroke-width': 1,
-              'circle-stroke-color': '#fff',
-            },
-          });
+            map.current.addLayer({
+              id: 'thematic-features',
+              type: 'circle',
+              source: 'thematic-data',
+              paint: {
+                'circle-radius': 6,
+                'circle-color': config.color,
+                'circle-opacity': 0.7,
+                'circle-stroke-width': 1,
+                'circle-stroke-color': '#fff',
+              },
+            });
 
-          map.current.on('mouseenter', 'thematic-features', () => {
-            if (map.current) map.current.getCanvas().style.cursor = 'pointer';
-          });
-          map.current.on('mouseleave', 'thematic-features', () => {
-            if (map.current) map.current.getCanvas().style.cursor = '';
-          });
+            map.current.on('mouseenter', 'thematic-features', () => {
+              if (map.current) map.current.getCanvas().style.cursor = 'pointer';
+            });
+            map.current.on('mouseleave', 'thematic-features', () => {
+              if (map.current) map.current.getCanvas().style.cursor = '';
+            });
 
+            sourceAdded.current = true;
+            setIsLoading(false);
+          } catch (e) {
+            console.error('Error adding source/layer:', e);
+            setError(e instanceof Error ? e.message : 'Erro ao adicionar camada');
+            setIsLoading(false);
+          }
+        });
+
+        map.current.on('error', (e) => {
+          console.error('Map error:', e);
+          setError('Erro ao carregar mapa');
           setIsLoading(false);
         });
       } catch (err) {
+        console.error('Map initialization error:', err);
         setError(err instanceof Error ? err.message : 'Erro ao carregar mapa');
         setIsLoading(false);
       }
     };
 
-    initMap();
+    initializeMap();
 
     return () => {
       if (map.current) {
         map.current.remove();
+        map.current = null;
+        sourceAdded.current = false;
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -133,14 +157,14 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
       {/* Title */}
       <div className="absolute top-0 left-0 right-0 bg-white/90 backdrop-blur px-3 py-2 z-10 border-b border-gray-200">
         <h3 className="font-semibold text-sm text-gray-900">
-          {config.icon} {config.title}
+          {config.icon} {config.label}
         </h3>
       </div>
 
       {/* Loading */}
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-white/80 z-20">
-          <div className="text-gray-600 text-sm">Loading...</div>
+          <div className="text-gray-600 text-sm">Carregando mapa...</div>
         </div>
       )}
 
@@ -148,8 +172,8 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
       {error && (
         <div className="absolute inset-0 flex items-center justify-center bg-red-50 z-20">
           <div className="text-red-600 text-center text-xs p-2">
-            <p>Error loading map</p>
-            <p className="mt-1">{error}</p>
+            <p>Erro ao carregar mapa</p>
+            <p className="mt-1 text-red-500">{error}</p>
           </div>
         </div>
       )}
