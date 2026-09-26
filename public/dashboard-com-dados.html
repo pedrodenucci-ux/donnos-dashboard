@@ -26,11 +26,15 @@ body{min-width:1536px}
 .headRight b{font-size:16px;font-weight:800;display:block;margin-bottom:4px}
 .content{padding:12px 16px 0}
 .top{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;height:569px;margin-bottom:8px}
-.card{border:1px solid var(--line);border-radius:2px;overflow:hidden;background:#fff}
+.card{border:1px solid var(--line);border-radius:2px;overflow:hidden;background:#fff;position:relative}
 .cardHead{height:34px;background:linear-gradient(90deg,#083c70 0%,#0a4d89 100%);color:#fff;padding:7px 10px;font-weight:800;font-size:15px;display:flex;align-items:center}
 .cardSub{height:34px;padding:7px 11px 6px;font-size:11px;color:#2d526f;background:#f8fbfd;line-height:1.3}
 .mapContainer{height:406px;position:relative;background:#f5f7f9;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .map{width:100%;height:100%;position:absolute}
+.mapLegend{position:absolute;bottom:8px;left:8px;background:rgba(255,255,255,.95);border:1px solid #aaa;border-radius:2px;padding:6px 8px;font-size:8px;line-height:1.3;z-index:10;max-width:130px}
+.mapLegend b{display:block;font-size:9px;margin-bottom:3px;color:#0a3a56}
+.legendItem{display:flex;align-items:center;margin-top:2px;gap:3px}
+.legendColor{width:12px;height:8px;border:0.5px solid #999;border-radius:1px}
 .mapCaption{height:95px;padding:9px 11px;font-size:12px;line-height:1.3;color:#305980;background:#f0f8fd;border-top:1px solid #dce9f0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
 .dataRows{display:flex;gap:8px;height:286px;margin-top:8px}
 .profile{width:22.5%;border:1px solid var(--line);background:#fff;border-radius:2px;overflow:hidden}
@@ -180,9 +184,12 @@ button:hover{background:linear-gradient(135deg,#082d5f 0%,#051f3f 100%)}
 <script>
 async function loadDashboard() {
   try {
-    const bairros = await fetch('/data/3127388_bairros.geojson').then(r => r.json());
+    const [bairros, pontos] = await Promise.all([
+      fetch('/data/3127388_bairros.geojson').then(r => r.json()),
+      fetch('/data/3127388_pontos.geojson').then(r => r.json()).catch(() => null)
+    ]);
     populateProfile(bairros);
-    renderMaps(bairros);
+    renderMaps(bairros, pontos);
   } catch (error) {
     console.error('Erro:', error);
   }
@@ -214,12 +221,12 @@ function populateProfile(bairros) {
   `;
 }
 
-function renderMaps(bairros) {
+function renderMaps(bairros, pontos) {
   const themes = [
-    {id:'map-density', prop:'population_density', colors:['#fff5d9','#ffe3a9','#f8b45d','#e96939','#c83b31','#9f172e']},
-    {id:'map-ise', prop:'socioeconomic_index', colors:['#c9387a','#ead956','#5fb878','#2393a8','#0f518a']},
-    {id:'map-companies', prop:'enterprise_count', colors:['#e8f4ff','#b3d9ff','#7eb8ff','#4a97ff','#2878c8']},
-    {id:'map-telecom', prop:'tower_count', colors:['#e8f4ff','#a8d8f0','#7ab8e0','#4a98d0','#2878c8']}
+    {id:'map-density', prop:'population_density', colors:['#fff5d9','#ffe3a9','#f8b45d','#e96939','#c83b31','#9f172e'], label: 'Hab./km²'},
+    {id:'map-ise', prop:'socioeconomic_index', colors:['#c9387a','#ead956','#5fb878','#2393a8','#0f518a'], label: 'ISE'},
+    {id:'map-companies', prop:'enterprise_count', colors:['#e8f4ff','#b3d9ff','#7eb8ff','#4a97ff','#2878c8'], label: 'Empresas'},
+    {id:'map-telecom', prop:'tower_count', colors:['#e8f4ff','#a8d8f0','#7ab8e0','#4a98d0','#2878c8'], label: 'Torres'}
   ];
 
   // Calculate bounds
@@ -250,7 +257,7 @@ function renderMaps(bairros) {
     const min = Math.min(...vals);
     const max = Math.max(...vals);
 
-    // Simple SVG map
+    // SVG map
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('viewBox', `${bounds.minLng} ${bounds.minLat} ${bounds.maxLng - bounds.minLng} ${bounds.maxLat - bounds.minLat}`);
     svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
@@ -278,8 +285,40 @@ function renderMaps(bairros) {
       svg.appendChild(polygon);
     });
 
+    // Draw pontos (points) if available
+    if (pontos && pontos.features) {
+      pontos.features.forEach(p => {
+        const coords = p.geometry.coordinates;
+        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        circle.setAttribute('cx', coords[0]);
+        circle.setAttribute('cy', coords[1]);
+        circle.setAttribute('r', '0.015');
+        circle.setAttribute('fill', '#e74c3c');
+        circle.setAttribute('stroke', '#fff');
+        circle.setAttribute('stroke-width', '0.003');
+        circle.setAttribute('opacity', '0.9');
+        circle.style.pointerEvents = 'none';
+        svg.appendChild(circle);
+      });
+    }
+
     container.innerHTML = '';
     container.appendChild(svg);
+
+    // Add legend
+    const legend = document.createElement('div');
+    legend.className = 'mapLegend';
+    legend.innerHTML = `<b>${theme.label}</b>`;
+
+    for (let i = 0; i < theme.colors.length; i++) {
+      const itemVal = min + (i / (theme.colors.length - 1)) * (max - min);
+      const item = document.createElement('div');
+      item.className = 'legendItem';
+      item.innerHTML = `<div class="legendColor" style="background:${theme.colors[i]}"></div><span>${itemVal.toFixed(0)}</span>`;
+      legend.appendChild(item);
+    }
+
+    container.appendChild(legend);
   });
 }
 
