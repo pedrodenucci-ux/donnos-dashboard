@@ -21,15 +21,16 @@ export default function Home() {
     setLoading(true);
     Promise.all([
       fetch(`/data/${code}_summary.json`).then((r) => (r.ok ? r.json() : null)),
-      fetch(`/data/${code}_geospatial.json`).then((r) => (r.ok ? r.json() : null)),
+      fetch(`/data/${code}_bairros.geojson`).then((r) => (r.ok ? r.json() : null)),
+      fetch(`/data/${code}_setores.geojson`).then((r) => (r.ok ? r.json() : null)),
     ])
-      .then(([summary, geo]) => {
-        console.log('Loaded city data:', { code, hasSummary: !!summary, hasGeo: !!geo, geoFeatures: geo?.features?.length || 0 });
+      .then(([summary, bairros, setores]) => {
+        console.log('Loaded city data:', { code, hasSummary: !!summary, hasBairros: !!bairros, hasSetores: !!setores });
         setSummary(summary);
-        if (geo) {
+        if (bairros || setores) {
           setGeospatial({
-            bairros: geo,
-            setores: geo,
+            bairros: bairros || { type: 'FeatureCollection', features: [] },
+            setores: setores || { type: 'FeatureCollection', features: [] },
           });
         } else {
           setGeospatial(null);

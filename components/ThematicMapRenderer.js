@@ -7,42 +7,70 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, cityCode }) {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const sourceAdded = useRef(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const themeConfig = {
     density: {
       label: 'Densidade Populacional',
-      description: 'Habitantes por km² (Censo 2022)',
-      color: '#3b82f6',
-      type: 'choropleth',
+      property: 'population_density',
+      colorStops: [
+        [0, '#fffcf0'],
+        [25, '#fee5c3'],
+        [100, '#fdbf6f'],
+        [250, '#fe9929'],
+        [500, '#d94701'],
+        [1000, '#8c2d04']
+      ],
+      unit: 'hab/km²'
     },
     socioeconomic: {
       label: 'Índice Socioeconômico',
-      description: 'Composição: renda, escolaridade, infraestrutura',
-      color: '#10b981',
-      type: 'choropleth',
+      property: 'socioeconomic_index',
+      colorStops: [
+        [0, '#e41a1c'],
+        [20, '#fd8d3c'],
+        [40, '#ffffbf'],
+        [60, '#a1d99b'],
+        [80, '#31a354'],
+        [100, '#006837']
+      ],
+      unit: 'ISE'
     },
     companies: {
       label: 'Concentração de Empresas',
-      description: 'Empresas ativas (Receita Federal, 2024)',
-      color: '#f59e0b',
-      type: 'choropleth',
+      property: 'enterprise_count',
+      colorStops: [
+        [0, '#f7fbff'],
+        [10, '#deebf7'],
+        [50, '#9ecae1'],
+        [100, '#3182bd'],
+        [200, '#08519c'],
+        [500, '#08306b']
+      ],
+      unit: 'empresas'
     },
     telecom: {
       label: 'Infraestrutura de Telecom',
-      description: 'ERBs (Anatel SMP 2024) e acessos de banda larga',
-      color: '#ef4444',
-      type: 'choropleth',
-    },
+      property: 'tower_count',
+      colorStops: [
+        [0, '#ffffcc'],
+        [1, '#ffeda0'],
+        [2, '#fed976'],
+        [3, '#feb24c'],
+        [4, '#fd8d3c'],
+        [5, '#fc4e2a'],
+        [10, '#e31a1c'],
+        [20, '#bd0026']
+      ],
+      unit: 'ERBs'
+    }
   };
 
   const config = themeConfig[theme] || themeConfig.density;
 
   useEffect(() => {
     if (!mapContainer.current || !geospatial) {
-      console.log('Missing container or geospatial data');
       return;
     }
 
@@ -58,29 +86,27 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
         setIsLoading(true);
         setError(null);
 
-        // Calculate bounds
         let bounds = [180, 90, -180, -90];
         layerData.features.forEach((feature) => {
-          if (feature.geometry?.coordinates && feature.geometry.type === 'Point') {
-            const [lng, lat] = feature.geometry.coordinates;
-            bounds[0] = Math.min(bounds[0], lng);
-            bounds[1] = Math.min(bounds[1], lat);
-            bounds[2] = Math.max(bounds[2], lng);
-            bounds[3] = Math.max(bounds[3], lat);
+          if (feature.geometry?.type === 'Polygon') {
+            const coords = feature.geometry.coordinates[0];
+            coords.forEach(([lng, lat]) => {
+              bounds[0] = Math.min(bounds[0], lng);
+              bounds[1] = Math.min(bounds[1], lat);
+              bounds[2] = Math.max(bounds[2], lng);
+              bounds[3] = Math.max(bounds[3], lat);
+            });
           }
         });
 
         const center = [(bounds[0] + bounds[2]) / 2, (bounds[1] + bounds[3]) / 2];
-        const zoom = 11;
+        const zoom = 12;
 
-        // Remove existing map if present
         if (map.current) {
           map.current.remove();
           map.current = null;
-          sourceAdded.current = false;
         }
 
-        // Create new map
         map.current = new maplibregl.Map({
           container: mapContainer.current,
           style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
@@ -91,38 +117,53 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
         });
 
         map.current.on('load', () => {
-          if (!map.current || sourceAdded.current) return;
+          if (!map.current) return;
 
           try {
-            map.current.addSource('thematic-data', {
+            map.current.addSource('choropleth-data', {
               type: 'geojson',
               data: layerData,
             });
 
+            const colorExpression = [
+              'interpolate',
+              ['linear'],
+              ['get', config.property],
+              ...config.colorStops.flatMap(([value, color]) => [value, color])
+            ];
+
             map.current.addLayer({
-              id: 'thematic-features',
-              type: 'circle',
-              source: 'thematic-data',
+              id: 'choropleth-fill',
+              type: 'fill',
+              source: 'choropleth-data',
               paint: {
-                'circle-radius': 6,
-                'circle-color': config.color,
-                'circle-opacity': 0.7,
-                'circle-stroke-width': 1,
-                'circle-stroke-color': '#fff',
+                'fill-color': colorExpression,
+                'fill-opacity': 0.8,
               },
             });
 
-            map.current.on('mouseenter', 'thematic-features', () => {
-              if (map.current) map.current.getCanvas().style.cursor = 'pointer';
-            });
-            map.current.on('mouseleave', 'thematic-features', () => {
-              if (map.current) map.current.getCanvas().style.cursor = '';
+            map.current.addLayer({
+              id: 'choropleth-outline',
+              type: 'line',
+              source: 'choropleth-data',
+              paint: {
+                'line-color': '#fff',
+                'line-width': 1.5,
+                'line-opacity': 0.6,
+              },
             });
 
-            sourceAdded.current = true;
+            map.current.on('mousemove', 'choropleth-fill', (e) => {
+              map.current.getCanvas().style.cursor = 'pointer';
+            });
+
+            map.current.on('mouseleave', 'choropleth-fill', () => {
+              map.current.getCanvas().style.cursor = '';
+            });
+
             setIsLoading(false);
           } catch (e) {
-            console.error('Error adding source/layer:', e);
+            console.error('Error adding choropleth layer:', e);
             setError(e instanceof Error ? e.message : 'Erro ao adicionar camada');
             setIsLoading(false);
           }
@@ -146,40 +187,28 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
       if (map.current) {
         map.current.remove();
         map.current = null;
-        sourceAdded.current = false;
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [geospatial, theme, selectedLayer]);
 
   return (
     <div className="w-full h-full relative bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
-      {/* Title */}
-      <div className="absolute top-0 left-0 right-0 bg-white/90 backdrop-blur px-3 py-2 z-10 border-b border-gray-200">
-        <h3 className="font-semibold text-sm text-gray-900">
-          {config.icon} {config.label}
-        </h3>
-      </div>
+      <div ref={mapContainer} className="w-full h-full" />
 
-      {/* Loading */}
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-white/80 z-20">
           <div className="text-gray-600 text-sm">Carregando mapa...</div>
         </div>
       )}
 
-      {/* Error */}
       {error && (
         <div className="absolute inset-0 flex items-center justify-center bg-red-50 z-20">
           <div className="text-red-600 text-center text-xs p-2">
             <p>Erro ao carregar mapa</p>
-            <p className="mt-1 text-red-500">{error}</p>
+            <p className="mt-1">{error}</p>
           </div>
         </div>
       )}
-
-      {/* Map */}
-      <div ref={mapContainer} className="w-full h-full" style={{ marginTop: '38px' }} />
     </div>
   );
 }
