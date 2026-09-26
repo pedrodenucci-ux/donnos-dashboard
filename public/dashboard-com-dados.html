@@ -285,20 +285,42 @@ function renderMaps(bairros, pontos) {
       svg.appendChild(polygon);
     });
 
-    // Draw pontos (points) if available
-    if (pontos && pontos.features) {
-      pontos.features.forEach(p => {
-        const coords = p.geometry.coordinates;
-        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        circle.setAttribute('cx', coords[0]);
-        circle.setAttribute('cy', coords[1]);
-        circle.setAttribute('r', '0.015');
-        circle.setAttribute('fill', '#e74c3c');
-        circle.setAttribute('stroke', '#fff');
-        circle.setAttribute('stroke-width', '0.003');
-        circle.setAttribute('opacity', '0.9');
-        circle.style.pointerEvents = 'none';
-        svg.appendChild(circle);
+    // Draw towers (only on telecom map)
+    if (theme.id === 'map-telecom') {
+      bairros.features.forEach(f => {
+        const towerCount = f.properties.tower_count || 0;
+        if (towerCount > 0) {
+          // Calculate centroid of the polygon
+          let cx = 0, cy = 0, pointCount = 0;
+          f.geometry.coordinates[0].forEach(coord => {
+            cx += coord[0];
+            cy += coord[1];
+            pointCount++;
+          });
+          cx /= pointCount;
+          cy /= pointCount;
+
+          // Create circles for each tower
+          for (let i = 0; i < towerCount; i++) {
+            // Distribute towers around centroid in small circle
+            const angle = (i / towerCount) * Math.PI * 2;
+            const offset = 0.003;
+            const tx = cx + offset * Math.cos(angle);
+            const ty = cy + offset * Math.sin(angle);
+
+            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle.setAttribute('cx', tx);
+            circle.setAttribute('cy', ty);
+            circle.setAttribute('r', '0.004');
+            circle.setAttribute('fill', '#e74c3c');
+            circle.setAttribute('stroke', '#fff');
+            circle.setAttribute('stroke-width', '0.002');
+            circle.setAttribute('opacity', '0.9');
+            circle.style.pointerEvents = 'none';
+            circle.title = `Torre em ${f.properties.neighborhood_name}`;
+            svg.appendChild(circle);
+          }
+        }
       });
     }
 
