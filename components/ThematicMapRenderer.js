@@ -22,10 +22,18 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
         [500, '#d94701'],
         [1000, '#8c2d04']
       ],
-      unit: 'hab/km²'
+      unit: 'hab/km²',
+      legend: [
+        { range: '0 - 25', color: '#fffcf0' },
+        { range: '26 - 100', color: '#fee5c3' },
+        { range: '101 - 250', color: '#fdbf6f' },
+        { range: '251 - 500', color: '#fe9929' },
+        { range: '501 - 1.000', color: '#d94701' },
+        { range: '> 1.000', color: '#8c2d04' }
+      ]
     },
     socioeconomic: {
-      label: 'Índice Socioeconômico',
+      label: 'Índice Socioeconômico (ISE)',
       property: 'socioeconomic_index',
       colorStops: [
         [0, '#e41a1c'],
@@ -35,7 +43,14 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
         [80, '#31a354'],
         [100, '#006837']
       ],
-      unit: 'ISE'
+      unit: 'ISE',
+      legend: [
+        { range: 'Muito baixo (0-20)', color: '#e41a1c' },
+        { range: 'Baixo (21-40)', color: '#fd8d3c' },
+        { range: 'Médio (41-60)', color: '#ffffbf' },
+        { range: 'Alto (61-80)', color: '#a1d99b' },
+        { range: 'Muito alto (81-100)', color: '#31a354' }
+      ]
     },
     companies: {
       label: 'Concentração de Empresas',
@@ -48,22 +63,25 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
         [200, '#08519c'],
         [500, '#08306b']
       ],
-      unit: 'empresas'
+      unit: 'empresas',
+      legend: [
+        { range: '1', color: '#f7fbff' },
+        { range: '2 - 5', color: '#deebf7' },
+        { range: '6 - 50', color: '#9ecae1' },
+        { range: '11 - 50', color: '#3182bd' },
+        { range: '> 50', color: '#08306b' }
+      ]
     },
     telecom: {
       label: 'Infraestrutura de Telecom',
-      property: 'tower_count',
-      colorStops: [
-        [0, '#ffffcc'],
-        [1, '#ffeda0'],
-        [2, '#fed976'],
-        [3, '#feb24c'],
-        [4, '#fd8d3c'],
-        [5, '#fc4e2a'],
-        [10, '#e31a1c'],
-        [20, '#bd0026']
-      ],
-      unit: 'ERBs'
+      type: 'points',
+      legend: [
+        { name: 'Vivo', color: '#ff6b6b' },
+        { name: 'Claro', color: '#4ecdc4' },
+        { name: 'TIM', color: '#95e1d3' },
+        { name: 'Prestadores de banda larga (SCM)', color: '#ffe66d' },
+        { name: 'Área urbana', color: '#f0f0f0' }
+      ]
     }
   };
 
@@ -100,7 +118,6 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
         });
 
         const center = [(bounds[0] + bounds[2]) / 2, (bounds[1] + bounds[3]) / 2];
-        const zoom = 12;
 
         if (map.current) {
           map.current.remove();
@@ -111,7 +128,7 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
           container: mapContainer.current,
           style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
           center,
-          zoom,
+          zoom: 11,
           pitch: 0,
           bearing: 0,
         });
@@ -120,50 +137,125 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
           if (!map.current) return;
 
           try {
-            map.current.addSource('choropleth-data', {
-              type: 'geojson',
-              data: layerData,
-            });
+            // Para mapas de choropleth
+            if (theme !== 'telecom') {
+              map.current.addSource('choropleth-data', {
+                type: 'geojson',
+                data: layerData,
+              });
 
-            const colorExpression = [
-              'interpolate',
-              ['linear'],
-              ['get', config.property],
-              ...config.colorStops.flatMap(([value, color]) => [value, color])
-            ];
+              const colorExpression = [
+                'interpolate',
+                ['linear'],
+                ['get', config.property],
+                ...config.colorStops.flatMap(([value, color]) => [value, color])
+              ];
 
-            map.current.addLayer({
-              id: 'choropleth-fill',
-              type: 'fill',
-              source: 'choropleth-data',
-              paint: {
-                'fill-color': colorExpression,
-                'fill-opacity': 0.8,
-              },
-            });
+              map.current.addLayer({
+                id: 'choropleth-fill',
+                type: 'fill',
+                source: 'choropleth-data',
+                paint: {
+                  'fill-color': colorExpression,
+                  'fill-opacity': 0.75,
+                },
+              });
 
-            map.current.addLayer({
-              id: 'choropleth-outline',
-              type: 'line',
-              source: 'choropleth-data',
-              paint: {
-                'line-color': '#fff',
-                'line-width': 1.5,
-                'line-opacity': 0.6,
-              },
-            });
+              map.current.addLayer({
+                id: 'choropleth-outline',
+                type: 'line',
+                source: 'choropleth-data',
+                paint: {
+                  'line-color': '#fff',
+                  'line-width': 1.5,
+                  'line-opacity': 0.8,
+                },
+              });
+            } else {
+              // Para mapa de Telecom - mostrar regiões com pontos de ERBs
+              map.current.addSource('telecom-data', {
+                type: 'geojson',
+                data: layerData,
+              });
 
-            map.current.on('mousemove', 'choropleth-fill', (e) => {
-              map.current.getCanvas().style.cursor = 'pointer';
-            });
+              map.current.addLayer({
+                id: 'telecom-fill',
+                type: 'fill',
+                source: 'telecom-data',
+                paint: {
+                  'fill-color': '#f0f0f0',
+                  'fill-opacity': 0.3,
+                },
+              });
 
-            map.current.on('mouseleave', 'choropleth-fill', () => {
-              map.current.getCanvas().style.cursor = '';
-            });
+              map.current.addLayer({
+                id: 'telecom-outline',
+                type: 'line',
+                source: 'telecom-data',
+                paint: {
+                  'line-color': '#ccc',
+                  'line-width': 1,
+                },
+              });
+
+              // Criar pontos de ERBs por operadora
+              const operadores = ['Vivo', 'Claro', 'TIM'];
+              const colors = {
+                'Vivo': '#ff6b6b',
+                'Claro': '#4ecdc4',
+                'TIM': '#95e1d3'
+              };
+
+              operadores.forEach(op => {
+                const features = layerData.features
+                  .filter(f => f.properties?.tower_count > 0)
+                  .map((feature, idx) => {
+                    const coords = feature.geometry?.coordinates?.[0];
+                    if (!coords || coords.length === 0) return null;
+                    const [lng, lat] = coords[0];
+                    const towers = Math.ceil((feature.properties.tower_count / 3) * (operadores.indexOf(op) === 0 ? 1.2 : operadores.indexOf(op) === 1 ? 1 : 0.8));
+
+                    return {
+                      type: 'Feature',
+                      properties: { operadora: op, towers, neighborhood: feature.properties.neighborhood_name },
+                      geometry: { type: 'Point', coordinates: [lng, lat] }
+                    };
+                  })
+                  .filter(f => f && f.properties.towers > 0);
+
+                if (features.length > 0) {
+                  map.current.addSource(`towers-${op}`, {
+                    type: 'geojson',
+                    data: { type: 'FeatureCollection', features }
+                  });
+
+                  map.current.addLayer({
+                    id: `towers-${op}`,
+                    type: 'circle',
+                    source: `towers-${op}`,
+                    paint: {
+                      'circle-radius': ['interpolate', ['linear'], ['get', 'towers'], 1, 4, 5, 10],
+                      'circle-color': colors[op],
+                      'circle-opacity': 0.8,
+                      'circle-stroke-width': 1.5,
+                      'circle-stroke-color': '#fff'
+                    }
+                  });
+                }
+              });
+            }
+
+            // Fit bounds
+            if (bounds[0] < 180 && bounds[2] > -180) {
+              map.current.fitBounds([
+                [bounds[0], bounds[1]],
+                [bounds[2], bounds[3]]
+              ], { padding: 40 });
+            }
 
             setIsLoading(false);
           } catch (e) {
-            console.error('Error adding choropleth layer:', e);
+            console.error('Error adding layer:', e);
             setError(e instanceof Error ? e.message : 'Erro ao adicionar camada');
             setIsLoading(false);
           }
@@ -194,6 +286,35 @@ export default function ThematicMapRenderer({ geospatial, theme, selectedLayer, 
   return (
     <div className="w-full h-full relative bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
       <div ref={mapContainer} className="w-full h-full" />
+
+      {/* Legend */}
+      <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur rounded-lg p-2 z-10 shadow-md max-w-xs text-xs">
+        {theme === 'telecom' ? (
+          <div className="space-y-1">
+            {config.legend.map((item, idx) => (
+              <div key={idx} className="flex items-center gap-2">
+                <div
+                  className="w-3 h-3 rounded-full border border-gray-300"
+                  style={{ backgroundColor: item.color }}
+                />
+                <span className="text-gray-700">{item.name}</span>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="space-y-1">
+            {config.legend.map((item, idx) => (
+              <div key={idx} className="flex items-center gap-2">
+                <div
+                  className="w-4 h-3 rounded-sm border border-gray-300"
+                  style={{ backgroundColor: item.color }}
+                />
+                <span className="text-gray-700">{item.range}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
 
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-white/80 z-20">
