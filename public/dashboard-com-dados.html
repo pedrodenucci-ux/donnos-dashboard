@@ -307,44 +307,46 @@ function renderMaps(bairros, pontos) {
           svg.appendChild(circle);
         }
       });
-    } else if (theme.id === 'map-telecom' && pontos) {
-      // Map operator names to colors
-      const operatorColorMap = {
-        'VIVO': '#b449a6',
-        'CLARO': '#e63b34',
-        'TIM': '#2478b7',
-        'Iez! Telecom Ltda.': '#9d4edd'
-      };
+    } else if (theme.id === 'map-telecom') {
+      if (pontos && pontos.features) {
+        // Map operator names to colors
+        const operatorColorMap = {
+          'VIVO': '#b449a6',
+          'CLARO': '#e63b34',
+          'TIM': '#2478b7',
+          'Iez! Telecom Ltda.': '#9d4edd'
+        };
 
-      // Plot all real telecom towers with their geolocations
-      pontos.features.forEach(f => {
-        if (f.properties.tipo_dados === 'torre_celular') {
-          // Extract operator name from "ERB OPERADORA" format
-          const operadoraMatch = f.properties.nome.match(/ERB\s+(.+)/i);
-          let operadora = operadoraMatch ? operadoraMatch[1].trim() : 'OUTRO';
+        // Plot all real telecom towers with their geolocations
+        pontos.features.forEach(f => {
+          if (f.properties && f.properties.tipo_dados === 'torre_celular' && f.geometry && f.geometry.coordinates) {
+            // Extract operator name from "ERB OPERADORA" format
+            const operadoraMatch = f.properties.nome.match(/ERB\s+(.+)/i);
+            let operadora = operadoraMatch ? operadoraMatch[1].trim() : 'OUTRO';
 
-          // Normalize operator name for color mapping
-          let normalizedOperadora = operadora.toUpperCase();
-          if (normalizedOperadora.includes('VIVO')) normalizedOperadora = 'VIVO';
-          if (normalizedOperadora.includes('CLARO')) normalizedOperadora = 'CLARO';
-          if (normalizedOperadora.includes('TIM')) normalizedOperadora = 'TIM';
-          if (normalizedOperadora.includes('IEZ')) normalizedOperadora = 'Iez! Telecom Ltda.';
+            // Normalize operator name for color mapping
+            let normalizedOperadora = operadora.toUpperCase();
+            if (normalizedOperadora.includes('VIVO')) normalizedOperadora = 'VIVO';
+            if (normalizedOperadora.includes('CLARO')) normalizedOperadora = 'CLARO';
+            if (normalizedOperadora.includes('TIM')) normalizedOperadora = 'TIM';
+            if (normalizedOperadora.includes('IEZ')) normalizedOperadora = 'Iez! Telecom Ltda.';
 
-          const color = operatorColorMap[normalizedOperadora] || '#cccccc';
-          const [lon, lat] = f.geometry.coordinates;
+            const color = operatorColorMap[normalizedOperadora] || '#cccccc';
+            const [lon, lat] = f.geometry.coordinates;
 
-          const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-          circle.setAttribute('cx', lon);
-          circle.setAttribute('cy', lat);
-          circle.setAttribute('r', '0.006');
-          circle.setAttribute('fill', color);
-          circle.setAttribute('stroke', 'none');
-          circle.setAttribute('opacity', '0.85');
-          circle.style.pointerEvents = 'none';
-          circle.title = `${f.properties.nome} - ${f.properties.detalhe}`;
-          svg.appendChild(circle);
-        }
-      });
+            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle.setAttribute('cx', lon);
+            circle.setAttribute('cy', lat);
+            circle.setAttribute('r', '0.006');
+            circle.setAttribute('fill', color);
+            circle.setAttribute('stroke', 'none');
+            circle.setAttribute('opacity', '0.85');
+            circle.style.pointerEvents = 'none';
+            circle.title = `${f.properties.nome} - ${f.properties.detalhe}`;
+            svg.appendChild(circle);
+          }
+        });
+      }
     }
 
     container.innerHTML = '';
