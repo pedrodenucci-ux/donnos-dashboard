@@ -1,0 +1,13 @@
+{
+  "type": "FeatureCollection",
+  "name": "3509007_geospatial",
+  "features": [
+    { "type": "Feature", "properties": { "tipo_dados": "empresa", "municipio_codigo": "3509007" }, "geometry": { "type": "Point", "coordinates": [ -47.060914, -22.906847 ] } },
+    { "type": "Feature", "properties": { "tipo_dados": "empresa", "municipio_codigo": "3509007" }, "geometry": { "type": "Point", "coordinates": [ -47.061234, -22.907451 ] } },
+    { "type": "Feature", "properties": { "tipo_dados": "empresa", "municipio_codigo": "3509007" }, "geometry": { "type": "Point", "coordinates": [ -47.059914, -22.905847 ] } },
+    { "type": "Feature", "properties": { "tipo_dados": "torre_celular", "municipio_codigo": "3509007" }, "geometry": { "type": "Point", "coordinates": [ -47.061534, -22.908451 ] } },
+    { "type": "Feature", "properties": { "tipo_dados": "torre_celular", "municipio_codigo": "3509007" }, "geometry": { "type": "Point", "coordinates": [ -47.058914, -22.904347 ] } },
+    { "type": "Feature", "properties": { "tipo_dados": "saude", "municipio_codigo": "3509007" }, "geometry": { "type": "Point", "coordinates": [ -47.062914, -22.909847 ] } },
+    { "type": "Feature", "properties": { "tipo_dados": "saude", "municipio_codigo": "3509007" }, "geometry": { "type": "Point", "coordinates": [ -47.060214, -22.906247 ] } }
+  ]
+}

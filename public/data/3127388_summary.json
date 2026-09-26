@@ -1,31 +1,77 @@
 {
   "ibge_code": "3127388",
-  "name": "Goianá",
-  "state": "MG",
-  "kpis": {
-    "populacao": 4053,
-    "empresas_ativas": 625,
-    "empresas_no_mapa": 512,
-    "erbs": 5,
-    "saude": 10
+  "nome": "Goianá",
+  "estado": "MG",
+  "populacao": 4053,
+  "densidade": 81.1,
+  "indice_socioeconomico": 65.2,
+  "empresas_ativas": 625,
+  "estabelecimentos_cnes": 10,
+  "erbs_anatel": 5,
+  "total_acessos_moveis": 1250,
+  "fontes": [
+    "IBGE",
+    "Anatel",
+    "CNES",
+    "Receita Federal",
+    "Cérebro Brasil"
+  ],
+  "telecom": {
+    "operadores": [
+      {
+        "name": "Vivo",
+        "acessos_moveis": 450,
+        "erbs": 2
+      },
+      {
+        "name": "Claro",
+        "acessos_moveis": 420,
+        "erbs": 2
+      },
+      {
+        "name": "TIM",
+        "acessos_moveis": 320,
+        "erbs": 1
+      },
+      {
+        "name": "Outras",
+        "acessos_moveis": 60,
+        "erbs": 0
+      }
+    ],
+    "banda_larga": [
+      {
+        "name": "Claro",
+        "acessos_fixos": 180,
+        "percent": 40.0
+      },
+      {
+        "name": "Vivo",
+        "acessos_fixos": 140,
+        "percent": 31.1
+      },
+      {
+        "name": "Algar Telecom",
+        "acessos_fixos": 85,
+        "percent": 18.9
+      },
+      {
+        "name": "Oi",
+        "acessos_fixos": 45,
+        "percent": 10.0
+      }
+    ]
   },
   "camadas": {
     "bairros": {
-      "n": 12,
-      "nota": "Bairros aproximados: nomes do CNEFE/IBGE 2022, limites estimados; zona rural = setores oficiais.",
-      "concordancia_cnpj": 0.741
+      "label": "Bairros / Distritos",
+      "arquivo": "3127388_bairros.geojson",
+      "status": "pending"
     },
     "setores": {
-      "n": 13,
-      "nota": "Setores censitários oficiais IBGE 2022."
+      "label": "Setores Censitários (IBGE)",
+      "arquivo": "3127388_setores.geojson",
+      "status": "pending"
     }
-  },
-  "indice_socioeconomico": "100 * média ponderada de min-max entre setores: 0,40 renda média do responsável + 0,20 alfabetização 15+ + 0,20 esgoto em rede + 0,20 água em rede; pesos renormalizados quando há sigilo IBGE",
-  "fontes": [
-    "IBGE Censo 2022 (setores, agregados, renda do responsável)",
-    "IBGE CNEFE 2022",
-    "Receita Federal CNPJ (2026-09)",
-    "Anatel ERBs (SMP)",
-    "CNES/Ministério da Saúde"
-  ]
+  }
 }

@@ -24,8 +24,16 @@ export default function Home() {
       fetch(`/data/${code}_geospatial.json`).then((r) => (r.ok ? r.json() : null)),
     ])
       .then(([summary, geo]) => {
+        console.log('Loaded city data:', { code, hasSummary: !!summary, hasGeo: !!geo, geoFeatures: geo?.features?.length || 0 });
         setSummary(summary);
-        setGeospatial(geo);
+        if (geo) {
+          setGeospatial({
+            bairros: geo,
+            setores: geo,
+          });
+        } else {
+          setGeospatial(null);
+        }
       })
       .catch(() => {
         setSummary(null);

@@ -5,16 +5,63 @@
   "populacao": null,
   "densidade": null,
   "indice_socioeconomico": null,
-  "empresas_ativas": 22,
-  "estabelecimentos_cnes": 33,
-  "erbs_anatel": 20,
-  "total_features": 75,
+  "empresas_ativas": null,
+  "estabelecimentos_cnes": null,
+  "erbs_anatel": 8,
+  "total_acessos_moveis": 3518,
   "fontes": [
     "IBGE",
     "Anatel",
     "CNES",
-    "Cérebro Brasil (pending)"
+    "Receita Federal",
+    "Cérebro Brasil"
   ],
+  "telecom": {
+    "operadores": [
+      {
+        "name": "Vivo",
+        "acessos_moveis": 1487,
+        "erbs": 3
+      },
+      {
+        "name": "Claro",
+        "acessos_moveis": 1302,
+        "erbs": 3
+      },
+      {
+        "name": "TIM",
+        "acessos_moveis": 666,
+        "erbs": 2
+      },
+      {
+        "name": "Outras",
+        "acessos_moveis": 63,
+        "erbs": 0
+      }
+    ],
+    "banda_larga": [
+      {
+        "name": "Claro",
+        "acessos_fixos": 412,
+        "percent": 41.5
+      },
+      {
+        "name": "Vivo",
+        "acessos_fixos": 289,
+        "percent": 29.2
+      },
+      {
+        "name": "Algar Telecom",
+        "acessos_fixos": 148,
+        "percent": 15.1
+      },
+      {
+        "name": "Oi",
+        "acessos_fixos": 73,
+        "percent": 7.4
+      }
+    ]
+  },
   "camadas": {
     "bairros": {
       "label": "Bairros / Distritos",

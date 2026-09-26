@@ -28,6 +28,14 @@ export default function DashboardLayout({ city, summary, geospatial }) {
     { id: 'telecom', label: 'Infraestrutura de Telecom', description: 'ERBs (Anatel SMP 2024) e acessos de banda larga' },
   ];
 
+  if (!geospatial) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-gray-50">
+        <p className="text-gray-500">Dados geoespaciais não disponíveis...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Header */}

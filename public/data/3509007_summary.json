@@ -1,6 +1,6 @@
 {
-  "ibge_code": "3550308",
-  "nome": "São Paulo",
+  "ibge_code": "3509007",
+  "nome": "Campinas",
   "estado": "SP",
   "populacao": null,
   "densidade": null,
@@ -65,12 +65,12 @@
   "camadas": {
     "bairros": {
       "label": "Bairros / Distritos",
-      "arquivo": "3550308_bairros.geojson",
+      "arquivo": "3509007_bairros.geojson",
       "status": "pending"
     },
     "setores": {
       "label": "Setores Censitários (IBGE)",
-      "arquivo": "3550308_setores.geojson",
+      "arquivo": "3509007_setores.geojson",
       "status": "pending"
     }
   }
